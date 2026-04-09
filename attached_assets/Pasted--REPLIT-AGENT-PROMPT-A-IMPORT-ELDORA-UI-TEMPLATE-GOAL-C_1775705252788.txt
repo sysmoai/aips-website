@@ -1,0 +1,131 @@
+=== REPLIT AGENT PROMPT A: IMPORT ELDORA UI TEMPLATE ===
+
+GOAL:
+Clone the Eldora UI SaaS landing page template and set up the AIPS
+(AI Premium Shop) website v2 foundation.
+
+SOURCE TEMPLATE:
+- GitHub: https://github.com/karthikmudunuri/saas-landing-page-template
+- Tech: Next.js 14 + TailwindCSS + Framer Motion
+- License: MIT (free, commercial use OK)
+
+STEPS:
+
+1. CLONE THE TEMPLATE
+   - Clone https://github.com/karthikmudunuri/saas-landing-page-template
+   - Install all dependencies (npm install)
+   - Verify it runs (npm run dev) — should show the demo SaaS landing page
+
+2. CLEAN THE TEMPLATE
+   - Remove all demo/placeholder content text (keep component structure)
+   - Remove demo images (keep image component slots)
+   - Keep ALL animation components (Framer Motion effects)
+   - Keep the dark theme setup
+   - Keep the responsive layout system
+   - Keep the navigation, hero, features, pricing, FAQ, footer component shells
+
+3. INSTALL ADDITIONAL DEPENDENCIES
+   npm install @shadcn/ui framer-motion lucide-react clsx tailwind-merge
+   npm install next-seo  (for SEO meta management)
+   npm install sharp     (for image optimization)
+
+4. SET UP FOLDER STRUCTURE
+   Create these folders:
+   /public/images/brand/       → AIPS logo files
+   /public/images/logos/       → Product logos (ChatGPT, Claude, etc.)
+   /public/images/heroes/      → Hero banner backgrounds
+   /public/images/og/          → Open Graph images (1200x630)
+   /public/images/badges/      → Payment + trust badge SVGs
+   /public/images/icons/       → Category + value prop icons
+   /public/images/posters/     → Product poster images
+   /public/images/mockups/     → Screenshots (future)
+   /public/images/testimonials/ → Customer proof (future)
+   /data/                      → products.json + brand config
+
+5. CREATE /data/brand.json (empty shell — will fill in Prompt B)
+   {
+     "name": "AI Premium Shop",
+     "shortName": "AIPS",
+     "domain": "aipremiumshop.com",
+     "products": []
+   }
+
+6. CREATE /data/products.json (empty shell — will fill in Prompt B)
+   {
+     "brandAssets": {},
+     "products": []
+   }
+
+7. UPDATE tailwind.config.js — AIPS THEME
+   Extend the theme with AIPS brand colors:
+   theme: {
+     extend: {
+       colors: {
+         'aips-dark': '#0a0a0a',
+         'aips-dark-secondary': '#1a1a2e',
+         'aips-teal': '#0d9488',
+         'aips-green': '#22c55e',
+         'aips-blue': '#2563eb',
+         'aips-accent': '#8b5cf6',
+         'chatgpt': '#10a37f',
+         'claude': '#d97706',
+         'midjourney': '#000000',
+         'perplexity': '#20b2aa',
+         'gemini': '#4285f4',
+         'copilot': '#6e40c9',
+         'notion': '#000000',
+         'bkash': '#e2136e',
+         'nagad': '#f6921e',
+       },
+       fontFamily: {
+         sans: ['Inter', 'system-ui', 'sans-serif'],
+         bangla: ['Noto Sans Bengali', 'system-ui', 'sans-serif'],
+       },
+     }
+   }
+
+8. UPDATE globals.css
+   Set default background to #0a0a0a (dark)
+   Set default text to #e2e8f0 (light gray)
+   Import Google Fonts: Inter (400,500,600,700) + Noto Sans Bengali (400,700)
+
+9. SET UP next.config.js FOR SSR
+   Ensure ALL pages use server-side rendering or static generation:
+   - Homepage: SSG (getStaticProps) or SSR
+   - Product pages: dynamic routes with SSR (getServerSideProps)
+   - Utility pages: SSG
+   Do NOT use client-only rendering for any public page.
+
+10. CREATE PLACEHOLDER COMPONENTS
+    Create these reusable components (empty shells for now):
+    /components/ProductCard.tsx    → product grid card
+    /components/PricingTable.tsx   → tier comparison table
+    /components/TrustBadges.tsx    → trust badges row
+    /components/PaymentBadges.tsx  → bKash/Nagad/Rocket badges
+    /components/WhatsAppCTA.tsx    → sticky WhatsApp button
+    /components/BanglaSection.tsx  → Bangla content block
+    /components/HeroSection.tsx    → product page hero
+    /components/FAQSection.tsx     → accordion FAQ with schema
+    /components/SEOHead.tsx        → meta tags + schema JSON-LD
+
+11. CREATE WhatsAppCTA COMPONENT (functional)
+    This should be a sticky floating button (bottom-right) on ALL pages:
+    - Green (#25d366) circular button with WhatsApp icon
+    - Links to: https://wa.me/8801865385348
+    - Visible on mobile, thumb-friendly (56x56 min)
+    - z-index: 50
+    - Shows on scroll (hidden at very top)
+
+12. VERIFY:
+    [ ] Template runs without errors
+    [ ] Dark theme is default
+    [ ] All Framer Motion animations work
+    [ ] Folder structure created
+    [ ] tailwind.config.js has AIPS colors
+    [ ] WhatsApp button appears
+    [ ] No demo content remains (just component shells)
+    [ ] SSR configured in next.config.js
+
+OUTPUT: Tell me when the template is running and ready for Prompt B.
+
+=== END PROMPT A ===
