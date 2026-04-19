@@ -1,6 +1,6 @@
 # nixpacks config for api-server subdirectory
 # Root-level nixpacks.toml is used when root directory = /
-# Trigger rebuild after package.json pnpm.overrides fix
+# Trigger rebuild v2 - all 81 pnpm.overrides now in package.json
 [phases.setup]
 nixPkgs = ["nodejs_22"]
 aptPkgs = []
