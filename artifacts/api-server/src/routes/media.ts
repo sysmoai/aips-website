@@ -77,11 +77,12 @@ mediaRouter.post("/admin/upload", requireAuth, upload.single("file"), async (req
   }
 });
 
-// DELETE /api/media/admin/:key
-mediaRouter.delete("/admin/:key(*)", requireAuth, async (req: Request, res: Response) => {
+// DELETE /api/media/admin/:key — fixed: use wildcard route compatible with path-to-regexp v0.3+
+mediaRouter.delete("/admin/*", requireAuth, async (req: Request, res: Response) => {
   try {
-    await getR2().send(new DeleteObjectCommand({ Bucket: BUCKET(), Key: req.params.key }));
-    res.json({ success: true, message: `Deleted ${req.params.key}` });
+    const key = (req.params as any)[0] as string;
+    await getR2().send(new DeleteObjectCommand({ Bucket: BUCKET(), Key: key }));
+    res.json({ success: true, message: `Deleted ${key}` });
   } catch (err: any) {
     res.status(500).json({ success: false, error: err.message });
   }
