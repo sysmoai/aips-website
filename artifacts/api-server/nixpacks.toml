@@ -1,3 +1,5 @@
+# nixpacks config for api-server subdirectory
+# Root-level nixpacks.toml is used when root directory = /
 [phases.setup]
 nixPkgs = ["nodejs_22"]
 aptPkgs = []
