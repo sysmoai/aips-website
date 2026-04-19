@@ -28,6 +28,21 @@ import BrandPage from "@/pages/BrandPage";
 import SupportPage from "@/pages/SupportPage";
 import HowToOrderPage from "@/pages/HowToOrderPage";
 import BestAISubscriptionPage from "@/pages/BestAISubscriptionPage";
+import AdminLoginPage from "@/pages/admin/LoginPage";
+import AdminDashboard from "@/pages/admin/DashboardPage";
+import AdminProducts from "@/pages/admin/ProductsPage";
+import AdminOrders from "@/pages/admin/OrdersPage";
+import AdminBlog from "@/pages/admin/BlogPage";
+import AdminMedia from "@/pages/admin/MediaPage";
+
+// Admin auth guard — redirects to /admin/login if no token
+function adminGuard(Component: () => JSX.Element | null) {
+  return () => {
+    const t = localStorage.getItem("aips_admin_token");
+    if (!t) { window.location.replace("/admin/login"); return null; }
+    return <Component />;
+  };
+}
 
 const WHATSAPP = "https://wa.me/8801865385348?text=Hi%2C%20I%20want%20to%20order%20an%20AI%20subscription";
 
@@ -171,6 +186,12 @@ function Router() {
       <Route path="/terms" component={TermsPage} />
       <Route path="/privacy-policy" component={PrivacyPolicyPage} />
 
+            <Route path="/admin/login"    component={AdminLoginPage} />
+            <Route path="/admin/products" component={adminGuard(AdminProducts)} />
+            <Route path="/admin/orders"   component={adminGuard(AdminOrders)} />
+            <Route path="/admin/blog"     component={adminGuard(AdminBlog)} />
+            <Route path="/admin/media"    component={adminGuard(AdminMedia)} />
+            <Route path="/admin"          component={adminGuard(AdminDashboard)} />
       <Route component={NotFound} />
     </Switch>
   );
