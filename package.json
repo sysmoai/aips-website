@@ -2,6 +2,7 @@
   "name": "aips-website",
   "version": "0.1.0",
   "private": true,
+  "packageManager": "pnpm@9.15.9",
   "engines": {
     "node": ">=20 <21",
     "pnpm": ">=9 <10"
