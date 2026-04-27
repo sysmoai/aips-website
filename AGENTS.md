@@ -75,8 +75,4 @@ brand, policies, categories, products, variants, bullets, faq, customers, leads,
 - ESLint + Prettier enforce style. Run pnpm lint --fix before commit.
 - Components: PascalCase. Files: kebab-case. Routes: lowercase.
 
-## 12. Canonical references (Notion)
-- Final Stack v3.0 LOCKED
-- Phase 0 Setup Tracker LIVE
-- Master Context Prompt v1
-- Dual-Agent Operations Playbook
+## 12.
