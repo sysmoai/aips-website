@@ -8,8 +8,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "AI Premium Shop",
-  description: "Premium digital subscriptions for Bangladesh.",
+  title: "AI Premium Shop | Premium Digital Subscriptions in Bangladesh",
+  description:
+    "Order trusted AI, design, productivity, and streaming subscriptions in Bangladesh with WhatsApp support and local payment options.",
 };
 
 export default function RootLayout({
