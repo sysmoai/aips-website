@@ -1,22 +1,17 @@
 import { siteUrl, siteName } from "@/lib/seo/metadata";
 
-/* ------------------------------------------------------------------ */
-/*  JSON-LD structured data components for AI Premium Shop            */
-/*  All components are Server Components (no "use client").           */
-/* ------------------------------------------------------------------ */
-
 function ScriptLd({ schema }: { schema: Record<string, unknown> }) {
   return (
     <script
       type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+      // eslint-disable-next-line react/no-danger
+      dangerouslySetInnerHTML={{
+        __html: JSON.stringify(schema).replace(/</g, "\u003c"),
+      }}
     />
   );
 }
 
-/* ------------------------------------------------------------------ */
-/*  Organization                                                      */
-/* ------------------------------------------------------------------ */
 interface OrganizationProps {
   logoUrl?: string;
   sameAs?: string[];
@@ -31,7 +26,6 @@ export function OrganizationJsonLd({
     "@type": "Organization",
     "@id": `${siteUrl}/#organization`,
     name: siteName,
-    // alternateName removed per brand rules — never abbreviate
     url: siteUrl,
     logo: {
       "@type": "ImageObject",
@@ -76,39 +70,22 @@ export function OrganizationJsonLd({
   return <ScriptLd schema={schema} />;
 }
 
-/* ------------------------------------------------------------------ */
-/*  WebSite (with SearchAction)                                       */
-/* ------------------------------------------------------------------ */
-interface WebsiteProps {
-  searchUrl?: string;
-}
-
-export function WebsiteJsonLd({ /* searchUrl = `${siteUrl}/search?q={search_term_string}` */ }: WebsiteProps) {
+export function WebsiteJsonLd() {
   const schema = {
     "@context": "https://schema.org",
     "@type": "WebSite",
     "@id": `${siteUrl}/#website`,
     url: siteUrl,
     name: siteName,
-    // alternateName removed per brand rules — never abbreviate
     inLanguage: "en-BD",
     publisher: {
       "@id": `${siteUrl}/#organization`,
     },
-    // SearchAction disabled — no search page exists yet. Re-enable when /search is built.
-    // potentialAction: {
-    //   "@type": "SearchAction",
-    //   target: { "@type": "EntryPoint", urlTemplate: searchUrl },
-    //   "query-input": "required name=search_term_string",
-    // },
   };
 
   return <ScriptLd schema={schema} />;
 }
 
-/* ------------------------------------------------------------------ */
-/*  BreadcrumbList                                                    */
-/* ------------------------------------------------------------------ */
 interface BreadcrumbItem {
   name: string;
   path: string;
@@ -133,9 +110,6 @@ export function BreadcrumbJsonLd({ items }: BreadcrumbProps) {
   return <ScriptLd schema={schema} />;
 }
 
-/* ------------------------------------------------------------------ */
-/*  Product + Offer + AggregateRating + Review                        */
-/* ------------------------------------------------------------------ */
 interface ProductJsonLdProps {
   name: string;
   description: string;
@@ -144,9 +118,7 @@ interface ProductJsonLdProps {
   priceBdt: number;
   comparePriceBdt?: number | null;
   availability?: "InStock" | "OutOfStock" | "PreOrder";
-  priceValidUntil?: string; // ISO date
-  ratingValue?: number;
-  reviewCount?: number;
+  priceValidUntil?: string;
   brandName?: string;
   categoryName?: string;
 }
@@ -160,8 +132,6 @@ export function ProductJsonLd({
   comparePriceBdt,
   availability = "InStock",
   priceValidUntil,
-  /* ratingValue = 4.8,
-  reviewCount = 124, */
   brandName = siteName,
   categoryName = "Digital Subscription",
 }: ProductJsonLdProps) {
@@ -177,15 +147,6 @@ export function ProductJsonLd({
       name: brandName,
     },
     category: categoryName,
-    // aggregateRating disabled until real reviews are collected.
-    // Hardcoded ratings risk Google manual review for fake reviews.
-    // aggregateRating: {
-    //   "@type": "AggregateRating",
-    //   ratingValue: String(ratingValue),
-    //   bestRating: "5",
-    //   worstRating: "1",
-    //   reviewCount: String(reviewCount),
-    // },
     offers: {
       "@type": "Offer",
       url: `${siteUrl}/products/${slug}`,
@@ -224,9 +185,6 @@ export function ProductJsonLd({
   return <ScriptLd schema={schema} />;
 }
 
-/* ------------------------------------------------------------------ */
-/*  FAQPage                                                           */
-/* ------------------------------------------------------------------ */
 interface FAQItem {
   question: string;
   answer: string;
@@ -253,9 +211,6 @@ export function FAQPageJsonLd({ items }: FAQPageProps) {
   return <ScriptLd schema={schema} />;
 }
 
-/* ------------------------------------------------------------------ */
-/*  Article (Blog)                                                    */
-/* ------------------------------------------------------------------ */
 interface ArticleJsonLdProps {
   title: string;
   description: string;
@@ -301,9 +256,6 @@ export function ArticleJsonLd({
   return <ScriptLd schema={schema} />;
 }
 
-/* ------------------------------------------------------------------ */
-/*  HowTo                                                             */
-/* ------------------------------------------------------------------ */
 interface HowToStep {
   name: string;
   text: string;
@@ -314,7 +266,7 @@ interface HowToStep {
 interface HowToProps {
   name: string;
   description: string;
-  totalTime?: string; // ISO 8601 duration, e.g. "PT15M"
+  totalTime?: string;
   estimatedCost?: { currency: string; value: string };
   steps: HowToStep[];
 }

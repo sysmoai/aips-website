@@ -7,7 +7,7 @@ export const metadata: Metadata = buildMetadata({
   title: "Midjourney vs Leonardo AI in Bangladesh — Best AI Image Generator?",
   description:
     "Compare Midjourney and Leonardo AI for Bangladeshi designers and creators. Artistic quality vs versatile models. Prices in BDT. Buy with bKash/Nagad.",
-  canonical: "https://aipremiumshop.com/midjourney-vs-dalle",
+  canonical: "https://aipremiumshop.com/midjourney-vs-leonardo",
 });
 
 const faqItems = [
@@ -47,7 +47,7 @@ export default function MidjourneyVsLeonardoPage() {
       <BreadcrumbJsonLd
         items={[
           { name: "Home", path: "/" },
-          { name: "Midjourney vs Leonardo AI", path: "/midjourney-vs-dalle" },
+          { name: "Midjourney vs Leonardo AI", path: "/midjourney-vs-leonardo" },
         ]}
       />
       <main className="min-h-screen">

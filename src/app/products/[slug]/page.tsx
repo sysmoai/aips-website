@@ -251,7 +251,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
                 <div className="relative text-center">
                   <p className="text-[0.6875rem] font-semibold uppercase tracking-[0.2em] text-white/60">{group.provider}</p>
-                  <h1 className="mt-2 text-4xl sm:text-5xl font-bold text-white">{group.brand}</h1>
+                  <div className="mt-2 text-4xl sm:text-5xl font-bold text-white" role="presentation">{group.brand}</div>
                   {savings > 10 && (
                     <div className="mt-3 inline-flex items-center gap-1.5 bg-white/10 backdrop-blur-sm rounded-full px-3 py-1">
                       <TrendingDown className="size-3.5 text-green-400" />

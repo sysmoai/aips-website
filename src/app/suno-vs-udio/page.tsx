@@ -7,7 +7,7 @@ export const metadata: Metadata = buildMetadata({
   title: "Suno AI vs Udio in Bangladesh — Best AI Music Generator?",
   description:
     "Compare Suno AI and Udio for Bangladeshi musicians and content creators. AI music generation, pricing in BDT, features, and use cases. Buy with bKash/Nagad.",
-  canonical: "https://aipremiumshop.com/capcut-vs-premiere",
+  canonical: "https://aipremiumshop.com/suno-vs-udio",
 });
 
 const faqItems = [
@@ -47,7 +47,7 @@ export default function SunoVsUdioPage() {
       <BreadcrumbJsonLd
         items={[
           { name: "Home", path: "/" },
-          { name: "Suno vs Udio", path: "/capcut-vs-premiere" },
+          { name: "Suno vs Udio", path: "/suno-vs-udio" },
         ]}
       />
       <main className="min-h-screen">

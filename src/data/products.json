@@ -24,7 +24,7 @@
     ],
     "deliverySLA": "5-30 min",
     "featured": true,
-    "whatsappMsg": "Hi, I want ChatGPT Plus Starter Shared (à§³350/mo)",
+    "whatsappMsg": "Hi, I want ChatGPT Plus Starter Shared (৳350/mo)",
     "status": "Active"
   },
   {
@@ -52,7 +52,7 @@
     ],
     "deliverySLA": "5-15 min",
     "featured": true,
-    "whatsappMsg": "Hi, I want ChatGPT Plus Premium Shared (à§³950/mo)",
+    "whatsappMsg": "Hi, I want ChatGPT Plus Premium Shared (৳950/mo)",
     "status": "Active"
   },
   {
@@ -80,7 +80,7 @@
     ],
     "deliverySLA": "2-4 hours",
     "featured": true,
-    "whatsappMsg": "Hi, I want ChatGPT Plus Personal (à§³2,990/mo)",
+    "whatsappMsg": "Hi, I want ChatGPT Plus Personal (৳2,990/mo)",
     "status": "Active",
     "badge": "Most Popular"
   },
@@ -108,7 +108,7 @@
     ],
     "deliverySLA": "2-4 hours",
     "featured": false,
-    "whatsappMsg": "Hi, I want ChatGPT Go Personal (à§³1,196/mo)",
+    "whatsappMsg": "Hi, I want ChatGPT Go Personal (৳1,196/mo)",
     "status": "Active"
   },
   {
@@ -125,7 +125,7 @@
     "tier": "Starter Shared",
     "accessType": "shared",
     "badge": "For Teams",
-    "description": "Shared ChatGPT Business seat. Team workspace, admin controls, unlimited GPT-5, Codex agent.",
+    "description": "Shared ChatGPT Business seat. Team workspace, admin controls, full GPT-5 access, Codex agent.",
     "capabilities": [
       "text",
       "code",
@@ -137,7 +137,7 @@
     ],
     "deliverySLA": "5-30 min",
     "featured": true,
-    "whatsappMsg": "Hi, I want ChatGPT Business Starter Shared (à§³699/mo)",
+    "whatsappMsg": "Hi, I want ChatGPT Business Starter Shared (৳699/mo)",
     "status": "Active"
   },
   {
@@ -153,7 +153,7 @@
     "officialUSD": 25,
     "tier": "Premium Shared",
     "accessType": "shared",
-    "description": "Premium shared ChatGPT Business. Fewer users, higher stability. Unlimited GPT-5, deep research, Codex.",
+    "description": "Premium shared ChatGPT Business. Fewer users, higher stability. Full GPT-5 access, deep research, Codex.",
     "capabilities": [
       "text",
       "code",
@@ -165,7 +165,7 @@
     ],
     "deliverySLA": "5-15 min",
     "featured": false,
-    "whatsappMsg": "Hi, I want ChatGPT Business Premium Shared (à§³1,299/mo)",
+    "whatsappMsg": "Hi, I want ChatGPT Business Premium Shared (৳1,299/mo)",
     "status": "Active"
   },
   {
@@ -181,7 +181,7 @@
     "officialUSD": 30,
     "tier": "Personal",
     "accessType": "personal",
-    "description": "Dedicated ChatGPT Business seat. Full admin control, data privacy, unlimited GPT-5, Codex agent.",
+    "description": "Dedicated ChatGPT Business seat. Full admin control, data privacy, full GPT-5 access, Codex agent.",
     "capabilities": [
       "text",
       "code",
@@ -193,7 +193,7 @@
     ],
     "deliverySLA": "2-4 hours",
     "featured": false,
-    "whatsappMsg": "Hi, I want ChatGPT Business Personal (à§³3,990/mo)",
+    "whatsappMsg": "Hi, I want ChatGPT Business Personal (৳3,990/mo)",
     "status": "Active"
   },
   {
@@ -210,7 +210,7 @@
     "tier": "Premium Shared",
     "accessType": "shared",
     "badge": "Best Value Pro",
-    "description": "Shared ChatGPT Pro. Unlimited GPT-5.4 Pro mode, Sora video, unlimited deep research, highest performance.",
+    "description": "Shared ChatGPT Pro. Full GPT-5 access.4 Pro mode, Sora video, unrestricted deep research, highest performance.",
     "capabilities": [
       "text",
       "code",
@@ -223,7 +223,7 @@
     ],
     "deliverySLA": "2-12 hours",
     "featured": true,
-    "whatsappMsg": "Hi, I want ChatGPT Pro Premium Shared (à§³4,500/mo)",
+    "whatsappMsg": "Hi, I want ChatGPT Pro Premium Shared (৳4,500/mo)",
     "status": "Active"
   },
   {
@@ -239,7 +239,7 @@
     "officialUSD": 200,
     "tier": "Personal",
     "accessType": "personal",
-    "description": "Full ChatGPT Pro. Unlimited GPT-5.4 Pro, Sora video, deep research, agents, earliest access to new features.",
+    "description": "Full ChatGPT Pro. Full GPT-5 access.4 Pro, Sora video, deep research, agents, earliest access to new features.",
     "capabilities": [
       "text",
       "code",
@@ -252,7 +252,7 @@
     ],
     "deliverySLA": "2-4 hours",
     "featured": false,
-    "whatsappMsg": "Hi, I want ChatGPT Pro Personal (à§³29,900/mo)",
+    "whatsappMsg": "Hi, I want ChatGPT Pro Personal (৳29,900/mo)",
     "status": "Active"
   },
   {
@@ -279,7 +279,7 @@
     ],
     "deliverySLA": "5-15 min",
     "featured": true,
-    "whatsappMsg": "Hi, I want Claude Pro Premium Shared (à§³1,495/mo)",
+    "whatsappMsg": "Hi, I want Claude Pro Premium Shared (৳1,495/mo)",
     "status": "Active"
   },
   {
@@ -305,7 +305,7 @@
     ],
     "deliverySLA": "2-4 hours",
     "featured": true,
-    "whatsappMsg": "Hi, I want Claude Pro Personal (à§³2,990/mo)",
+    "whatsappMsg": "Hi, I want Claude Pro Personal (৳2,990/mo)",
     "status": "Active",
     "badge": "Full Control"
   },
@@ -332,7 +332,7 @@
     ],
     "deliverySLA": "2-4 hours",
     "featured": false,
-    "whatsappMsg": "Hi, I want Claude Max 5x (à§³14,950/mo)",
+    "whatsappMsg": "Hi, I want Claude Max 5x (৳14,950/mo)",
     "status": "Active"
   },
   {
@@ -358,7 +358,7 @@
     ],
     "deliverySLA": "2-4 hours",
     "featured": false,
-    "whatsappMsg": "Hi, I want Claude Max 20x (à§³29,900/mo)",
+    "whatsappMsg": "Hi, I want Claude Max 20x (৳29,900/mo)",
     "status": "Active"
   },
   {
@@ -384,7 +384,7 @@
     ],
     "deliverySLA": "2-12 hours",
     "featured": false,
-    "whatsappMsg": "Hi, I want Claude Team (à§³3,990/seat/mo)",
+    "whatsappMsg": "Hi, I want Claude Team (৳3,990/seat/mo)",
     "status": "Active"
   },
   {
@@ -401,7 +401,7 @@
     "tier": "Personal",
     "accessType": "personal",
     "badge": "83% Off",
-    "description": "AIPS SPECIAL â€” à§³500 only (official à§³2,990). Full Google AI Pro on YOUR Gmail. Gemini 3.1 Pro, Deep Research, image gen, video gen, AI agents, 2TB storage.",
+    "description": "AI Premium Shop SPECIAL â€” ৳500 only (official ৳2,990). Full Google AI Pro on YOUR Gmail. Gemini 3.1 Pro, Deep Research, image gen, video gen, AI agents, 2TB storage.",
     "capabilities": [
       "text",
       "code",
@@ -415,7 +415,7 @@
     ],
     "deliverySLA": "5-15 min",
     "featured": true,
-    "whatsappMsg": "Hi, I want Google AI Pro (à§³500/mo)",
+    "whatsappMsg": "Hi, I want Google AI Pro (৳500/mo)",
     "status": "Active"
   },
   {
@@ -443,7 +443,7 @@
     ],
     "deliverySLA": "2-4 hours",
     "featured": false,
-    "whatsappMsg": "Hi, I want SuperGrok Lite (à§³1,495/mo)",
+    "whatsappMsg": "Hi, I want SuperGrok Lite (৳1,495/mo)",
     "status": "Active"
   },
   {
@@ -459,7 +459,7 @@
     "officialUSD": 30,
     "tier": "Standard",
     "accessType": "personal",
-    "description": "Full SuperGrok. Grok 4.1 unlimited, DeepSearch, HD images & 30s video, 4x AI agents, real-time X data.",
+    "description": "Full SuperGrok. Grok 4.1 full access, DeepSearch, HD images & 30s video, 4x AI agents, real-time X data.",
     "capabilities": [
       "text",
       "code",
@@ -471,7 +471,7 @@
     ],
     "deliverySLA": "2-4 hours",
     "featured": true,
-    "whatsappMsg": "Hi, I want SuperGrok (à§³3,990/mo)",
+    "whatsappMsg": "Hi, I want SuperGrok (৳3,990/mo)",
     "status": "Active",
     "badge": "X Power"
   },
@@ -496,7 +496,7 @@
     ],
     "deliverySLA": "5-15 min",
     "featured": true,
-    "whatsappMsg": "Hi, I want Perplexity Pro Shared (à§³350/mo)",
+    "whatsappMsg": "Hi, I want Perplexity Pro Shared (৳350/mo)",
     "status": "Active",
     "badge": "Research"
   },
@@ -521,7 +521,7 @@
     ],
     "deliverySLA": "2-4 hours",
     "featured": false,
-    "whatsappMsg": "Hi, I want Perplexity Pro Personal (à§³2,990/mo)",
+    "whatsappMsg": "Hi, I want Perplexity Pro Personal (৳2,990/mo)",
     "status": "Active"
   },
   {
@@ -537,7 +537,7 @@
     "officialUSD": 200,
     "tier": "Max",
     "accessType": "personal",
-    "description": "Perplexity Max. Unlimited deep research, best AI reasoning models, massive data handling.",
+    "description": "Perplexity Max. Unrestricted deep research, best AI reasoning models, massive data handling.",
     "capabilities": [
       "text",
       "search",
@@ -545,7 +545,7 @@
     ],
     "deliverySLA": "2-4 hours",
     "featured": false,
-    "whatsappMsg": "Hi, I want Perplexity Max (à§³29,900/mo)",
+    "whatsappMsg": "Hi, I want Perplexity Max (৳29,900/mo)",
     "status": "Active"
   },
   {
@@ -562,14 +562,14 @@
     "tier": "Shared",
     "accessType": "shared",
     "badge": "Best Seller",
-    "description": "Shared Midjourney Standard. 15hr fast GPU, unlimited relax mode, image + video gen.",
+    "description": "Shared Midjourney Standard. 15hr fast GPU, extended relax mode, image + video gen.",
     "capabilities": [
       "image-gen",
       "video-gen"
     ],
     "deliverySLA": "5-30 min",
     "featured": true,
-    "whatsappMsg": "Hi, I want Midjourney Standard Shared (à§³1,199/mo)",
+    "whatsappMsg": "Hi, I want Midjourney Standard Shared (৳1,199/mo)",
     "status": "Active"
   },
   {
@@ -592,7 +592,7 @@
     ],
     "deliverySLA": "5-15 min",
     "featured": false,
-    "whatsappMsg": "Hi, I want Midjourney Standard Premium Shared (à§³2,399/mo)",
+    "whatsappMsg": "Hi, I want Midjourney Standard Premium Shared (৳2,399/mo)",
     "status": "Active"
   },
   {
@@ -608,14 +608,14 @@
     "officialUSD": 30,
     "tier": "Personal",
     "accessType": "personal",
-    "description": "Full personal Midjourney Standard. Own account, 15hr fast GPU, unlimited relax, commercial rights.",
+    "description": "Full personal Midjourney Standard. Own account, 15hr fast GPU, extended relax, commercial rights.",
     "capabilities": [
       "image-gen",
       "video-gen"
     ],
     "deliverySLA": "2-4 hours",
     "featured": false,
-    "whatsappMsg": "Hi, I want Midjourney Standard Personal (à§³3,990/mo)",
+    "whatsappMsg": "Hi, I want Midjourney Standard Personal (৳3,990/mo)",
     "status": "Active"
   },
   {
@@ -639,7 +639,7 @@
     ],
     "deliverySLA": "5-30 min",
     "featured": false,
-    "whatsappMsg": "Hi, I want Midjourney Pro Shared (à§³4,788/mo)",
+    "whatsappMsg": "Hi, I want Midjourney Pro Shared (৳4,788/mo)",
     "status": "Active"
   },
   {
@@ -663,7 +663,7 @@
     ],
     "deliverySLA": "2-4 hours",
     "featured": false,
-    "whatsappMsg": "Hi, I want Midjourney Pro Personal (à§³8,970/mo)",
+    "whatsappMsg": "Hi, I want Midjourney Pro Personal (৳8,970/mo)",
     "status": "Active"
   },
   {
@@ -687,7 +687,7 @@
     ],
     "deliverySLA": "2-4 hours",
     "featured": false,
-    "whatsappMsg": "Hi, I want Midjourney Mega (à§³17,940/mo)",
+    "whatsappMsg": "Hi, I want Midjourney Mega (৳17,940/mo)",
     "status": "Active"
   },
   {
@@ -703,14 +703,14 @@
     "officialUSD": 20,
     "tier": "Plus",
     "accessType": "personal",
-    "description": "Ideogram Plus. Best AI text rendering. 1000 priority credits/mo, unlimited slow.",
+    "description": "Ideogram Plus. Best AI text rendering. 1000 priority credits/mo, extended slow mode.",
     "capabilities": [
       "image-gen",
       "image-edit"
     ],
     "deliverySLA": "2-4 hours",
     "featured": false,
-    "whatsappMsg": "Hi, I want Ideogram Plus (à§³2,990/mo)",
+    "whatsappMsg": "Hi, I want Ideogram Plus (৳2,990/mo)",
     "status": "Active"
   },
   {
@@ -733,7 +733,7 @@
     ],
     "deliverySLA": "2-4 hours",
     "featured": false,
-    "whatsappMsg": "Hi, I want Ideogram Pro (à§³8,970/mo)",
+    "whatsappMsg": "Hi, I want Ideogram Pro (৳8,970/mo)",
     "status": "Active"
   },
   {
@@ -756,7 +756,7 @@
     ],
     "deliverySLA": "5-30 min",
     "featured": false,
-    "whatsappMsg": "Hi, I want Leonardo AI Shared (à§³599/mo)",
+    "whatsappMsg": "Hi, I want Leonardo AI Shared (৳599/mo)",
     "status": "Active"
   },
   {
@@ -781,7 +781,7 @@
     ],
     "deliverySLA": "2-4 hours",
     "featured": true,
-    "whatsappMsg": "Hi, I want Runway Standard (à§³1,794/mo)",
+    "whatsappMsg": "Hi, I want Runway Standard (৳1,794/mo)",
     "status": "Active"
   },
   {
@@ -797,7 +797,7 @@
     "officialUSD": 28,
     "tier": "Pro",
     "accessType": "personal",
-    "description": "Runway Pro. 2250 credits/mo, Gen-4 unlimited turbo, 4K export, watermark-free.",
+    "description": "Runway Pro. 2250 credits/mo, Gen-4 full turbo, 4K export, watermark-free.",
     "capabilities": [
       "video-gen",
       "video-edit",
@@ -805,12 +805,12 @@
     ],
     "deliverySLA": "2-4 hours",
     "featured": false,
-    "whatsappMsg": "Hi, I want Runway Pro (à§³4,186/mo)",
+    "whatsappMsg": "Hi, I want Runway Pro (৳4,186/mo)",
     "status": "Active"
   },
   {
-    "id": "runway-unlimited-personal",
-    "name": "Runway Unlimited - Personal",
+    "id": "runway-full-access-personal",
+    "name": "Runway Full Access - Personal",
     "slug": "runway-bangladesh",
     "brand": "Runway",
     "brandSlug": "runway-bangladesh",
@@ -819,9 +819,9 @@
     "category": "ai-video",
     "price": 11362,
     "officialUSD": 76,
-    "tier": "Unlimited",
+    "tier": "Full Access",
     "accessType": "personal",
-    "description": "Runway Unlimited. Unlimited Gen-4 generations, all features, maximum performance.",
+    "description": "Runway Full Access. Full Gen-4 generations, all features, maximum performance.",
     "capabilities": [
       "video-gen",
       "video-edit",
@@ -829,7 +829,7 @@
     ],
     "deliverySLA": "2-4 hours",
     "featured": false,
-    "whatsappMsg": "Hi, I want Runway Unlimited (à§³11,362/mo)",
+    "whatsappMsg": "Hi, I want Runway Full Access (৳11,362/mo)",
     "status": "Active"
   },
   {
@@ -845,14 +845,14 @@
     "officialUSD": 29,
     "tier": "Shared",
     "accessType": "shared",
-    "description": "Shared HeyGen Creator. AI avatar videos, 700+ stock avatars, voice cloning, 175+ languages. Unlimited videos.",
+    "description": "Shared HeyGen Creator. AI avatar videos, 700+ stock avatars, voice cloning, 175+ languages. Unrestricted videos.",
     "capabilities": [
       "video-gen",
       "voice"
     ],
     "deliverySLA": "5-30 min",
     "featured": false,
-    "whatsappMsg": "Hi, I want HeyGen Creator Shared (à§³1,499/mo)",
+    "whatsappMsg": "Hi, I want HeyGen Creator Shared (৳1,499/mo)",
     "status": "Active"
   },
   {
@@ -874,7 +874,7 @@
     ],
     "deliverySLA": "2-4 hours",
     "featured": false,
-    "whatsappMsg": "Hi, I want ElevenLabs Starter (à§³748/mo)",
+    "whatsappMsg": "Hi, I want ElevenLabs Starter (৳748/mo)",
     "status": "Active"
   },
   {
@@ -896,7 +896,7 @@
     ],
     "deliverySLA": "2-4 hours",
     "featured": false,
-    "whatsappMsg": "Hi, I want ElevenLabs Creator (à§³3,289/mo)",
+    "whatsappMsg": "Hi, I want ElevenLabs Creator (৳3,289/mo)",
     "status": "Active"
   },
   {
@@ -918,7 +918,7 @@
     ],
     "deliverySLA": "2-4 hours",
     "featured": false,
-    "whatsappMsg": "Hi, I want ElevenLabs Pro (à§³14,802/mo)",
+    "whatsappMsg": "Hi, I want ElevenLabs Pro (৳14,802/mo)",
     "status": "Active"
   },
   {
@@ -941,7 +941,7 @@
     ],
     "deliverySLA": "2-4 hours",
     "featured": true,
-    "whatsappMsg": "Hi, I want Suno AI Pro (à§³1,495/mo)",
+    "whatsappMsg": "Hi, I want Suno AI Pro (৳1,495/mo)",
     "status": "Active"
   },
   {
@@ -963,7 +963,7 @@
     ],
     "deliverySLA": "2-4 hours",
     "featured": false,
-    "whatsappMsg": "Hi, I want Suno AI Premier (à§³3,990/mo)",
+    "whatsappMsg": "Hi, I want Suno AI Premier (৳3,990/mo)",
     "status": "Active"
   },
   {
@@ -985,7 +985,7 @@
     ],
     "deliverySLA": "5-30 min",
     "featured": false,
-    "whatsappMsg": "Hi, I want Udio Pro Shared (à§³499/mo)",
+    "whatsappMsg": "Hi, I want Udio Pro Shared (৳499/mo)",
     "status": "Active"
   },
   {
@@ -1002,13 +1002,13 @@
     "tier": "Pro",
     "accessType": "personal",
     "badge": "Best Seller",
-    "description": "GitHub Copilot Pro. Unlimited code completions, 300 premium requests/mo, Claude/GPT-5 models.",
+    "description": "GitHub Copilot Pro. Unrestricted code completions, 300 premium requests/mo, Claude/GPT-5 models.",
     "capabilities": [
       "code"
     ],
     "deliverySLA": "2-4 hours",
     "featured": true,
-    "whatsappMsg": "Hi, I want GitHub Copilot Pro (à§³1,495/mo)",
+    "whatsappMsg": "Hi, I want GitHub Copilot Pro (৳1,495/mo)",
     "status": "Active"
   },
   {
@@ -1030,7 +1030,7 @@
     ],
     "deliverySLA": "2-4 hours",
     "featured": false,
-    "whatsappMsg": "Hi, I want GitHub Copilot Pro+ (à§³5,831/mo)",
+    "whatsappMsg": "Hi, I want GitHub Copilot Pro+ (৳5,831/mo)",
     "status": "Active"
   },
   {
@@ -1047,14 +1047,14 @@
     "tier": "Pro",
     "accessType": "personal",
     "badge": "Best Seller",
-    "description": "Cursor Pro AI code editor. Claude, GPT-5, Gemini models. Unlimited completions, cloud agents.",
+    "description": "Cursor Pro AI code editor. Claude, GPT-5, Gemini models. Unrestricted completions, cloud agents.",
     "capabilities": [
       "code",
       "agents"
     ],
     "deliverySLA": "2-4 hours",
     "featured": true,
-    "whatsappMsg": "Hi, I want Cursor Pro (à§³2,990/mo)",
+    "whatsappMsg": "Hi, I want Cursor Pro (৳2,990/mo)",
     "status": "Active"
   },
   {
@@ -1077,7 +1077,7 @@
     ],
     "deliverySLA": "2-4 hours",
     "featured": false,
-    "whatsappMsg": "Hi, I want Cursor Pro+ (à§³8,970/mo)",
+    "whatsappMsg": "Hi, I want Cursor Pro+ (৳8,970/mo)",
     "status": "Active"
   },
   {
@@ -1100,7 +1100,7 @@
     ],
     "deliverySLA": "5-30 min",
     "featured": false,
-    "whatsappMsg": "Hi, I want v0.dev Pro Shared (à§³999/mo)",
+    "whatsappMsg": "Hi, I want v0.dev Pro Shared (৳999/mo)",
     "status": "Active"
   },
   {
@@ -1117,14 +1117,14 @@
     "tier": "Core",
     "accessType": "personal",
     "badge": "Special Deal",
-    "description": "AIPS SPECIAL â€” Replit Core at à§³500. Cloud IDE with AI Agent, deploy and host apps. Build anything with AI.",
+    "description": "AI Premium Shop SPECIAL â€” Replit Core at ৳500. Cloud IDE with AI Agent, deploy and host apps. Build anything with AI.",
     "capabilities": [
       "code",
       "agents"
     ],
     "deliverySLA": "2-4 hours",
     "featured": false,
-    "whatsappMsg": "Hi, I want Replit Core (à§³500/mo)",
+    "whatsappMsg": "Hi, I want Replit Core (৳500/mo)",
     "status": "Active"
   },
   {
@@ -1149,7 +1149,7 @@
     ],
     "deliverySLA": "2-4 hours",
     "featured": true,
-    "whatsappMsg": "Hi, I want Notion Business Monthly (à§³800/mo)",
+    "whatsappMsg": "Hi, I want Notion Business Monthly (৳800/mo)",
     "status": "Active"
   },
   {
@@ -1165,7 +1165,7 @@
     "officialUSD": 120,
     "tier": "6-Month",
     "accessType": "personal",
-    "description": "Notion Business 6-month plan. à§³4,800 one-time (à§³800/mo). No monthly renewal hassle.",
+    "description": "Notion Business 6-month plan. ৳4,800 one-time (৳800/mo). No monthly renewal hassle.",
     "capabilities": [
       "workspace",
       "text",
@@ -1173,7 +1173,7 @@
     ],
     "deliverySLA": "2-4 hours",
     "featured": true,
-    "whatsappMsg": "Hi, I want Notion Business 6-Month (à§³4,800)",
+    "whatsappMsg": "Hi, I want Notion Business 6-Month (৳4,800)",
     "status": "Active",
     "badge": "Best Value"
   },
@@ -1199,7 +1199,7 @@
     ],
     "deliverySLA": "2-12 hours",
     "featured": false,
-    "whatsappMsg": "Hi, I want Manus AI (à§³2,500/mo)",
+    "whatsappMsg": "Hi, I want Manus AI (৳2,500/mo)",
     "status": "Active"
   },
   {
@@ -1222,7 +1222,7 @@
     ],
     "deliverySLA": "5-30 min",
     "featured": false,
-    "whatsappMsg": "Hi, I want Otter.ai Pro Shared (à§³799/mo)",
+    "whatsappMsg": "Hi, I want Otter.ai Pro Shared (৳799/mo)",
     "status": "Active"
   },
   {
@@ -1245,7 +1245,7 @@
     ],
     "deliverySLA": "5-30 min",
     "featured": false,
-    "whatsappMsg": "Hi, I want Gamma Plus Shared (à§³399/mo)",
+    "whatsappMsg": "Hi, I want Gamma Plus Shared (৳399/mo)",
     "status": "Active"
   },
   {
@@ -1268,16 +1268,16 @@
     ],
     "deliverySLA": "5-30 min",
     "featured": false,
-    "whatsappMsg": "Hi, I want Writesonic Shared (à§³799/mo)",
+    "whatsappMsg": "Hi, I want Writesonic Shared (৳799/mo)",
     "status": "Active"
   },
   {
     "id": "student-essentials",
     "name": "Student Essentials Package",
     "slug": "student-package-bangladesh",
-    "brand": "AIPS",
+    "brand": "AI Premium Shop",
     "brandSlug": "bundles",
-    "provider": "AIPS",
+    "provider": "AI Premium Shop",
     "brandColor": "#f4b942",
     "category": "bundles",
     "price": 449,
@@ -1291,23 +1291,23 @@
     ],
     "deliverySLA": "5-30 min",
     "featured": false,
-    "whatsappMsg": "Hi, I want Student Essentials Package (à§³449)",
+    "whatsappMsg": "Hi, I want Student Essentials Package (৳449)",
     "status": "Active"
   },
   {
     "id": "university-pro",
     "name": "University Pro Package",
     "slug": "student-package-bangladesh",
-    "brand": "AIPS",
+    "brand": "AI Premium Shop",
     "brandSlug": "bundles",
-    "provider": "AIPS",
+    "provider": "AI Premium Shop",
     "brandColor": "#f4b942",
     "category": "bundles",
     "price": 899,
     "officialUSD": 20,
     "tier": "Pro",
     "accessType": "bundle",
-    "description": "Advanced AI bundle for university students. ChatGPT Premium + Perplexity. Save à§³650.",
+    "description": "Advanced AI bundle for university students. ChatGPT Premium + Perplexity. Save ৳650.",
     "capabilities": [
       "text",
       "code",
@@ -1315,23 +1315,23 @@
     ],
     "deliverySLA": "5-30 min",
     "featured": false,
-    "whatsappMsg": "Hi, I want University Pro Package (à§³899)",
+    "whatsappMsg": "Hi, I want University Pro Package (৳899)",
     "status": "Active"
   },
   {
     "id": "freelancer-bundle",
     "name": "Freelancer Bundle",
     "slug": "freelancer-bundle-bangladesh",
-    "brand": "AIPS",
+    "brand": "AI Premium Shop",
     "brandSlug": "bundles",
-    "provider": "AIPS",
+    "provider": "AI Premium Shop",
     "brandColor": "#f4b942",
     "category": "bundles",
     "price": 3999,
     "officialUSD": 50,
     "tier": "Bundle",
     "accessType": "bundle",
-    "description": "AI toolkit for freelancers. ChatGPT Personal + Midjourney + Perplexity. Save à§³789.",
+    "description": "AI toolkit for freelancers. ChatGPT Personal + Midjourney + Perplexity. Save ৳789.",
     "capabilities": [
       "text",
       "code",
@@ -1339,16 +1339,16 @@
     ],
     "deliverySLA": "2-4 hours",
     "featured": false,
-    "whatsappMsg": "Hi, I want Freelancer Bundle (à§³3,999)",
+    "whatsappMsg": "Hi, I want Freelancer Bundle (৳3,999)",
     "status": "Active"
   },
   {
     "id": "business-package",
     "name": "Business Package",
     "slug": "business-package-bangladesh",
-    "brand": "AIPS",
+    "brand": "AI Premium Shop",
     "brandSlug": "bundles",
-    "provider": "AIPS",
+    "provider": "AI Premium Shop",
     "brandColor": "#f4b942",
     "category": "bundles",
     "price": 15000,
@@ -1364,16 +1364,16 @@
     ],
     "deliverySLA": "2-12 hours",
     "featured": false,
-    "whatsappMsg": "Hi, I want Business Package (à§³15,000)",
+    "whatsappMsg": "Hi, I want Business Package (৳15,000)",
     "status": "Active"
   },
   {
     "id": "b2b-implementation",
     "name": "B2B Implementation Service",
     "slug": "b2b-implementation-bangladesh",
-    "brand": "AIPS",
+    "brand": "AI Premium Shop",
     "brandSlug": "bundles",
-    "provider": "AIPS",
+    "provider": "AI Premium Shop",
     "brandColor": "#f4b942",
     "category": "bundles",
     "price": 25000,
@@ -1389,7 +1389,7 @@
     ],
     "deliverySLA": "Custom",
     "featured": false,
-    "whatsappMsg": "Hi, I want B2B Implementation (à§³25,000)",
+    "whatsappMsg": "Hi, I want B2B Implementation (৳25,000)",
     "status": "Active"
   },
   {
@@ -1577,7 +1577,7 @@
     "tier": "Personal",
     "accessType": "personal",
     "badge": "Pro Presenter",
-    "description": "Personal Gamma Plus. Your own account, unlimited AI decks, custom domains, analytics, advanced export (PDF, PPT).",
+    "description": "Personal Gamma Plus. Your own account, unrestricted AI decks, custom domains, analytics, advanced export (PDF, PPT).",
     "capabilities": [
       "text",
       "workspace",
@@ -1799,7 +1799,7 @@
     "tier": "Personal",
     "accessType": "personal",
     "badge": "Studio Quality",
-    "description": "Personal Murf.ai Pro. Your own account, unlimited voice generation, API access, team workspace, priority support.",
+    "description": "Personal Murf.ai Pro. Your own account, unrestricted voice generation, API access, team workspace, priority support.",
     "capabilities": [
       "voice",
       "text",
@@ -1895,7 +1895,7 @@
     "tier": "Personal",
     "accessType": "personal",
     "badge": "Enterprise Writer",
-    "description": "Personal Jasper Pro. Your own account, unlimited words, brand voice training, team collaboration, API access.",
+    "description": "Personal Jasper Pro. Your own account, unrestricted word generation, brand voice training, team collaboration, API access.",
     "capabilities": [
       "text",
       "search",
@@ -1943,7 +1943,7 @@
     "officialUSD": 36,
     "tier": "Personal",
     "accessType": "personal",
-    "description": "Personal Copy.ai Pro. Your own account, unlimited generations, workflow automation, team features, priority support.",
+    "description": "Personal Copy.ai Pro. Your own account, unrestricted generations, workflow automation, team features, priority support.",
     "capabilities": [
       "text",
       "agents",
@@ -1967,7 +1967,7 @@
     "officialUSD": 12,
     "tier": "Shared",
     "accessType": "shared",
-    "description": "Shared Codeium Pro. Unlimited autocomplete, 500+ fast requests/mo, 70+ IDE support. Best free Copilot alternative.",
+    "description": "Shared Codeium Pro. Unrestricted autocomplete, 500+ fast requests/mo, 70+ IDE support. Best free Copilot alternative.",
     "capabilities": [
       "code",
       "agents"
@@ -1991,7 +1991,7 @@
     "tier": "Personal",
     "accessType": "personal",
     "badge": "Dev Favorite",
-    "description": "Personal Codeium Pro. Your own account, unlimited fast requests, all IDE extensions, team admin, API access.",
+    "description": "Personal Codeium Pro. Your own account, unrestricted fast requests, all IDE extensions, team admin, API access.",
     "capabilities": [
       "code",
       "agents"
@@ -2038,7 +2038,7 @@
     "officialUSD": 10,
     "tier": "Personal",
     "accessType": "personal",
-    "description": "Personal Coda AI. Your own workspace, unlimited AI, custom automations, team collaboration, priority support.",
+    "description": "Personal Coda AI. Your own workspace, full AI access, custom automations, team collaboration, priority support.",
     "capabilities": [
       "workspace",
       "text",

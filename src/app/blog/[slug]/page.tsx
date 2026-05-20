@@ -1,5 +1,5 @@
 import { getAllPosts, getPostBySlug } from "@/lib/blog";
-import { buildMetadata } from "@/lib/seo/metadata";
+import { buildBlogMetadata } from "@/lib/seo/metadata";
 import { ArticleJsonLd, BreadcrumbJsonLd } from "@/components/seo/json-ld";
 import type { Metadata } from "next";
 import { ArrowLeft, Clock, Calendar } from "lucide-react";
@@ -19,10 +19,14 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       robots: { index: false, follow: false },
     };
   }
-  return buildMetadata({
+  return buildBlogMetadata({
     title: post.title,
-    description: post.description,
-    canonical: `https://aipremiumshop.com/blog/${post.slug}`,
+    excerpt: post.description,
+    slug: post.slug,
+    
+    authorName: post.authorName,
+    publishedAt: new Date(post.date),
+    updatedAt: new Date(post.date),
   });
 }
 

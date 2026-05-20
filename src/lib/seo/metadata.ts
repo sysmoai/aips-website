@@ -14,10 +14,6 @@ interface PageMetaInput {
   ogImage?: string;
   ogType?: "website" | "article" | "product";
   noindex?: boolean;
-  alternates?: {
-    languages?: Record<string, string>;
-    canonical?: string;
-  };
   publishedAt?: string;
   modifiedAt?: string;
   authors?: string[];
@@ -47,14 +43,13 @@ export function buildMetadata(input: PageMetaInput = {}): Metadata {
     metadataBase: new URL(siteUrl),
     alternates: {
       canonical: canonical,
-      languages: input.alternates?.languages ?? {
+      languages: {
         "en-BD": canonical,
-        "bn-BD": `${canonical}?lang=bn`, // TODO: replace with real bn route when i18n is ready
         "x-default": canonical,
       },
     },
     openGraph: {
-      type: (input.ogType === "product" ? "website" : input.ogType) ?? "website",
+      type: (input.ogType === "article" ? "article" : "website") as "website" | "article",
       locale: "en_US",
       alternateLocale: ["bn_BD"],
       url: canonical,
@@ -78,8 +73,6 @@ export function buildMetadata(input: PageMetaInput = {}): Metadata {
       title,
       description,
       images: [ogImage],
-      // TODO: add creator handle when available
-      // creator: "@aipremiumshop",
     },
     robots: {
       index: !input.noindex,

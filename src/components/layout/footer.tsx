@@ -64,7 +64,7 @@ function FooterLogo() {
         <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
           <img
             src="/icon.png"
-            alt=""
+            alt="AI Premium Shop logo"
             draggable={false}
             decoding="sync"
             className="block select-none"

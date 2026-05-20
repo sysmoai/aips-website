@@ -17,7 +17,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       alternates: {
         languages: {
           "en-BD": `${siteUrl}/`,
-          "bn-BD": `${siteUrl}/bn`,
           "x-default": `${siteUrl}/`,
         },
       },
@@ -30,7 +29,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       alternates: {
         languages: {
           "en-BD": `${siteUrl}/products`,
-          "bn-BD": `${siteUrl}/bn/products`,
           "x-default": `${siteUrl}/products`,
         },
       },
@@ -43,7 +41,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       alternates: {
         languages: {
           "en-BD": `${siteUrl}/blog`,
-          "bn-BD": `${siteUrl}/bn/blog`,
           "x-default": `${siteUrl}/blog`,
         },
       },
@@ -105,8 +102,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${siteUrl}/copilot-vs-cursor`, lastModified: now, changeFrequency: "monthly", priority: 0.75 },
     { url: `${siteUrl}/midjourney-vs-ideogram`, lastModified: now, changeFrequency: "monthly", priority: 0.75 },
     { url: `${siteUrl}/canva-vs-adobe`, lastModified: now, changeFrequency: "monthly", priority: 0.75 },
-    { url: `${siteUrl}/capcut-vs-premiere`, lastModified: now, changeFrequency: "monthly", priority: 0.75 },
-    { url: `${siteUrl}/midjourney-vs-dalle`, lastModified: now, changeFrequency: "monthly", priority: 0.75 },
+    { url: `${siteUrl}/suno-vs-udio`, lastModified: now, changeFrequency: "monthly", priority: 0.75 },
+    { url: `${siteUrl}/midjourney-vs-leonardo`, lastModified: now, changeFrequency: "monthly", priority: 0.75 },
   ];
 
   // Blog posts

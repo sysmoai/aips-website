@@ -62,7 +62,7 @@ export function ProductGrid() {
       {/* Search */}
       <div className="mt-8 relative max-w-md">
         <Search className="absolute left-4 top-1/2 size-4 -translate-y-1/2 text-[#5b6280]" />
-        <input
+        <input aria-label="Search products"
           type="text"
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}

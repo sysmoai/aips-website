@@ -1,6 +1,6 @@
 import { buildMetadata } from "@/lib/seo/metadata";
-import { OrganizationJsonLd, BreadcrumbJsonLd } from "@/components/seo/json-ld";
 import type { Metadata } from "next";
+import { BreadcrumbJsonLd } from "@/components/seo/json-ld";
 import { MessageCircle, MapPin, Mail, Phone, CheckCircle2 } from "lucide-react";
 
 export const metadata: Metadata = buildMetadata({
@@ -18,7 +18,6 @@ export default function AboutPage() {
 
   return (
     <>
-      <OrganizationJsonLd />
       <BreadcrumbJsonLd items={breadcrumbItems} />
 
       <main className="min-h-screen">

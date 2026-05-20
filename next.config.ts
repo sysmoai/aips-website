@@ -171,32 +171,42 @@ const nextConfig: NextConfig = {
       // Legacy or common misspellings
       {
         source: "/chatgpt",
-        destination: "/products/chatgpt-plus",
+        destination: "/products/chatgpt-plus-bangladesh",
         permanent: true,
       },
       {
         source: "/claude",
-        destination: "/products/claude-pro",
+        destination: "/products/claude-pro-bangladesh",
         permanent: true,
       },
       {
         source: "/midjourney",
-        destination: "/products/midjourney",
+        destination: "/products/midjourney-bangladesh",
         permanent: true,
       },
       {
         source: "/canva",
-        destination: "/products/canva-pro",
+        destination: "/products/canva-pro-bangladesh",
         permanent: true,
       },
       {
         source: "/netflix",
-        destination: "/products/netflix-premium",
+        destination: "/products/netflix-premium-bangladesh",
         permanent: true,
       },
       {
         source: "/youtube-premium",
-        destination: "/products/youtube-premium",
+        destination: "/products/youtube-premium-bangladesh",
+        permanent: true,
+      },
+      {
+        source: "/capcut-vs-premiere",
+        destination: "/suno-vs-udio",
+        permanent: true,
+      },
+      {
+        source: "/midjourney-vs-dalle",
+        destination: "/midjourney-vs-leonardo",
         permanent: true,
       },
     ];
