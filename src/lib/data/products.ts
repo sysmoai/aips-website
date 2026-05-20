@@ -27,6 +27,7 @@ export interface LiveProduct {
 
 export interface ProductGroup {
   slug: string;
+  name: string; // Display name, e.g. "Claude Pro" not "Claude"
   brand: string;
   brandSlug: string;
   provider: string;
@@ -83,8 +84,12 @@ export function getProductGroups(): ProductGroup[] {
     const allCapabilities = Array.from(
       new Set(variants.flatMap((v) => v.capabilities))
     );
+    // Extract display name from first variant.
+    // The JSON uses a corrupted em-dash (\u00e2\u20ac\u201d) due to encoding issues.
+    const displayName = first.name.split("\u00e2\u20ac\u201d")[0].trim();
     groups.push({
       slug,
+      name: displayName,
       brand: first.brand,
       brandSlug: first.brandSlug,
       provider: first.provider,

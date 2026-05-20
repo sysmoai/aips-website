@@ -39,7 +39,7 @@ export async function generateMetadata({
   }
 
   return buildProductMetadata({
-    name: group.brand,
+    name: group.name,
     shortDescription: group.description,
     slug: group.slug,
     basePriceBdt: group.minPrice,
@@ -63,16 +63,16 @@ export default async function ProductPage({ params }: ProductPageProps) {
   const breadcrumbItems = [
     { name: "Home", path: "/" },
     { name: "Products", path: "/products" },
-    { name: group.brand, path: `/products/${group.slug}` },
+    { name: group.name, path: `/products/${group.slug}` },
   ];
 
   const faqItems = [
     {
-      question: `How long does ${group.brand} delivery take?`,
+      question: `How long does ${group.name} delivery take?`,
       answer: `Most orders are delivered within ${mainVariant.deliverySLA} after payment confirmation via WhatsApp. During peak hours (7 PM – 11 PM BST), delivery may take slightly longer.`,
     },
     {
-      question: `Is the ${group.brand} account original or shared?`,
+      question: `Is the ${group.name} account original or shared?`,
       answer:
         "We offer both private setup guidance and shared slot options depending on the product. The exact account type is confirmed with you on WhatsApp before payment.",
     },
@@ -96,7 +96,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
   const howToSteps = [
     {
       name: "Choose your plan",
-      text: `Select the ${group.brand} plan that fits your needs on the product page.`,
+      text: `Select the ${group.name} plan that fits your needs on the product page.`,
     },
     {
       name: "Confirm on WhatsApp",
@@ -116,7 +116,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
     <>
       {/* Structured data */}
       <ProductJsonLd
-        name={group.brand}
+        name={group.name}
         description={group.description}
         slug={group.slug}
         priceBdt={group.minPrice}
@@ -125,8 +125,8 @@ export default async function ProductPage({ params }: ProductPageProps) {
       <BreadcrumbJsonLd items={breadcrumbItems} />
       <FAQPageJsonLd items={faqItems} />
       <HowToJsonLd
-        name={`How to activate ${group.brand} in Bangladesh`}
-        description={`Step-by-step guide to buying and activating ${group.brand} in Bangladesh through AI Premium Shop.`}
+        name={`How to activate ${group.name} in Bangladesh`}
+        description={`Step-by-step guide to buying and activating ${group.name} in Bangladesh through AI Premium Shop.`}
         totalTime="PT15M"
         estimatedCost={{ currency: "BDT", value: String(group.minPrice) }}
         steps={howToSteps}
@@ -202,7 +202,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
               {/* CTA */}
               <a
                 href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
-                  `Hi AI Premium Shop, I want ${group.brand}.`
+                  `Hi AI Premium Shop, I want ${group.name}.`
                 )}`}
                 className="mt-8 inline-flex h-12 items-center justify-center gap-2 rounded-lg bg-[#176b4d] px-6 text-sm font-semibold text-white transition hover:bg-[#11543c]"
               >

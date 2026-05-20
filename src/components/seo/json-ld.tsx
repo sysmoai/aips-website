@@ -70,10 +70,7 @@ export function OrganizationJsonLd({
         areaServed: "BD",
       },
     ],
-    sameAs: [
-      // TODO: populate when social profiles are ready
-      ...sameAs,
-    ],
+    sameAs: sameAs.length > 0 ? sameAs : undefined,
   };
 
   return <ScriptLd schema={schema} />;
@@ -86,7 +83,7 @@ interface WebsiteProps {
   searchUrl?: string;
 }
 
-export function WebsiteJsonLd({ searchUrl = `${siteUrl}/search?q={search_term_string}` }: WebsiteProps) {
+export function WebsiteJsonLd({ /* searchUrl = `${siteUrl}/search?q={search_term_string}` */ }: WebsiteProps) {
   const schema = {
     "@context": "https://schema.org",
     "@type": "WebSite",
@@ -98,14 +95,12 @@ export function WebsiteJsonLd({ searchUrl = `${siteUrl}/search?q={search_term_st
     publisher: {
       "@id": `${siteUrl}/#organization`,
     },
-    potentialAction: {
-      "@type": "SearchAction",
-      target: {
-        "@type": "EntryPoint",
-        urlTemplate: searchUrl,
-      },
-      "query-input": "required name=search_term_string",
-    },
+    // SearchAction disabled — no search page exists yet. Re-enable when /search is built.
+    // potentialAction: {
+    //   "@type": "SearchAction",
+    //   target: { "@type": "EntryPoint", urlTemplate: searchUrl },
+    //   "query-input": "required name=search_term_string",
+    // },
   };
 
   return <ScriptLd schema={schema} />;
@@ -165,8 +160,8 @@ export function ProductJsonLd({
   comparePriceBdt,
   availability = "InStock",
   priceValidUntil,
-  ratingValue = 4.8,
-  reviewCount = 124,
+  /* ratingValue = 4.8,
+  reviewCount = 124, */
   brandName = siteName,
   categoryName = "Digital Subscription",
 }: ProductJsonLdProps) {
@@ -182,13 +177,15 @@ export function ProductJsonLd({
       name: brandName,
     },
     category: categoryName,
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: String(ratingValue),
-      bestRating: "5",
-      worstRating: "1",
-      reviewCount: String(reviewCount),
-    },
+    // aggregateRating disabled until real reviews are collected.
+    // Hardcoded ratings risk Google manual review for fake reviews.
+    // aggregateRating: {
+    //   "@type": "AggregateRating",
+    //   ratingValue: String(ratingValue),
+    //   bestRating: "5",
+    //   worstRating: "1",
+    //   reviewCount: String(reviewCount),
+    // },
     offers: {
       "@type": "Offer",
       url: `${siteUrl}/products/${slug}`,
