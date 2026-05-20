@@ -4,7 +4,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://aipremiumshop.com";
 const siteName = "AI Premium Shop";
 const defaultTitle = "Premium AI Subscriptions in Bangladesh | AI Premium Shop";
 const defaultDescription =
-  "Buy ChatGPT Plus, Claude Pro, Perplexity, Midjourney, Canva Pro, Netflix & more in Bangladesh. bKash/Nagad payment. 15-min delivery. WhatsApp support.";
+  "Buy ChatGPT Plus, Claude Pro, Perplexity, Midjourney, Canva Pro, Netflix & more in Bangladesh. bKash/Nagad payment. 5–15 min delivery after payment confirmation. WhatsApp support.";
 const defaultOgImage = `${siteUrl}/og/default.png`;
 
 interface PageMetaInput {
@@ -43,10 +43,6 @@ export function buildMetadata(input: PageMetaInput = {}): Metadata {
     metadataBase: new URL(siteUrl),
     alternates: {
       canonical: canonical,
-      languages: {
-        "en-BD": canonical,
-        "x-default": canonical,
-      },
     },
     openGraph: {
       type: (input.ogType === "article" ? "article" : "website") as "website" | "article",
@@ -88,7 +84,7 @@ export function buildMetadata(input: PageMetaInput = {}): Metadata {
     category: "ecommerce",
     classification: "Digital Subscriptions, AI Tools, Productivity Software, Streaming Services",
     other: {
-      ...(process.env.NEXT_PUBLIC_FB_PIXEL_ID ? { "fb:app_id": process.env.NEXT_PUBLIC_FB_PIXEL_ID } : {}),
+      ...(process.env.NEXT_PUBLIC_FB_APP_ID ? { "fb:app_id": process.env.NEXT_PUBLIC_FB_APP_ID } : {}),
     },
   };
 }
@@ -118,7 +114,6 @@ export function buildProductMetadata(product: {
     description,
     canonical,
     ogImage,
-    ogType: "product",
     keywords: [
       `${product.name} Bangladesh`,
       `${product.name} BD`,

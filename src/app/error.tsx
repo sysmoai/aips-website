@@ -41,7 +41,7 @@ export default function Error({
       <div className="mt-10 text-slate-500 text-sm">
         Need help?{" "}
         <a
-          href="https://wa.me/8801865385348"
+          href={`https://wa.me/${process.env.NEXT_PUBLIC_WA_PRIMARY ?? "8801865385348"}`}
           target="_blank"
           rel="noopener noreferrer"
           className="text-[#25d366] hover:underline"

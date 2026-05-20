@@ -36,7 +36,7 @@ export default function ContactPage() {
       icon: Phone,
       title: "Phone / WhatsApp Call",
       desc: "Voice and WhatsApp calls accepted during business hours (7 AM – 12 AM BST).",
-      action: { label: "+880 1865-385348", href: "tel:+8801865385348", style: "text" as const },
+      action: { label: "+880 1865-385348", href: `tel:+${whatsappNumber}`, style: "text" as const },
     },
     {
       icon: Clock,
@@ -49,7 +49,7 @@ export default function ContactPage() {
   const miniFaq = [
     {
       q: "I paid but haven't received my order. What should I do?",
-      a: "First, check your WhatsApp — we may have sent credentials that were marked as read. If not, message us again with your transaction ID. We guarantee delivery within 2 hours or a full refund.",
+      a: "First, check your WhatsApp — we may have sent credentials that were marked as read. If not, message us again with your transaction ID. We deliver within 2 hours or provide a full refund.",
     },
     {
       q: "Can I get a refund if I change my mind?",

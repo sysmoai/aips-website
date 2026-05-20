@@ -144,7 +144,7 @@ export default function HowToGetChatGPTPlusPage() {
             <h3>Step 4: Receive Your Account</h3>
             <p>
               Send the payment screenshot via WhatsApp. Our team verifies the transaction and delivers
-              your ChatGPT Plus login credentials within <strong>5-30 minutes</strong>.
+              your ChatGPT Plus login credentials within <strong>5–15 minutes</strong>.
             </p>
             <p>
               You will receive:
@@ -181,7 +181,7 @@ export default function HowToGetChatGPTPlusPage() {
             <h2>Can I Renew My ChatGPT Plus?</h2>
             <p>
               Absolutely. We send a renewal reminder 48 hours before expiry. Simply message us on
-              WhatsApp and we process the renewal with the same 15-minute delivery speed.
+              WhatsApp and we process the renewal with the same 5–15 minute delivery speed.
             </p>
           </div>
 

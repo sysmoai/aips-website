@@ -41,7 +41,7 @@ export function OrganizationJsonLd({
       height: 512,
     },
     description:
-      "Bangladesh's trusted store for premium AI subscriptions, design tools, and streaming services. Local payment, WhatsApp support, 15-minute delivery.",
+      "Bangladesh's trusted store for premium AI subscriptions, design tools, and streaming services. Local payment, WhatsApp support, 5–15 minutes after payment confirmation.",
     foundingDate: "2024",
     founders: [
       {
@@ -58,7 +58,7 @@ export function OrganizationJsonLd({
     contactPoint: [
       {
         "@type": "ContactPoint",
-        telephone: "+880-1865-385348",
+        telephone: process.env.NEXT_PUBLIC_WA_PRIMARY ? "+" + process.env.NEXT_PUBLIC_WA_PRIMARY : "+880-1865-385348",
         contactType: "customer support",
         availableLanguage: ["English", "Bengali"],
         areaServed: "BD",

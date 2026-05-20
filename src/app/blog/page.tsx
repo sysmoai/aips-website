@@ -29,7 +29,7 @@ export default function BlogPage() {
               <div className="p-6 flex flex-col flex-1">
                 <p className="text-[0.625rem] font-semibold uppercase tracking-[0.12em] text-[#f4b942]">{post.category}</p>
                 <h2 className="mt-2 text-[1.125rem] font-semibold text-white group-hover:text-[#f4b942] transition">
-                  <Link href={`/blog/${post.slug}`} className="focus-visible:outline-none">
+                  <Link href={`/blog/${post.slug}`}>
                     {post.title}
                   </Link>
                 </h2>

@@ -50,7 +50,7 @@ function getCategoryGradient(category: string): string {
 
 const stats = [
   { value: "10k+", label: "Orders delivered" },
-  { value: "15 min", label: "Avg. delivery" },
+  { value: "5–15 min", label: "Avg. delivery" },
   { value: "24/7", label: "Support" },
   { value: "86+", label: "Products" },
 ];
@@ -89,7 +89,7 @@ const faqItems = [
   },
   {
     q: "Do you offer a warranty?",
-    a: "Yes. Shared slots include a 7-day replacement guarantee if the account stops working. Private setups include 30 days of free activation support.",
+    a: "Yes. Shared slots include a 7-day replacement warranty if the account stops working. Personal Account setups include 30 days of free activation support.",
   },
   {
     q: "Is it safe to buy from AI Premium Shop?",
@@ -171,7 +171,7 @@ export default function Home() {
                     <ChevronRight className="size-4" />
                   </Link>
                   <a href={whatsappUrl} className="btn-secondary">
-                    <MessageCircle className="size-4 text-[#22c55e]" />
+                    <MessageCircle className="size-4 text-[#25d366]" />
                     Chat on WhatsApp
                   </a>
                 </div>
@@ -419,7 +419,7 @@ export default function Home() {
                 <ChevronRight className="size-4" />
               </Link>
               <a href={whatsappUrl} className="btn-secondary">
-                <MessageCircle className="size-4 text-[#22c55e]" />
+                <MessageCircle className="size-4 text-[#25d366]" />
                 Chat on WhatsApp
               </a>
             </div>

@@ -66,7 +66,7 @@ function FooterLogo() {
             src="/icon.png"
             alt="AI Premium Shop logo"
             draggable={false}
-            decoding="sync"
+            decoding="async"
             className="block select-none"
             style={{
               width: `${scale * 100}%`,

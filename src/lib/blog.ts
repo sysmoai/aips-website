@@ -64,7 +64,7 @@ const posts: BlogPost[] = [
     slug: "how-to-get-chatgpt-plus-bangladesh",
     title: "How to Get ChatGPT Plus in Bangladesh — bKash Guide",
     description:
-      "Step-by-step guide to buying ChatGPT Plus in Bangladesh with bKash, Nagad, or Rocket. No foreign credit card needed. 15-minute delivery.",
+      "Step-by-step guide to buying ChatGPT Plus in Bangladesh with bKash, Nagad, or Rocket. No foreign credit card needed. 5–15 minutes after payment confirmation.",
     category: "Tutorial",
     date: "May 20, 2026",
     datePublished: "2026-05-20T00:00:00Z",
@@ -122,7 +122,7 @@ const posts: BlogPost[] = [
     slug: "pay-ai-tools-bkash-bangladesh",
     title: "How to Pay for AI Tools with bKash in Bangladesh",
     description:
-      "Complete guide to buying ChatGPT, Claude, Midjourney, and 86+ AI subscriptions using bKash, Nagad, and Rocket in Bangladesh. No foreign card needed.",
+      "Complete guide to buying ChatGPT, Claude, Midjourney, and 86+ AI subscriptions using bKash, Nagad, and Rocket in Bangladesh. No foreign card needed. 5–15 minutes after payment confirmation.",
     category: "Tutorial",
     date: "May 20, 2026",
     datePublished: "2026-05-20T00:00:00Z",

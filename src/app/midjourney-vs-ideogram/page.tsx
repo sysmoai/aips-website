@@ -6,7 +6,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = buildMetadata({
   title: "Midjourney vs Ideogram in Bangladesh — Best AI Image Generator?",
   description:
-    "Midjourney vs Ideogram for Bangladeshi designers and creators. Compare price, quality, features, and use cases. Buy with bKash/Nagad. 15-min delivery.",
+    "Midjourney vs Ideogram for Bangladeshi designers and creators. Compare price, quality, features, and use cases. Buy with bKash/Nagad. 5–15 min delivery after payment confirmation.",
   canonical: "https://aipremiumshop.com/midjourney-vs-ideogram",
 });
 

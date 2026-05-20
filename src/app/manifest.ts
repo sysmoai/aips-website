@@ -5,7 +5,7 @@ export const dynamic = "force-static";
 export default function manifest(): MetadataRoute.Manifest {
   return {
     name: "AI Premium Shop",
-    short_name: "AIPS",
+    short_name: "AI Premium Shop",
     description: "Buy Premium AI Subscriptions in Bangladesh. ChatGPT Plus, Claude Pro, Midjourney, Canva Pro & 86+ more. Pay with bKash or Nagad.",
     start_url: "/",
     display: "standalone",

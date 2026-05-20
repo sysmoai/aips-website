@@ -7,6 +7,7 @@ import {
   getWhatsappUrl,
 } from "@/lib/data/products";
 import { buildMetadata } from "@/lib/seo/metadata";
+import { BreadcrumbJsonLd } from "@/components/seo/json-ld";
 import type { Metadata } from "next";
 import {
   ChevronRight,
@@ -154,18 +155,26 @@ export default async function CategoryPage({
 
   if (groups.length === 0) notFound();
 
+  const breadcrumbItems = [
+    { name: "Home", path: "/" },
+    { name: "Products", path: "/products" },
+    { name: getCategoryLabel(slug), path: `/category/${slug}` },
+  ];
+
   return (
-    <main className="min-h-screen">
-      {/* Breadcrumb */}
-      <div className="mx-auto max-w-7xl px-5 sm:px-8 pt-8 pb-4">
-        <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-[0.8125rem] text-[#5b6280]">
-          <Link href="/" className="hover:text-white transition">Home</Link>
-          <ChevronRight className="size-3" />
-          <Link href="/products" className="hover:text-white transition">Products</Link>
-          <ChevronRight className="size-3" />
-          <span className="text-white">{getCategoryLabel(slug)}</span>
-        </nav>
-      </div>
+    <>
+      <BreadcrumbJsonLd items={breadcrumbItems} />
+      <main className="min-h-screen">
+        {/* Breadcrumb */}
+        <div className="mx-auto max-w-7xl px-5 sm:px-8 pt-8 pb-4">
+          <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-[0.8125rem] text-[#5b6280]">
+            <Link href="/" className="hover:text-white transition">Home</Link>
+            <ChevronRight className="size-3" />
+            <Link href="/products" className="hover:text-white transition">Products</Link>
+            <ChevronRight className="size-3" />
+            <span className="text-white">{getCategoryLabel(slug)}</span>
+          </nav>
+        </div>
 
       {/* Hero */}
       <section className="mx-auto max-w-7xl px-5 sm:px-8 pb-16">
@@ -340,5 +349,6 @@ export default async function CategoryPage({
         </div>
       </section>
     </main>
+    </>
   );
 }

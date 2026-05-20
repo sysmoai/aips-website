@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X, MessageCircle } from "lucide-react";
@@ -27,8 +27,6 @@ function NavbarLogo() {
   return (
     <div className="flex items-center gap-3">
       <div
-        aria-label="AI Premium Shop"
-        role="img"
         className="relative shrink-0"
         style={{
           width: size,
@@ -53,7 +51,7 @@ function NavbarLogo() {
             src="/icon.png"
             alt="AI Premium Shop logo"
             draggable={false}
-            decoding="sync"
+            decoding="async"
             className="block select-none"
             style={{
               width: `${scale * 100}%`,
@@ -96,7 +94,10 @@ export function Navbar() {
   const pathname = usePathname();
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 20);
+    const onScroll = () => {
+      const isScrolled = window.scrollY > 20;
+      setScrolled((prev) => (prev !== isScrolled ? isScrolled : prev));
+    };
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
@@ -177,6 +178,7 @@ export function Navbar() {
 
           {/* Mobile toggle */}
           <button
+            type="button"
             className="md:hidden p-2 text-slate-300 hover:text-white rounded-lg hover:bg-white/5"
             onClick={() => setMobileOpen((o) => !o)}
             aria-label={mobileOpen ? "Close menu" : "Open menu"}

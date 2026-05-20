@@ -82,7 +82,7 @@ export default function AboutPage() {
               </p>
               <ul className="mt-5 space-y-3">
                 <li className="flex items-center gap-3 text-[0.875rem] text-[#8a91a8]">
-                  <MessageCircle className="size-4 text-[#22c55e]" />
+                  <MessageCircle className="size-4 text-[#25d366]" />
                   <a href={`https://wa.me/${process.env.NEXT_PUBLIC_WA_PRIMARY ?? "8801865385348"}`} target="_blank" rel="noopener noreferrer" className="hover:text-[#f4b942] transition">+880 1865-385348</a>
                 </li>
                 <li className="flex items-center gap-3 text-[0.875rem] text-[#8a91a8]">

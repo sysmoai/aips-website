@@ -37,7 +37,7 @@ export default function BestAIToolsBangladeshPage() {
               Best AI Tools in Bangladesh — Complete Buying Guide
             </h1>
             <p className="mt-4 text-lg leading-7 text-[#8a91a8]">
-              Updated May 2026 · Prices in BDT · bKash/Nagad accepted · 15-minute delivery
+              Updated May 2026 · Prices in BDT · bKash/Nagad accepted · 5–15 minutes after payment confirmation
             </p>
           </header>
 

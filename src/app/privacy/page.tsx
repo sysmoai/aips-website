@@ -71,7 +71,7 @@ export default function PrivacyPage() {
               <h2 className="text-[1.125rem] font-semibold text-white">6. Contact</h2>
               <p className="mt-3">
                 For privacy-related inquiries, contact us via WhatsApp at{" "}
-                <a href="https://wa.me/8801865385348" className="text-[#f4b942] hover:underline">+880 1865-385348</a>
+                <a href={`https://wa.me/${process.env.NEXT_PUBLIC_WA_PRIMARY ?? "8801865385348"}`} className="text-[#f4b942] hover:underline">+880 1865-385348</a>
                 {" or email "}
                 <a href="mailto:hello@aipremiumshop.com" className="text-[#f4b942] hover:underline">hello@aipremiumshop.com</a>.
               </p>

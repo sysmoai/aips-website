@@ -71,8 +71,10 @@ export function ProductGrid() {
         />
         {searchQuery && (
           <button
+            type="button"
             onClick={() => setSearchQuery("")}
             className="absolute right-4 top-1/2 -translate-y-1/2 text-[#5b6280] hover:text-white transition"
+            aria-label="Clear search"
           >
             <X className="size-4" />
           </button>
@@ -82,6 +84,7 @@ export function ProductGrid() {
       {/* Category filters */}
       <div className="mt-5 flex flex-wrap gap-2">
         <button
+          type="button"
           onClick={() => setActiveCategory(null)}
           className={`rounded-lg px-4 py-2 text-[0.75rem] font-semibold transition-all duration-200 ${
             activeCategory === null
@@ -93,6 +96,7 @@ export function ProductGrid() {
         </button>
         {categories.map((cat) => (
           <button
+            type="button"
             key={cat}
             onClick={() => setActiveCategory(activeCategory === cat ? null : cat)}
             className={`rounded-lg px-4 py-2 text-[0.75rem] font-semibold transition-all duration-200 ${
@@ -107,7 +111,7 @@ export function ProductGrid() {
       </div>
 
       {/* Results count */}
-      <p className="mt-5 text-[0.8125rem] text-[#5b6280]">
+      <p className="mt-5 text-[0.8125rem] text-[#5b6280]" aria-live="polite" aria-atomic="true">
         Showing <span className="text-white font-medium">{filtered.length}</span> of{" "}
         <span className="text-white font-medium">{groups.length}</span> products
       </p>
@@ -198,6 +202,7 @@ export function ProductGrid() {
         <div className="mt-16 text-center">
           <p className="text-[1.125rem] text-[#8a91a8]">No products found.</p>
           <button
+            type="button"
             onClick={() => {
               setActiveCategory(null);
               setSearchQuery("");

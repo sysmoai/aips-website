@@ -37,7 +37,7 @@ export default function TermsPage() {
             <section>
               <h2 className="text-[1.125rem] font-semibold text-white">2. Account types</h2>
               <p className="mt-3">
-                We offer both private setup guidance and shared slot access depending on the product.
+                We offer both Personal Account setup guidance and shared slot access depending on the product.
                 The exact account type is confirmed with you on WhatsApp before payment. Shared slot
                 products come with a 7-day warranty.
               </p>
@@ -98,7 +98,7 @@ export default function TermsPage() {
               <h2 className="text-[1.125rem] font-semibold text-white">9. Contact</h2>
               <p className="mt-3">
                 For questions about these terms, contact us via WhatsApp at{" "}
-                <a href="https://wa.me/8801865385348" className="text-[#f4b942] hover:underline">+880 1865-385348</a>
+                <a href={`https://wa.me/${process.env.NEXT_PUBLIC_WA_PRIMARY ?? "8801865385348"}`} className="text-[#f4b942] hover:underline">+880 1865-385348</a>
                 {" or email "}
                 <a href="mailto:hello@aipremiumshop.com" className="text-[#f4b942] hover:underline">hello@aipremiumshop.com</a>.
               </p>
