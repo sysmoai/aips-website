@@ -49,3 +49,7 @@ next-env.d.ts
 /test-results
 *.pem
 secrets/
+dist/
+*.zip
+products-extracted.json
+deploy.sh

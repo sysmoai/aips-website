@@ -1,0 +1,179 @@
+import type { Metadata } from "next";
+
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://aipremiumshop.com";
+const siteName = "AI Premium Shop";
+const defaultTitle = "Premium AI Subscriptions in Bangladesh | AI Premium Shop";
+const defaultDescription =
+  "Buy ChatGPT Plus, Claude Pro, Perplexity, Midjourney, Canva Pro, Netflix & more in Bangladesh. bKash/Nagad payment. 15-min delivery. WhatsApp support.";
+const defaultOgImage = `${siteUrl}/og/default.png`;
+
+interface PageMetaInput {
+  title?: string;
+  description?: string;
+  canonical?: string;
+  ogImage?: string;
+  ogType?: "website" | "article" | "product";
+  noindex?: boolean;
+  alternates?: {
+    languages?: Record<string, string>;
+    canonical?: string;
+  };
+  publishedAt?: string;
+  modifiedAt?: string;
+  authors?: string[];
+  keywords?: string[];
+}
+
+export function buildMetadata(input: PageMetaInput = {}): Metadata {
+  const title = input.title ? `${input.title} | ${siteName}` : defaultTitle;
+  const description = input.description ?? defaultDescription;
+  const ogImage = input.ogImage ?? defaultOgImage;
+  const canonical = input.canonical ?? siteUrl;
+
+  return {
+    title,
+    description,
+    keywords: input.keywords ?? [
+      "AI subscription Bangladesh",
+      "ChatGPT Plus BD",
+      "Claude Pro Bangladesh",
+      "Midjourney BD",
+      "Canva Pro Bangladesh",
+      "buy AI tools BD",
+      "premium subscriptions Bangladesh",
+      "bKash AI subscription",
+      "Nagad payment AI",
+    ],
+    metadataBase: new URL(siteUrl),
+    alternates: {
+      canonical: canonical,
+      languages: input.alternates?.languages ?? {
+        "en-BD": canonical,
+        "bn-BD": `${canonical}?lang=bn`, // TODO: replace with real bn route when i18n is ready
+        "x-default": canonical,
+      },
+    },
+    openGraph: {
+      type: "website",
+      locale: "en_BD",
+      alternateLocale: ["bn_BD"],
+      url: canonical,
+      siteName,
+      title,
+      description,
+      images: [
+        {
+          url: ogImage,
+          width: 1200,
+          height: 630,
+          alt: title,
+        },
+      ],
+      ...(input.publishedAt && { publishedTime: input.publishedAt }),
+      ...(input.modifiedAt && { modifiedTime: input.modifiedAt }),
+      ...(input.authors && { authors: input.authors }),
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: [ogImage],
+      // TODO: add creator handle when available
+      // creator: "@aipremiumshop",
+    },
+    robots: {
+      index: !input.noindex,
+      follow: !input.noindex,
+      nocache: false,
+      googleBot: {
+        index: !input.noindex,
+        follow: !input.noindex,
+        "max-video-preview": -1,
+        "max-image-preview": "large",
+        "max-snippet": -1,
+      },
+    },
+    verification: {
+      // TODO: populate when GSC / Bing verification codes are available
+      // google: "YOUR_GSC_CODE",
+      // bing: "YOUR_BING_CODE",
+    },
+    category: "ecommerce",
+    classification: "Digital Subscriptions, AI Tools, Productivity Software, Streaming Services",
+    other: {
+      "og:price:currency": "BDT",
+      "og:availability": "instock",
+      "fb:app_id": process.env.NEXT_PUBLIC_FB_PIXEL_ID ?? "",
+    },
+  };
+}
+
+export function buildProductMetadata(product: {
+  name: string;
+  shortDescription?: string | null;
+  metaTitle?: string | null;
+  metaDescription?: string | null;
+  slug: string;
+  basePriceBdt: number;
+  heroImageUrl?: string | null;
+  updatedAt?: Date | null;
+}): Metadata {
+  const title =
+    product.metaTitle ??
+    `${product.name} in Bangladesh — Buy at Best Price | AI Premium Shop`;
+  const description =
+    product.metaDescription ??
+    product.shortDescription ??
+    `Buy ${product.name} in Bangladesh. Starting from ৳${product.basePriceBdt.toLocaleString("en-BD")}. bKash/Nagad accepted. 15-min WhatsApp delivery. Trusted by 10,000+ customers.`;
+  const canonical = `${siteUrl}/products/${product.slug}`;
+  const ogImage = product.heroImageUrl ?? defaultOgImage;
+
+  return buildMetadata({
+    title,
+    description,
+    canonical,
+    ogImage,
+    ogType: "product",
+    keywords: [
+      `${product.name} Bangladesh`,
+      `${product.name} BD`,
+      `buy ${product.name} Bangladesh`,
+      `${product.name} price BD`,
+      `${product.name} bKash`,
+      `${product.name} Nagad`,
+    ],
+    modifiedAt: product.updatedAt?.toISOString(),
+  });
+}
+
+export function buildBlogMetadata(post: {
+  title: string;
+  excerpt?: string | null;
+  metaTitle?: string | null;
+  metaDescription?: string | null;
+  slug: string;
+  coverImageUrl?: string | null;
+  authorName: string;
+  publishedAt?: Date | null;
+  updatedAt?: Date | null;
+}): Metadata {
+  const title = post.metaTitle ?? post.title;
+  const description =
+    post.metaDescription ?? post.excerpt ?? `Read ${post.title} on AI Premium Shop.`;
+  const canonical = `${siteUrl}/blog/${post.slug}`;
+  const ogImage = post.coverImageUrl ?? defaultOgImage;
+
+  return buildMetadata({
+    title,
+    description,
+    canonical,
+    ogImage,
+    ogType: "article",
+    keywords: [post.title, "AI Premium Shop", "Bangladesh", "AI subscriptions"],
+    publishedAt: post.publishedAt?.toISOString(),
+    modifiedAt: post.updatedAt?.toISOString(),
+    authors: [post.authorName],
+  });
+}
+
+export { siteUrl, siteName, defaultTitle, defaultDescription };
