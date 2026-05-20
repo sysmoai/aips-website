@@ -54,8 +54,8 @@ export function buildMetadata(input: PageMetaInput = {}): Metadata {
       },
     },
     openGraph: {
-      type: "website",
-      locale: "en_BD",
+      type: (input.ogType === "product" ? "website" : input.ogType) ?? "website",
+      locale: "en_US",
       alternateLocale: ["bn_BD"],
       url: canonical,
       siteName,
@@ -84,7 +84,6 @@ export function buildMetadata(input: PageMetaInput = {}): Metadata {
     robots: {
       index: !input.noindex,
       follow: !input.noindex,
-      nocache: false,
       googleBot: {
         index: !input.noindex,
         follow: !input.noindex,
@@ -93,17 +92,10 @@ export function buildMetadata(input: PageMetaInput = {}): Metadata {
         "max-snippet": -1,
       },
     },
-    verification: {
-      // TODO: populate when GSC / Bing verification codes are available
-      // google: "YOUR_GSC_CODE",
-      // bing: "YOUR_BING_CODE",
-    },
     category: "ecommerce",
     classification: "Digital Subscriptions, AI Tools, Productivity Software, Streaming Services",
     other: {
-      "og:price:currency": "BDT",
-      "og:availability": "instock",
-      "fb:app_id": process.env.NEXT_PUBLIC_FB_PIXEL_ID ?? "",
+      ...(process.env.NEXT_PUBLIC_FB_PIXEL_ID ? { "fb:app_id": process.env.NEXT_PUBLIC_FB_PIXEL_ID } : {}),
     },
   };
 }
@@ -124,11 +116,11 @@ export function buildProductMetadata(product: {
   const description =
     product.metaDescription ??
     product.shortDescription ??
-    `Buy ${product.name} in Bangladesh. Starting from ৳${product.basePriceBdt.toLocaleString("en-BD")}. bKash/Nagad accepted. 15-min WhatsApp delivery. Trusted by 10,000+ customers.`;
+    `Buy ${product.name} in Bangladesh. Starting from ৳${product.basePriceBdt.toLocaleString("en-BD")}. bKash/Nagad accepted. 15-min WhatsApp delivery. 10,000+ orders delivered.`;
   const canonical = `${siteUrl}/products/${product.slug}`;
   const ogImage = product.heroImageUrl ?? defaultOgImage;
 
-  return buildMetadata({
+  const base = buildMetadata({
     title,
     description,
     canonical,
@@ -144,6 +136,16 @@ export function buildProductMetadata(product: {
     ],
     modifiedAt: product.updatedAt?.toISOString(),
   });
+
+  return {
+    ...base,
+    other: {
+      ...base.other,
+      "og:price:currency": "BDT",
+      "og:price:amount": String(product.basePriceBdt),
+      "og:availability": "instock",
+    },
+  };
 }
 
 export function buildBlogMetadata(post: {

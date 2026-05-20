@@ -4,9 +4,9 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = buildBlogMetadata({
-  title: "Best AI Tools in Bangladesh (2026) — Complete Buying Guide",
+  title: "Best AI Tools in Bangladesh — Complete Buying Guide",
   excerpt:
-    "The 15 best AI subscriptions for Bangladeshi students, freelancers, and businesses in 2026. Prices in BDT, bKash payment, and local support.",
+    "The best AI subscriptions for Bangladeshi students, freelancers, and businesses. Prices in BDT, bKash payment, and local support.",
   slug: "best-ai-tools-bangladesh-2026",
   authorName: "EMON HOSSAIN",
   publishedAt: new Date("2026-05-20"),
@@ -16,8 +16,8 @@ export default function BestAIToolsBangladeshPage() {
   return (
     <>
       <ArticleJsonLd
-        title="Best AI Tools in Bangladesh (2026) — Complete Buying Guide"
-        description="The 15 best AI subscriptions for Bangladeshi students, freelancers, and businesses in 2026."
+        title="Best AI Tools in Bangladesh — Complete Buying Guide"
+        description="The best AI subscriptions for Bangladeshi students, freelancers, and businesses in Bangladesh."
         slug="best-ai-tools-bangladesh-2026"
         authorName="EMON HOSSAIN"
         publishedAt="2026-05-20T00:00:00Z"
@@ -30,18 +30,18 @@ export default function BestAIToolsBangladeshPage() {
         ]}
       />
 
-      <main className="min-h-screen bg-[#f7f7f2] text-[#171713]">
+      <main className="min-h-screen  text-white">
         <article className="mx-auto max-w-3xl px-4 py-12 sm:px-6 lg:px-8">
           <header>
-            <h1 className="text-3xl font-semibold leading-tight text-[#141410] sm:text-4xl">
-              Best AI Tools in Bangladesh (2026) — Complete Buying Guide
+            <h1 className="text-3xl font-semibold leading-tight text-white sm:text-4xl">
+              Best AI Tools in Bangladesh — Complete Buying Guide
             </h1>
-            <p className="mt-4 text-lg leading-7 text-[#5c5a4e]">
+            <p className="mt-4 text-lg leading-7 text-[#8a91a8]">
               Updated May 2026 · Prices in BDT · bKash/Nagad accepted · 15-minute delivery
             </p>
           </header>
 
-          <div className="prose prose-lg mt-10 max-w-none text-[#4f4d42] prose-headings:text-[#171713] prose-a:text-[#176b4d]">
+          <div className="prose prose-lg mt-10 max-w-none text-[#8a91a8] prose-headings:text-white prose-a:text-[#f4b942]">
             <p>
               Bangladesh is experiencing an AI revolution. From university students writing assignments
               to freelancers winning Upwork contracts, AI subscriptions have become essential tools.
@@ -155,40 +155,40 @@ export default function BestAIToolsBangladeshPage() {
               <li><strong>Visa/Mastercard</strong> — Local bank cards</li>
             </ul>
             <p>
-              Delivery is via WhatsApp within 5–30 minutes. No foreign credit card required.
+              Delivery is via WhatsApp within 5–15 minutes. No foreign credit card required.
             </p>
 
             <h2>Which AI Tool Should You Buy First?</h2>
             <table className="w-full text-left text-sm mt-4">
               <thead>
-                <tr className="border-b border-[#dfded4]">
+                <tr className="border-b border-white/[0.06]">
                   <th className="py-2 pr-4 font-semibold">User Type</th>
                   <th className="py-2 pr-4 font-semibold">First Purchase</th>
                   <th className="py-2 pr-4 font-semibold">Budget</th>
                 </tr>
               </thead>
               <tbody>
-                <tr className="border-b border-[#e8e7df]">
+                <tr className="border-b border-white/[0.04]">
                   <td className="py-2 pr-4">Student</td>
                   <td className="py-2 pr-4">ChatGPT Plus Starter Shared</td>
                   <td className="py-2 pr-4">৳350/mo</td>
                 </tr>
-                <tr className="border-b border-[#e8e7df]">
+                <tr className="border-b border-white/[0.04]">
                   <td className="py-2 pr-4">Freelancer</td>
                   <td className="py-2 pr-4">ChatGPT Plus Premium Shared</td>
                   <td className="py-2 pr-4">৳950/mo</td>
                 </tr>
-                <tr className="border-b border-[#e8e7df]">
+                <tr className="border-b border-white/[0.04]">
                   <td className="py-2 pr-4">Developer</td>
                   <td className="py-2 pr-4">GitHub Copilot Pro</td>
                   <td className="py-2 pr-4">৳1,495/mo</td>
                 </tr>
-                <tr className="border-b border-[#e8e7df]">
+                <tr className="border-b border-white/[0.04]">
                   <td className="py-2 pr-4">Designer</td>
                   <td className="py-2 pr-4">Midjourney Standard Shared</td>
                   <td className="py-2 pr-4">৳1,199/mo</td>
                 </tr>
-                <tr className="border-b border-[#e8e7df]">
+                <tr className="border-b border-white/[0.04]">
                   <td className="py-2 pr-4">Business</td>
                   <td className="py-2 pr-4">Notion Business Monthly</td>
                   <td className="py-2 pr-4">৳800/mo</td>
@@ -197,14 +197,14 @@ export default function BestAIToolsBangladeshPage() {
             </table>
           </div>
 
-          <div className="mt-12 rounded-lg bg-[#171713] p-8 text-center text-white">
+          <div className="mt-12 rounded-lg glass-card p-8 text-center text-white">
             <h2 className="text-2xl font-semibold">Ready to buy your first AI tool?</h2>
             <p className="mt-2 text-white/70">
-              Browse all 56 AI subscriptions with verified BDT pricing.
+              Browse all 86+ AI subscriptions with verified BDT pricing.
             </p>
             <Link
               href="/products"
-              className="mt-6 inline-flex h-12 items-center justify-center rounded-lg bg-[#176b4d] px-6 text-sm font-semibold transition hover:bg-[#11543c]"
+              className="mt-6 inline-flex h-12 items-center justify-center btn-whatsapp h-12 px-6"
             >
               Browse All AI Tools
             </Link>

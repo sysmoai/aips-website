@@ -31,7 +31,7 @@ export function OrganizationJsonLd({
     "@type": "Organization",
     "@id": `${siteUrl}/#organization`,
     name: siteName,
-    alternateName: "AIPS",
+    // alternateName removed per brand rules — never abbreviate
     url: siteUrl,
     logo: {
       "@type": "ImageObject",
@@ -90,7 +90,7 @@ export function WebsiteJsonLd({ /* searchUrl = `${siteUrl}/search?q={search_term
     "@id": `${siteUrl}/#website`,
     url: siteUrl,
     name: siteName,
-    alternateName: "AIPS",
+    // alternateName removed per brand rules — never abbreviate
     inLanguage: "en-BD",
     publisher: {
       "@id": `${siteUrl}/#organization`,

@@ -4,9 +4,9 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = buildBlogMetadata({
-  title: "How to Get ChatGPT Plus in Bangladesh (2026) — bKash Guide",
+  title: "How to Get ChatGPT Plus in Bangladesh — bKash Guide",
   excerpt:
-    "Step-by-step guide to buying ChatGPT Plus in Bangladesh with bKash, Nagad, or Rocket. No foreign credit card needed. 15-minute delivery.",
+    "Step-by-step guide to buying ChatGPT Plus in Bangladesh with bKash, Nagad, or Rocket. No foreign credit card needed. 5-15 minute delivery.",
   slug: "how-to-get-chatgpt-plus-bangladesh",
   authorName: "EMON HOSSAIN",
   publishedAt: new Date("2026-05-20"),
@@ -16,7 +16,7 @@ export default function HowToGetChatGPTPlusPage() {
   return (
     <>
       <ArticleJsonLd
-        title="How to Get ChatGPT Plus in Bangladesh (2026) — bKash Guide"
+        title="How to Get ChatGPT Plus in Bangladesh — bKash Guide"
         description="Step-by-step guide to buying ChatGPT Plus in Bangladesh with bKash, Nagad, or Rocket."
         slug="how-to-get-chatgpt-plus-bangladesh"
         authorName="EMON HOSSAIN"
@@ -37,22 +37,22 @@ export default function HowToGetChatGPTPlusPage() {
           { name: "Choose your ChatGPT Plus plan", text: "Visit AI Premium Shop and select ChatGPT Plus Starter Shared (৳350), Premium Shared (৳950), or Personal (৳2,990)." },
           { name: "Click Order via WhatsApp", text: "Click the Order button and send the pre-filled message to our support team." },
           { name: "Pay with bKash or Nagad", text: "Send payment via bKash Merchant Pay, Nagad, Rocket, or bank card. Share the transaction screenshot." },
-          { name: "Receive your account", text: "Get your ChatGPT Plus login credentials delivered on WhatsApp within 5-30 minutes." },
+          { name: "Receive your account", text: "Get your ChatGPT Plus login credentials delivered on WhatsApp within 5-15 minutes." },
         ]}
       />
 
-      <main className="min-h-screen bg-[#f7f7f2] text-[#171713]">
+      <main className="min-h-screen  text-white">
         <article className="mx-auto max-w-3xl px-4 py-12 sm:px-6 lg:px-8">
           <header>
-            <h1 className="text-3xl font-semibold leading-tight text-[#141410] sm:text-4xl">
-              How to Get ChatGPT Plus in Bangladesh (2026) — Complete bKash Guide
+            <h1 className="text-3xl font-semibold leading-tight text-white sm:text-4xl">
+              How to Get ChatGPT Plus in Bangladesh — Complete bKash Guide
             </h1>
-            <p className="mt-4 text-lg leading-7 text-[#5c5a4e]">
-              No foreign credit card needed. Pay with bKash, Nagad, or Rocket. Delivery in 15 minutes.
+            <p className="mt-4 text-lg leading-7 text-[#8a91a8]">
+              No foreign credit card needed. Pay with bKash, Nagad, or Rocket. Delivery in 5–15 minutes.
             </p>
           </header>
 
-          <div className="prose prose-lg mt-10 max-w-none text-[#4f4d42] prose-headings:text-[#171713] prose-a:text-[#176b4d]">
+          <div className="prose prose-lg mt-10 max-w-none text-[#8a91a8] prose-headings:text-white prose-a:text-[#f4b942]">
             <p>
               ChatGPT Plus is the most popular AI subscription in Bangladesh. But OpenAI does not
               accept bKash, Nagad, or local Bangladeshi payment methods. This guide shows you exactly
@@ -73,32 +73,32 @@ export default function HowToGetChatGPTPlusPage() {
             <h2>ChatGPT Plus Plans Available in Bangladesh</h2>
             <table className="w-full text-left text-sm mt-4">
               <thead>
-                <tr className="border-b border-[#dfded4]">
+                <tr className="border-b border-white/[0.06]">
                   <th className="py-2 pr-4 font-semibold">Plan</th>
                   <th className="py-2 pr-4 font-semibold">Price (BDT)</th>
                   <th className="py-2 pr-4 font-semibold">Best For</th>
                 </tr>
               </thead>
               <tbody>
-                <tr className="border-b border-[#e8e7df]">
+                <tr className="border-b border-white/[0.04]">
                   <td className="py-2 pr-4">Starter Shared</td>
                   <td className="py-2 pr-4">৳350/mo</td>
                   <td className="py-2 pr-4">Students, light users</td>
                 </tr>
-                <tr className="border-b border-[#e8e7df]">
+                <tr className="border-b border-white/[0.04]">
                   <td className="py-2 pr-4">Premium Shared</td>
                   <td className="py-2 pr-4">৳950/mo</td>
                   <td className="py-2 pr-4">Freelancers, regular users</td>
                 </tr>
-                <tr className="border-b border-[#e8e7df]">
+                <tr className="border-b border-white/[0.04]">
                   <td className="py-2 pr-4">Personal</td>
                   <td className="py-2 pr-4">৳2,990/mo</td>
                   <td className="py-2 pr-4">Power users, professionals</td>
                 </tr>
-                <tr className="border-b border-[#e8e7df]">
+                <tr className="border-b border-white/[0.04]">
                   <td className="py-2 pr-4">Pro Personal</td>
                   <td className="py-2 pr-4">৳29,900/mo</td>
-                  <td className="py-2 pr-4">Enterprise, unlimited usage</td>
+                  <td className="py-2 pr-4">Enterprise, high-volume usage</td>
                 </tr>
               </tbody>
             </table>
@@ -113,7 +113,7 @@ export default function HowToGetChatGPTPlusPage() {
             <ul>
               <li><strong>Starter Shared (৳350):</strong> Budget-friendly. Shared with 4-6 users. Good for students.</li>
               <li><strong>Premium Shared (৳950):</strong> 2-3 users max. Higher stability. Best for freelancers.</li>
-              <li><strong>Personal (৳2,990):</strong> Your own private account. Full GPT-5.4 access. Best for professionals.</li>
+              <li><strong>Personal (৳2,990):</strong> Your own Personal Account. Full GPT-5.4 access. Best for professionals.</li>
             </ul>
 
             <h3>Step 2: Order via WhatsApp</h3>
@@ -163,7 +163,7 @@ export default function HowToGetChatGPTPlusPage() {
               However, availability depends on how many users are online simultaneously.
             </p>
             <p>
-              For guaranteed 24/7 access, choose <strong>Personal</strong> (৳2,990/mo) which gives you
+              For dedicated 24/7 access, choose <strong>Personal Account</strong> (৳2,990/mo) which gives you
               a dedicated account.
             </p>
 
@@ -185,14 +185,14 @@ export default function HowToGetChatGPTPlusPage() {
             </p>
           </div>
 
-          <div className="mt-12 rounded-lg bg-[#171713] p-8 text-center text-white">
+          <div className="mt-12 rounded-lg glass-card p-8 text-center text-white">
             <h2 className="text-2xl font-semibold">Ready to get ChatGPT Plus?</h2>
             <p className="mt-2 text-white/70">
               Starting from ৳350/mo with bKash payment and instant delivery.
             </p>
             <Link
               href="/products/chatgpt-plus-bangladesh"
-              className="mt-6 inline-flex h-12 items-center justify-center rounded-lg bg-[#10a37f] px-6 text-sm font-semibold transition hover:bg-[#0e8c6d]"
+              className="mt-6 inline-flex h-12 items-center justify-center btn-primary h-12 px-6"
             >
               Buy ChatGPT Plus Now
             </Link>

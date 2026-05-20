@@ -1,13 +1,24 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { OrganizationJsonLd, WebsiteJsonLd } from "@/components/seo/json-ld";
 import { siteUrl, buildMetadata } from "@/lib/seo/metadata";
+import { Navbar } from "@/components/layout/navbar";
+import { Footer } from "@/components/layout/footer";
+import { ScrollToTop } from "@/components/layout/scroll-to-top";
+import { StickyWhatsApp } from "@/components/layout/sticky-whatsapp";
 
 const inter = Inter({
   variable: "--font-sans",
   subsets: ["latin"],
 });
+
+export const viewport: Viewport = {
+  themeColor: "#0a0e27",
+  colorScheme: "dark",
+  width: "device-width",
+  initialScale: 1,
+};
 
 export const metadata: Metadata = buildMetadata({
   title: "Premium AI Subscriptions in Bangladesh",
@@ -23,7 +34,7 @@ export default function RootLayout({
     <html
       lang="en"
       dir="ltr"
-      className={`${inter.variable} h-full antialiased`}
+      className={`${inter.variable} h-full antialiased dark`}
     >
       <head>
         <OrganizationJsonLd />
@@ -31,10 +42,14 @@ export default function RootLayout({
         <link rel="llms-txt" href="/llms.txt" type="text/plain" />
         <link rel="preconnect" href={siteUrl} />
         <link rel="dns-prefetch" href={siteUrl} />
-        {/* TODO: Add preconnect to Supabase, media CDN, and analytics when domains are known */}
-        {/* <link rel="preconnect" href="https://your-supabase-project.supabase.co" /> */}
       </head>
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col bg-[#0a0e27] text-white">
+        <Navbar />
+        <div className="flex-1 pt-[4.5rem]">{children}</div>
+        <Footer />
+        <StickyWhatsApp />
+        <ScrollToTop />
+      </body>
     </html>
   );
 }

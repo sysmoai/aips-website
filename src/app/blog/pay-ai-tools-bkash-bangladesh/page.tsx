@@ -2,11 +2,12 @@ import { buildBlogMetadata } from "@/lib/seo/metadata";
 import { ArticleJsonLd, BreadcrumbJsonLd, FAQPageJsonLd } from "@/components/seo/json-ld";
 import Link from "next/link";
 import type { Metadata } from "next";
+import { ChevronRight } from "lucide-react";
 
 export const metadata: Metadata = buildBlogMetadata({
-  title: "How to Pay for AI Tools with bKash in Bangladesh (2026)",
+  title: "How to Pay for AI Tools with bKash in Bangladesh",
   excerpt:
-    "Complete guide to buying ChatGPT, Claude, Midjourney, and 50+ AI subscriptions using bKash, Nagad, and Rocket in Bangladesh. No foreign card needed.",
+    "Complete guide to buying ChatGPT, Claude, Midjourney, and 86+ AI subscriptions using bKash, Nagad, and Rocket in Bangladesh. No foreign card needed.",
   slug: "pay-ai-tools-bkash-bangladesh",
   authorName: "EMON HOSSAIN",
   publishedAt: new Date("2026-05-20"),
@@ -16,7 +17,7 @@ const faqItems = [
   {
     question: "Can I pay for ChatGPT Plus with bKash in Bangladesh?",
     answer:
-      "Yes. AI Premium Shop accepts bKash Merchant Pay for ChatGPT Plus, Claude Pro, Midjourney, and all 56 AI subscriptions. No foreign credit card is required.",
+      "Yes. AI Premium Shop accepts bKash Merchant Pay for ChatGPT Plus, Claude Pro, Midjourney, and all 86+ AI subscriptions. No foreign credit card is required.",
   },
   {
     question: "Is it safe to buy AI subscriptions through a reseller?",
@@ -34,7 +35,7 @@ export default function PayAIToolsBkashPage() {
   return (
     <>
       <ArticleJsonLd
-        title="How to Pay for AI Tools with bKash in Bangladesh (2026)"
+        title="How to Pay for AI Tools with bKash in Bangladesh"
         description="Complete guide to buying AI subscriptions using bKash, Nagad, and Rocket in Bangladesh."
         slug="pay-ai-tools-bkash-bangladesh"
         authorName="EMON HOSSAIN"
@@ -49,18 +50,21 @@ export default function PayAIToolsBkashPage() {
       />
       <FAQPageJsonLd items={faqItems} />
 
-      <main className="min-h-screen bg-[#f7f7f2] text-[#171713]">
+      <main className="min-h-screen  text-white">
         <article className="mx-auto max-w-3xl px-4 py-12 sm:px-6 lg:px-8">
           <header>
-            <h1 className="text-3xl font-semibold leading-tight text-[#141410] sm:text-4xl">
-              How to Pay for AI Tools with bKash in Bangladesh (2026)
+            <h1 className="text-3xl font-semibold leading-tight text-white sm:text-4xl">
+              How to Pay for AI Tools with bKash in Bangladesh
             </h1>
-            <p className="mt-4 text-lg leading-7 text-[#5c5a4e]">
-              Buy ChatGPT, Claude, Midjourney, and 50+ AI subscriptions without a foreign credit card.
+            <p className="mt-4 text-lg leading-7 text-[#8a91a8]">
+              Buy ChatGPT, Claude, Midjourney, and 86+ AI subscriptions without a foreign credit card.
+            </p>
+            <p className="mt-2 text-sm text-[#5b6280]">
+              Published <time dateTime="2026-05-20">20 May 2026</time>
             </p>
           </header>
 
-          <div className="prose prose-lg mt-10 max-w-none text-[#4f4d42] prose-headings:text-[#171713] prose-a:text-[#176b4d]">
+          <div className="prose prose-lg mt-10 max-w-none text-[#8a91a8] prose-headings:text-white prose-a:text-[#f4b942]">
             <p>
               Most AI companies — OpenAI, Anthropic, Google, Midjourney — require international
               credit cards that most Bangladeshi users don&apos;t have. This guide shows you how to
@@ -122,7 +126,7 @@ export default function PayAIToolsBkashPage() {
 
             <h3>Step 1: Choose Your AI Tool</h3>
             <p>
-              Browse <Link href="/products">all 56 AI subscriptions</Link> and select the one
+              Browse <Link href="/products">all 86+ AI subscriptions</Link> and select the one
               that fits your needs. Popular choices:
             </p>
             <ul>
@@ -182,38 +186,38 @@ export default function PayAIToolsBkashPage() {
 
             <h2>What AI Tools Can You Buy?</h2>
             <p>
-              AI Premium Shop sells 56 premium subscriptions across 8 categories:
+              AI Premium Shop sells 86+ premium subscriptions across 8 categories:
             </p>
             <table className="w-full text-left text-sm mt-4">
               <thead>
-                <tr className="border-b border-[#dfded4]">
+                <tr className="border-b border-white/[0.06]">
                   <th className="py-2 pr-4 font-semibold">Category</th>
                   <th className="py-2 pr-4 font-semibold">Tools</th>
                   <th className="py-2 pr-4 font-semibold">Price Range</th>
                 </tr>
               </thead>
               <tbody>
-                <tr className="border-b border-[#e8e7df]">
+                <tr className="border-b border-white/[0.04]">
                   <td className="py-2 pr-4">AI Assistants</td>
                   <td className="py-2 pr-4">ChatGPT, Claude, Gemini, Perplexity</td>
                   <td className="py-2 pr-4">৳350 – ৳29,900</td>
                 </tr>
-                <tr className="border-b border-[#e8e7df]">
+                <tr className="border-b border-white/[0.04]">
                   <td className="py-2 pr-4">AI Code</td>
                   <td className="py-2 pr-4">Copilot, Cursor, v0.dev, Replit</td>
                   <td className="py-2 pr-4">৳500 – ৳8,970</td>
                 </tr>
-                <tr className="border-b border-[#e8e7df]">
+                <tr className="border-b border-white/[0.04]">
                   <td className="py-2 pr-4">AI Image</td>
                   <td className="py-2 pr-4">Midjourney, Ideogram, Leonardo</td>
                   <td className="py-2 pr-4">৳599 – ৳17,940</td>
                 </tr>
-                <tr className="border-b border-[#e8e7df]">
+                <tr className="border-b border-white/[0.04]">
                   <td className="py-2 pr-4">AI Video</td>
                   <td className="py-2 pr-4">Runway, HeyGen</td>
                   <td className="py-2 pr-4">৳1,499 – ৳11,362</td>
                 </tr>
-                <tr className="border-b border-[#e8e7df]">
+                <tr className="border-b border-white/[0.04]">
                   <td className="py-2 pr-4">AI Voice</td>
                   <td className="py-2 pr-4">ElevenLabs, Suno, Udio</td>
                   <td className="py-2 pr-4">৳499 – ৳14,802</td>
@@ -222,14 +226,34 @@ export default function PayAIToolsBkashPage() {
             </table>
           </div>
 
-          <div className="mt-12 rounded-lg bg-[#171713] p-8 text-center text-white">
+          <section className="mt-12">
+            <h2 className="text-2xl font-semibold text-white">Frequently asked questions</h2>
+            <div className="mt-6 space-y-3">
+              {faqItems.map((item, i) => (
+                <details
+                  key={i}
+                  className="group rounded-xl border border-white/[0.06] bg-white/[0.02] overflow-hidden transition-colors open:border-[#f4b942]/15"
+                >
+                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 px-5 py-4">
+                    <span className="text-[0.9375rem] font-medium text-white">{item.question}</span>
+                    <ChevronRight className="size-4 text-[#5b6280] transition-transform duration-300 group-open:rotate-90" />
+                  </summary>
+                  <div className="border-t border-white/[0.04] px-5 pb-4 pt-3">
+                    <p className="text-[0.875rem] leading-relaxed text-[#8a91a8]">{item.answer}</p>
+                  </div>
+                </details>
+              ))}
+            </div>
+          </section>
+
+          <div className="mt-12 rounded-lg glass-card p-8 text-center text-white">
             <h2 className="text-2xl font-semibold">Start buying AI tools with bKash today</h2>
             <p className="mt-2 text-white/70">
-              56 subscriptions available. Delivery in 15 minutes.
+              86+ subscriptions available. Delivery in 5–15 minutes.
             </p>
             <Link
               href="/products"
-              className="mt-6 inline-flex h-12 items-center justify-center rounded-lg bg-[#176b4d] px-6 text-sm font-semibold transition hover:bg-[#11543c]"
+              className="mt-6 inline-flex h-12 items-center justify-center btn-whatsapp h-12 px-6"
             >
               Browse All AI Tools
             </Link>

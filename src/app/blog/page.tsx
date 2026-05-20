@@ -1,121 +1,48 @@
-import { desc, eq } from "drizzle-orm";
-import { db } from "@/db";
-import { blogPosts } from "@/db/schema";
+import { getAllPosts } from "@/lib/blog";
 import { buildMetadata } from "@/lib/seo/metadata";
-import { BreadcrumbJsonLd } from "@/components/seo/json-ld";
-import { staticBlogPosts } from "@/lib/data/blog-posts";
 import type { Metadata } from "next";
+import Link from "next/link";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Blog — AI Tools, Subscriptions & Tech Tips for Bangladesh",
+  title: "Blog — AI & Premium Tools Tips | AI Premium Shop Bangladesh",
   description:
-    "Guides, comparisons, and buying advice for ChatGPT Plus, Claude Pro, Midjourney, Canva Pro, and more in Bangladesh. Written by AI Premium Shop.",
+    "Read expert guides on ChatGPT Plus, Midjourney, Claude, Canva Pro, CapCut Pro, and more. Stay updated on AI tools for Bangladeshi users.",
   canonical: "https://aipremiumshop.com/blog",
-  ogType: "website",
 });
 
-async function getPublishedPosts() {
-  try {
-    const dbPosts = await db
-      .select()
-      .from(blogPosts)
-      .where(eq(blogPosts.status, "published"))
-      .orderBy(desc(blogPosts.publishedAt));
-    return dbPosts;
-  } catch {
-    return [];
-  }
-}
-
-export default async function BlogIndexPage() {
-  const dbPosts = await getPublishedPosts();
-
-  // Merge static posts (always shown) with any DB posts
-  const allPosts =
-    dbPosts.length > 0
-      ? [
-          ...staticBlogPosts,
-          ...dbPosts
-            .filter((p) => !staticBlogPosts.some((s) => s.slug === p.slug))
-            .map((p) => ({
-              id: p.id,
-              slug: p.slug,
-              title: p.title,
-              excerpt: p.excerpt ?? "",
-              coverImageUrl: p.coverImageUrl ?? undefined,
-              authorName: p.authorName,
-              publishedAt: p.publishedAt?.toISOString() ?? new Date().toISOString(),
-            })),
-        ]
-      : staticBlogPosts;
-
-  const breadcrumbItems = [
-    { name: "Home", path: "/" },
-    { name: "Blog", path: "/blog" },
-  ];
+export default function BlogPage() {
+  const posts = getAllPosts();
 
   return (
-    <>
-      <BreadcrumbJsonLd items={breadcrumbItems} />
+    <main className="min-h-screen">
+      <section className="mx-auto max-w-7xl px-5 sm:px-8 py-12">
+        <p className="text-[0.6875rem] font-semibold uppercase tracking-[0.15em] text-[#f4b942]">Blog</p>
+        <h1 className="mt-3 text-4xl sm:text-5xl font-bold tracking-tight">AI & Premium Tools Guides</h1>
+        <p className="mt-4 text-[1rem] leading-relaxed text-[#8a91a8] max-w-2xl">
+          Expert guides and honest reviews for Bangladeshi creators, developers, and professionals.
+        </p>
 
-      <main className="min-h-screen bg-[#f7f7f2] text-[#171713]">
-        <section className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
-          <div className="max-w-2xl">
-            <h1 className="text-4xl font-semibold leading-tight text-[#141410] sm:text-5xl">
-              AI Premium Shop Blog
-            </h1>
-            <p className="mt-4 text-lg leading-7 text-[#5c5a4e]">
-              Buying guides, tool comparisons, and Bangladesh-specific tips for AI subscriptions,
-              design software, streaming services, and productivity apps.
-            </p>
-          </div>
-
-          <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {allPosts.map((post) => (
-              <article
-                key={post.id}
-                className="group rounded-lg border border-[#dfded4] bg-white p-5 transition hover:shadow-lg"
-              >
-                <a href={`/blog/${post.slug}`} className="block">
-                  {post.coverImageUrl && (
-                    <div className="relative aspect-[16/9] overflow-hidden rounded-md bg-[#e8e7df]">
-                      <img
-                        src={post.coverImageUrl}
-                        alt={`Cover for ${post.title}`}
-                        className="h-full w-full object-cover transition group-hover:scale-105"
-                        width={400}
-                        height={225}
-                        loading="lazy"
-                      />
-                    </div>
-                  )}
-                  <div className="mt-4">
-                    <h2 className="text-xl font-semibold text-[#171713] group-hover:text-[#176b4d]">
-                      {post.title}
-                    </h2>
-                    {post.excerpt && (
-                      <p className="mt-2 text-sm text-[#666454] line-clamp-3">
-                        {post.excerpt}
-                      </p>
-                    )}
-                    <div className="mt-3 flex items-center gap-2 text-xs text-[#666454]">
-                      <span>{post.authorName}</span>
-                      <span>·</span>
-                      <time dateTime={post.publishedAt}>
-                        {new Date(post.publishedAt).toLocaleDateString("en-BD", {
-                          year: "numeric",
-                          month: "short",
-                          day: "numeric",
-                        })}
-                      </time>
-                    </div>
-                  </div>
-                </a>
-              </article>
-            ))}
-          </div>
-        </section>
-      </main>
-    </>
+        <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          {posts.map((post) => (
+            <article key={post.slug} className="glass-card rounded-2xl overflow-hidden group flex flex-col">
+              <div className={`h-1 bg-gradient-to-r from-[#f4b942]/40 to-transparent`} />
+              <div className="p-6 flex flex-col flex-1">
+                <p className="text-[0.625rem] font-semibold uppercase tracking-[0.12em] text-[#f4b942]">{post.category}</p>
+                <h2 className="mt-2 text-[1.125rem] font-semibold text-white group-hover:text-[#f4b942] transition">
+                  <Link href={`/blog/${post.slug}`} className="focus-visible:outline-none">
+                    {post.title}
+                  </Link>
+                </h2>
+                <p className="mt-2 text-[0.8125rem] text-[#5b6280] line-clamp-3">{post.description}</p>
+                <div className="mt-auto pt-4 flex items-center justify-between text-[0.625rem] text-[#5b6280]">
+                  <span>{post.date}</span>
+                  <span>{post.readTime}</span>
+                </div>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+    </main>
   );
 }

@@ -4,7 +4,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = buildMetadata({
-  title: "ChatGPT vs Gemini Advanced in Bangladesh (2026) — Best Google AI?",
+  title: "ChatGPT vs Gemini Advanced in Bangladesh — Best Google AI?",
   description:
     "ChatGPT Plus vs Gemini Advanced for Bangladeshi users. Compare BDT pricing, features, Bangla support, and Google integration. Buy with bKash/Nagad.",
   canonical: "https://aipremiumshop.com/chatgpt-vs-gemini",
@@ -48,18 +48,18 @@ export default function ChatGPTVsGeminiPage() {
           { name: "ChatGPT vs Gemini", path: "/chatgpt-vs-gemini" },
         ]}
       />
-      <main className="min-h-screen bg-[#f7f7f2] text-[#171713]">
+      <main className="min-h-screen  text-white">
         <article className="mx-auto max-w-4xl px-4 py-12 sm:px-6 lg:px-8">
-          <h1 className="text-4xl font-semibold leading-tight text-[#141410] sm:text-5xl">
-            ChatGPT vs Gemini Advanced in Bangladesh (2026)
+          <h1 className="text-4xl font-semibold leading-tight text-white sm:text-5xl">
+            ChatGPT vs Gemini Advanced in Bangladesh
           </h1>
-          <p className="mt-4 text-lg leading-7 text-[#5c5a4e]">
+          <p className="mt-4 text-lg leading-7 text-[#8a91a8]">
             OpenAI vs Google AI for Bangladesh. Prices in BDT. Payment via bKash/Nagad.
           </p>
 
-          <div className="mt-8 rounded-lg border border-[#d7d5c9] bg-white p-6">
-            <h2 className="text-lg font-semibold text-[#171713]">Quick Answer</h2>
-            <p className="mt-2 text-[#4f4d42]">
+          <div className="mt-8 rounded-lg border border-white/[0.06] glass-card p-6">
+            <h2 className="text-lg font-semibold text-white">Quick Answer</h2>
+            <p className="mt-2 text-[#8a91a8]">
               <strong>Choose ChatGPT Plus</strong> (৳350–৳2,990/mo) for the best all-rounder,
               superior coding, and DALL-E image generation. <strong>Choose Gemini Advanced</strong>
               (৳500/mo) if you live in the Google ecosystem (Gmail, Docs, Drive) and want
@@ -70,41 +70,41 @@ export default function ChatGPTVsGeminiPage() {
           <div className="mt-10 overflow-x-auto">
             <table className="w-full text-left text-sm">
               <thead>
-                <tr className="border-b border-[#dfded4]">
-                  <th className="py-3 pr-4 font-semibold text-[#171713]">Feature</th>
-                  <th className="py-3 pr-4 font-semibold text-[#171713]">ChatGPT Plus</th>
-                  <th className="py-3 pr-4 font-semibold text-[#171713]">Gemini Advanced</th>
+                <tr className="border-b border-white/[0.06]">
+                  <th className="py-3 pr-4 font-semibold text-white">Feature</th>
+                  <th className="py-3 pr-4 font-semibold text-white">ChatGPT Plus</th>
+                  <th className="py-3 pr-4 font-semibold text-white">Gemini Advanced</th>
                 </tr>
               </thead>
-              <tbody className="text-[#4f4d42]">
-                <tr className="border-b border-[#e8e7df]">
+              <tbody className="text-[#8a91a8]">
+                <tr className="border-b border-white/[0.04]">
                   <td className="py-3 pr-4 font-medium">Price (BD)</td>
                   <td className="py-3 pr-4">৳350 – ৳2,990/mo</td>
                   <td className="py-3 pr-4">৳500/mo</td>
                 </tr>
-                <tr className="border-b border-[#e8e7df]">
+                <tr className="border-b border-white/[0.04]">
                   <td className="py-3 pr-4 font-medium">Context Window</td>
                   <td className="py-3 pr-4">128K tokens</td>
                   <td className="py-3 pr-4">1M tokens (industry leading)</td>
                 </tr>
-                <tr className="border-b border-[#e8e7df]">
+                <tr className="border-b border-white/[0.04]">
                   <td className="py-3 pr-4 font-medium">Google Integration</td>
                   <td className="py-3 pr-4">❌ None</td>
                   <td className="py-3 pr-4">✅ Gmail, Docs, Drive, Maps</td>
                 </tr>
-                <tr className="border-b border-[#e8e7df]">
+                <tr className="border-b border-white/[0.04]">
                   <td className="py-3 pr-4 font-medium">Image Generation</td>
                   <td className="py-3 pr-4">✅ DALL-E (excellent)</td>
                   <td className="py-3 pr-4">✅ Imagen (good)</td>
                 </tr>
-                <tr className="border-b border-[#e8e7df]">
+                <tr className="border-b border-white/[0.04]">
                   <td className="py-3 pr-4 font-medium">Bangla Support</td>
                   <td className="py-3 pr-4">✅ Excellent</td>
                   <td className="py-3 pr-4">✅ Good</td>
                 </tr>
-                <tr className="border-b border-[#e8e7df]">
+                <tr className="border-b border-white/[0.04]">
                   <td className="py-3 pr-4 font-medium">Video Analysis</td>
-                  <td className="py-3 pr-4">❌ No</td>
+                  <td className="py-3 pr-4">✅ Yes (GPT-4o vision)</td>
                   <td className="py-3 pr-4">✅ Up to 1 hour of video</td>
                 </tr>
               </tbody>
@@ -112,22 +112,22 @@ export default function ChatGPTVsGeminiPage() {
           </div>
 
           <div className="mt-8 grid gap-6 md:grid-cols-2">
-            <div className="rounded-lg border border-[#dfded4] bg-white p-6">
-              <h3 className="text-xl font-semibold text-[#171713]">ChatGPT Plus</h3>
-              <p className="mt-2 text-2xl font-bold text-[#171713]">৳350/mo</p>
+            <div className="rounded-lg border border-white/[0.06] glass-card p-6">
+              <h3 className="text-xl font-semibold text-white">ChatGPT Plus</h3>
+              <p className="mt-2 text-2xl font-bold text-white">৳350/mo</p>
               <Link
                 href="/products/chatgpt-plus-bangladesh"
-                className="mt-4 inline-flex h-10 items-center justify-center rounded-lg bg-[#10a37f] px-4 text-sm font-semibold text-white"
+                className="mt-4 inline-flex h-10 items-center justify-center btn-primary h-10 px-4 text-[0.8125rem]"
               >
                 View ChatGPT Plans
               </Link>
             </div>
-            <div className="rounded-lg border border-[#dfded4] bg-white p-6">
-              <h3 className="text-xl font-semibold text-[#171713]">Gemini Advanced</h3>
-              <p className="mt-2 text-2xl font-bold text-[#171713]">৳500/mo</p>
+            <div className="rounded-lg border border-white/[0.06] glass-card p-6">
+              <h3 className="text-xl font-semibold text-white">Gemini Advanced</h3>
+              <p className="mt-2 text-2xl font-bold text-white">৳500/mo</p>
               <Link
                 href="/products/gemini-advanced-bangladesh"
-                className="mt-4 inline-flex h-10 items-center justify-center rounded-lg bg-[#4285f4] px-4 text-sm font-semibold text-white"
+                className="mt-4 inline-flex h-10 items-center justify-center btn-primary h-10 px-4 text-[0.8125rem]"
               >
                 View Gemini Plans
               </Link>
@@ -135,15 +135,15 @@ export default function ChatGPTVsGeminiPage() {
           </div>
 
           <section className="mt-12">
-            <h2 className="text-2xl font-semibold text-[#141410]">Frequently Asked Questions</h2>
+            <h2 className="text-2xl font-semibold text-white">Frequently Asked Questions</h2>
             <dl className="mt-6 space-y-4">
               {faqItems.map((item, i) => (
                 <div
                   key={i}
-                  className="rounded-lg border border-[#dfded4] bg-white p-6 transition hover:shadow-sm"
+                  className="rounded-lg border border-white/[0.06] glass-card p-6 transition hover:border-[#f4b942]/20"
                 >
-                  <dt className="text-lg font-semibold text-[#171713]">{item.question}</dt>
-                  <dd className="mt-2 leading-7 text-[#4f4d42]">{item.answer}</dd>
+                  <dt className="text-lg font-semibold text-white">{item.question}</dt>
+                  <dd className="mt-2 leading-7 text-[#8a91a8]">{item.answer}</dd>
                 </div>
               ))}
             </dl>

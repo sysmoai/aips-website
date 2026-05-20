@@ -1,7 +1,7 @@
 export const dynamic = "force-static";
 
 import type { MetadataRoute } from "next";
-import { getProductGroups } from "@/lib/data/products";
+import { getProductGroups, getCategories } from "@/lib/data/products";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://aipremiumshop.com";
@@ -89,12 +89,24 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.85,
   }));
 
+  // Category pages
+  const categories = getCategories();
+  const categoryEntries: MetadataRoute.Sitemap = categories.map((slug) => ({
+    url: `${siteUrl}/category/${slug}`,
+    lastModified: now,
+    changeFrequency: "weekly",
+    priority: 0.8,
+  }));
+
   // Comparison pages
   const comparisonEntries: MetadataRoute.Sitemap = [
     { url: `${siteUrl}/chatgpt-vs-claude`, lastModified: now, changeFrequency: "monthly", priority: 0.75 },
     { url: `${siteUrl}/chatgpt-vs-gemini`, lastModified: now, changeFrequency: "monthly", priority: 0.75 },
     { url: `${siteUrl}/copilot-vs-cursor`, lastModified: now, changeFrequency: "monthly", priority: 0.75 },
     { url: `${siteUrl}/midjourney-vs-ideogram`, lastModified: now, changeFrequency: "monthly", priority: 0.75 },
+    { url: `${siteUrl}/canva-vs-adobe`, lastModified: now, changeFrequency: "monthly", priority: 0.75 },
+    { url: `${siteUrl}/capcut-vs-premiere`, lastModified: now, changeFrequency: "monthly", priority: 0.75 },
+    { url: `${siteUrl}/midjourney-vs-dalle`, lastModified: now, changeFrequency: "monthly", priority: 0.75 },
   ];
 
   // Blog posts
@@ -104,5 +116,5 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${siteUrl}/blog/pay-ai-tools-bkash-bangladesh`, lastModified: now, changeFrequency: "monthly", priority: 0.75 },
   ];
 
-  return [...staticPages, ...productEntries, ...comparisonEntries, ...blogEntries];
+  return [...staticPages, ...categoryEntries, ...productEntries, ...comparisonEntries, ...blogEntries];
 }

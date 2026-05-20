@@ -4,7 +4,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Midjourney vs Ideogram in Bangladesh (2026) — Best AI Image Generator?",
+  title: "Midjourney vs Ideogram in Bangladesh — Best AI Image Generator?",
   description:
     "Midjourney vs Ideogram for Bangladeshi designers and creators. Compare price, quality, features, and use cases. Buy with bKash/Nagad. 15-min delivery.",
   canonical: "https://aipremiumshop.com/midjourney-vs-ideogram",
@@ -26,6 +26,16 @@ const faqItems = [
     answer:
       "Yes, both tools allow commercial use. Midjourney Personal plans give you full commercial rights. Ideogram Pro also permits commercial usage. Many Bangladeshi freelancers on Fiverr and Upwork use these tools for client projects.",
   },
+  {
+    question: "Does Midjourney still require Discord?",
+    answer:
+      "Midjourney now has a full web app at midjourney.com where you can generate images without Discord. However, some shared plan setups may still use Discord for access. Personal Accounts are set up directly through the web app.",
+  },
+  {
+    question: "Which one is better for social media content in Bangladesh?",
+    answer:
+      "For Instagram and Facebook posts, Midjourney produces more visually stunning and shareable images. For posts that include text overlays, quotes, or branding, Ideogram is the better choice because it renders readable text accurately.",
+  },
 ];
 
 export default function MidjourneyVsIdeogramPage() {
@@ -39,19 +49,19 @@ export default function MidjourneyVsIdeogramPage() {
       />
       <FAQPageJsonLd items={faqItems} />
 
-      <main className="min-h-screen bg-[#f7f7f2] text-[#171713]">
+      <main className="min-h-screen  text-white">
         <article className="mx-auto max-w-4xl px-4 py-12 sm:px-6 lg:px-8">
-          <h1 className="text-4xl font-semibold leading-tight text-[#141410] sm:text-5xl">
-            Midjourney vs Ideogram in Bangladesh (2026)
+          <h1 className="text-4xl font-semibold leading-tight text-white sm:text-5xl">
+            Midjourney vs Ideogram in Bangladesh
           </h1>
-          <p className="mt-4 text-lg leading-7 text-[#5c5a4e]">
+          <p className="mt-4 text-lg leading-7 text-[#8a91a8]">
             For designers, marketers, and content creators in Bangladesh. Prices in BDT.
             Payment via bKash/Nagad.
           </p>
 
-          <div className="mt-8 rounded-lg border border-[#d7d5c9] bg-white p-6">
-            <h2 className="text-lg font-semibold text-[#171713]">Quick Answer</h2>
-            <p className="mt-2 text-[#4f4d42]">
+          <div className="mt-8 rounded-lg border border-white/[0.06] glass-card p-6">
+            <h2 className="text-lg font-semibold text-white">Quick Answer</h2>
+            <p className="mt-2 text-[#8a91a8]">
               <strong>Choose Midjourney</strong> for the highest quality artistic and photorealistic
               images (৳1,199–৳17,940/mo). <strong>Choose Ideogram</strong> if you need text-in-image
               generation, logo design, or typography (৳2,990–৳8,970/mo).
@@ -59,28 +69,28 @@ export default function MidjourneyVsIdeogramPage() {
           </div>
 
           <div className="mt-10 grid gap-6 md:grid-cols-2">
-            <div className="rounded-lg border border-[#dfded4] bg-white p-6">
-              <h3 className="text-xl font-semibold text-[#171713]">Midjourney</h3>
-              <p className="mt-2 text-2xl font-bold text-[#171713]">৳1,199 – ৳17,940/mo</p>
-              <ul className="mt-4 space-y-2 text-[#4f4d42]">
+            <div className="rounded-lg border border-white/[0.06] glass-card p-6">
+              <h3 className="text-xl font-semibold text-white">Midjourney</h3>
+              <p className="mt-2 text-2xl font-bold text-white">৳1,199 – ৳17,940/mo</p>
+              <ul className="mt-4 space-y-2 text-[#8a91a8]">
                 <li>✓ Best-in-class image quality</li>
                 <li>✓ Photorealistic and artistic mastery</li>
                 <li>✓ Strong community and style references</li>
                 <li>✓ Excellent for concept art, fashion, architecture</li>
                 <li>✗ Poor text rendering</li>
-                <li>✗ Discord-only interface (no web app for all tiers)</li>
+                <li>✗ Web app available but shared plans may use Discord</li>
               </ul>
               <Link
                 href="/products/midjourney-bangladesh"
-                className="mt-6 inline-flex h-10 items-center justify-center rounded-lg bg-[#171713] px-4 text-sm font-semibold text-white"
+                className="mt-6 inline-flex h-10 items-center justify-center rounded-lg glass-card px-4 text-sm font-semibold text-white"
               >
                 View Midjourney Plans
               </Link>
             </div>
-            <div className="rounded-lg border border-[#dfded4] bg-white p-6">
-              <h3 className="text-xl font-semibold text-[#171713]">Ideogram</h3>
-              <p className="mt-2 text-2xl font-bold text-[#171713]">৳2,990 – ৳8,970/mo</p>
-              <ul className="mt-4 space-y-2 text-[#4f4d42]">
+            <div className="rounded-lg border border-white/[0.06] glass-card p-6">
+              <h3 className="text-xl font-semibold text-white">Ideogram</h3>
+              <p className="mt-2 text-2xl font-bold text-white">৳2,990 – ৳8,970/mo</p>
+              <ul className="mt-4 space-y-2 text-[#8a91a8]">
                 <li>✓ Best text-in-image generation</li>
                 <li>✓ Excellent for logos and posters</li>
                 <li>✓ Clean web interface</li>
@@ -90,7 +100,7 @@ export default function MidjourneyVsIdeogramPage() {
               </ul>
               <Link
                 href="/products/ideogram-bangladesh"
-                className="mt-6 inline-flex h-10 items-center justify-center rounded-lg bg-[#171713] px-4 text-sm font-semibold text-white"
+                className="mt-6 inline-flex h-10 items-center justify-center rounded-lg glass-card px-4 text-sm font-semibold text-white"
               >
                 View Ideogram Plans
               </Link>
@@ -98,12 +108,12 @@ export default function MidjourneyVsIdeogramPage() {
           </div>
 
           <section className="mt-12">
-            <h2 className="text-2xl font-semibold text-[#171713]">Frequently Asked Questions</h2>
+            <h2 className="text-2xl font-semibold text-white">Frequently Asked Questions</h2>
             <dl className="mt-6 space-y-4">
               {faqItems.map((item, i) => (
-                <div key={i} className="rounded-lg border border-[#dfded4] bg-white p-5">
-                  <dt className="font-semibold text-[#171713]">{item.question}</dt>
-                  <dd className="mt-2 text-[#4f4d42] leading-7">{item.answer}</dd>
+                <div key={i} className="rounded-lg border border-white/[0.06] glass-card p-5">
+                  <dt className="font-semibold text-white">{item.question}</dt>
+                  <dd className="mt-2 text-[#8a91a8] leading-7">{item.answer}</dd>
                 </div>
               ))}
             </dl>

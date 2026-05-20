@@ -1,88 +1,64 @@
-import { eq } from "drizzle-orm";
-import { db } from "@/db";
-import { faq as faqTable } from "@/db/schema";
 import { buildMetadata } from "@/lib/seo/metadata";
 import { FAQPageJsonLd, BreadcrumbJsonLd } from "@/components/seo/json-ld";
 import type { Metadata } from "next";
+import { MessageCircle, ChevronRight } from "lucide-react";
 
 export const metadata: Metadata = buildMetadata({
   title: "FAQ — AI Premium Shop Bangladesh",
   description:
-    "Frequently asked questions about buying AI subscriptions in Bangladesh. Payment, delivery, warranty, refunds, bKash, Nagad, and more.",
+    "Answers to common questions about ChatGPT Plus, Midjourney, Canva Pro, and more in Bangladesh. Payment, delivery, warranty, and Resolution Policy.",
   canonical: "https://aipremiumshop.com/faq",
 });
 
-async function getFaqs() {
-  try {
-    return await db
-      .select()
-      .from(faqTable)
-      .where(eq(faqTable.productId, "")) // General FAQs have no productId
-      .orderBy(faqTable.displayOrder);
-  } catch {
-    return [];
-  }
-}
-
 const defaultFaqs = [
   {
-    question: "How long does delivery take?",
-    answer:
-      "Most orders are delivered within 15 minutes after payment confirmation. During peak hours (7 PM – 11 PM BST), delivery may take up to 45 minutes.",
+    q: "How does delivery work?",
+    a: "After you confirm your order on WhatsApp and send a payment screenshot, we verify the transaction and send your login credentials within 5–15 minutes. Personal Accounts take 2-4 hours due to individual setup. During peak hours (7 PM – 11 PM BST), delivery may take slightly longer.",
   },
   {
-    question: "What payment methods do you accept?",
-    answer:
-      "We accept bKash, Nagad, Rocket, and local Visa/Mastercard debit or credit cards. All payments are confirmed via WhatsApp for security.",
+    q: "What payment methods do you accept?",
+    a: "We accept bKash Send Money, Nagad Send Money, Rocket, and local bank cards (Visa/Mastercard via SSLCommerz). All payments are confirmed via WhatsApp screenshot for your security. We do not accept PayPal or international credit cards.",
   },
   {
-    question: "Are the accounts original or shared?",
-    answer:
-      "It depends on the product. We offer both private account setup guidance and shared slots. The exact type is confirmed with you on WhatsApp before you pay.",
+    q: "Are the accounts original? Will my account get banned?",
+    a: "Personal Accounts are set up through standard sign-up processes using legitimate payment methods. Shared slots are pre-registered accounts shared among a small group of users. We never claim official partnership with any brand. Shared slots carry a small risk if usage patterns trigger platform security — which is why we offer a 7-day replacement warranty. We confirm the exact account type before payment.",
   },
   {
-    question: "What is your refund policy?",
-    answer:
-      "Full refund if service is not delivered within 2 hours. Partial refund (50%) if you change your mind within 6 hours and credentials are unused. No refund after 24 hours or once credentials are used.",
+    q: "What is your Resolution Policy?",
+    a: "Full refund if service is not delivered within 2 hours. Partial refund (50%) if you change your mind within 6 hours and credentials are unused. No refund after 24 hours or once credentials are actively used. Shared plans include a 7-day replacement warranty if the service stops working.",
   },
   {
-    question: "Do you offer a warranty?",
-    answer:
-      "Yes. Shared slots include a 7-day replacement guarantee if the account stops working. Private setups include 30 days of free activation support.",
+    q: "Do you offer a warranty?",
+    a: "Yes — all shared slot products come with a 7-day replacement warranty. If the service stops working within 7 days, we will replace the slot at no extra cost. Personal Accounts do not need a warranty because they are fully under your control.",
   },
   {
-    question: "Can I pay after receiving the product?",
-    answer:
-      "No. We require payment before delivery to prevent fraud. We have served 10,000+ customers and verify every transaction on WhatsApp.",
+    q: "Can I use my own email address?",
+    a: "For Personal Account products, you can use your own email. For shared slot products, the account is pre-registered. We confirm which option is available for your specific product on WhatsApp before you pay.",
   },
   {
-    question: "Do you sell to customers outside Bangladesh?",
-    answer:
-      "Our primary market is Bangladesh. However, Bangladeshi diaspora customers can pay for family or friends living in BD.",
+    q: "Is my payment information secure?",
+    a: "We never collect or store your bKash, Nagad, or bank card details. You pay directly through your mobile money app. We only need the transaction screenshot for verification. Your financial data never touches our servers.",
   },
   {
-    question: "How do I renew my subscription?",
-    answer:
-      "We send a renewal reminder 48 hours before expiry. Simply message us on WhatsApp and we will process the renewal with the same 15-minute delivery speed.",
+    q: "Do you provide invoices or receipts?",
+    a: "Yes — we can provide a digital receipt for every purchase upon request. Message us on WhatsApp after your order is delivered and we will send a receipt with transaction details for your records.",
   },
   {
-    question: "Is my payment information secure?",
-    answer:
-      "We never store your bKash/Nagad login or card numbers. We only log transaction IDs for dispute resolution. All customer data is stored in encrypted databases.",
+    q: "Can I upgrade or change my plan later?",
+    a: "Yes — you can upgrade from a shared plan to a Personal Account at any time. We will calculate the price difference and apply it to your new plan. Contact us on WhatsApp to discuss plan changes.",
   },
   {
-    question: "What if the product I want is not listed?",
-    answer:
-      "Message us on WhatsApp with the product name. We can often source subscriptions not yet listed on the website.",
+    q: "Do subscriptions auto-renew?",
+    a: "No — we do not store your payment details or charge you automatically. Each month, we send a reminder on WhatsApp. You manually renew by sending payment again. This gives you full control over your spending.",
+  },
+  {
+    q: "Do you support bulk orders for teams or agencies?",
+    a: "Yes — we offer bulk pricing for agencies, design studios, development teams, and educational institutions. Contact us on WhatsApp with your requirements for a custom quote and dedicated support.",
   },
 ];
 
-export default async function FAQPage() {
-  const dbFaqs = await getFaqs();
-  const faqItems =
-    dbFaqs.length > 0
-      ? dbFaqs.map((f) => ({ question: f.question, answer: f.answer }))
-      : defaultFaqs;
+export default function FAQPage() {
+  const whatsappNumber = process.env.NEXT_PUBLIC_WA_PRIMARY ?? "8801865385348";
 
   const breadcrumbItems = [
     { name: "Home", path: "/" },
@@ -91,29 +67,53 @@ export default async function FAQPage() {
 
   return (
     <>
-      <FAQPageJsonLd items={faqItems} />
+      <FAQPageJsonLd
+        items={defaultFaqs.map((f) => ({ question: f.q, answer: f.a }))}
+      />
       <BreadcrumbJsonLd items={breadcrumbItems} />
 
-      <main className="min-h-screen bg-[#f7f7f2] text-[#171713]">
-        <section className="mx-auto max-w-4xl px-4 py-12 sm:px-6 lg:px-8">
-          <h1 className="text-4xl font-semibold leading-tight text-[#141410] sm:text-5xl">
-            Frequently Asked Questions
-          </h1>
-          <p className="mt-4 text-lg leading-7 text-[#5c5a4e]">
-            Everything you need to know about buying premium subscriptions in Bangladesh.
+      <main className="min-h-screen">
+        <section className="mx-auto max-w-3xl px-5 sm:px-8 py-12">
+          <p className="text-[0.6875rem] font-semibold uppercase tracking-[0.15em] text-[#f4b942]">FAQ</p>
+          <h1 className="mt-3 text-4xl sm:text-5xl font-bold tracking-tight">Frequently asked questions</h1>
+          <p className="mt-4 text-[1rem] leading-relaxed text-[#8a91a8]">
+            Everything you need to know about ordering, payment, delivery, and support.
+          </p>
+          <p className="mt-2 text-[0.75rem] text-[#5b6280]">
+            Last updated: <time dateTime="2026-05-20">20 May 2026</time>
           </p>
 
-          <dl className="mt-10 space-y-4">
-            {faqItems.map((item, i) => (
-              <div
+          <div className="mt-10 space-y-3">
+            {defaultFaqs.map((faq, i) => (
+              <details
                 key={i}
-                className="rounded-lg border border-[#dfded4] bg-white p-6 transition hover:shadow-sm"
+                className="group rounded-xl border border-white/[0.06] bg-white/[0.02] overflow-hidden transition-colors open:border-[#f4b942]/15"
               >
-                <dt className="text-lg font-semibold text-[#171713]">{item.question}</dt>
-                <dd className="mt-2 leading-7 text-[#4f4d42]">{item.answer}</dd>
-              </div>
+                <summary className="flex cursor-pointer list-none items-center justify-between gap-4 px-5 py-4">
+                  <span className="text-[0.9375rem] font-medium text-white">{faq.q}</span>
+                  <ChevronRight className="size-4 text-[#5b6280] transition-transform duration-300 group-open:rotate-90" />
+                </summary>
+                <div className="border-t border-white/[0.04] px-5 pb-4 pt-3">
+                  <p className="text-[0.875rem] leading-relaxed text-[#8a91a8]">{faq.a}</p>
+                </div>
+              </details>
             ))}
-          </dl>
+          </div>
+
+          {/* CTA */}
+          <div className="mt-16 glass-card rounded-2xl p-8 text-center">
+            <h2 className="text-xl font-bold text-white">Still have questions?</h2>
+            <p className="mt-2 text-[0.875rem] text-[#8a91a8]">
+              Our support team is available 24/7 on WhatsApp. We usually respond within minutes.
+            </p>
+            <a
+              href={`https://wa.me/${whatsappNumber}`}
+              className="btn-whatsapp inline-flex h-10 px-6 mt-6 text-[0.8125rem]"
+            >
+              <MessageCircle className="size-4" />
+              Chat on WhatsApp
+            </a>
+          </div>
         </section>
       </main>
     </>

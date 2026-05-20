@@ -57,6 +57,7 @@ export function getCategories(): string[] {
 }
 
 export function getCategoryLabel(slug: string): string {
+  const cleanSlug = slug.replace(/\s+/g, "");
   const map: Record<string, string> = {
     "ai-assistant": "AI Assistant",
     "ai-code": "AI Code",
@@ -67,7 +68,7 @@ export function getCategoryLabel(slug: string): string {
     "ai-writing": "AI Writing",
     bundles: "Bundles",
   };
-  return map[slug] ?? slug;
+  return map[cleanSlug] ?? map[slug] ?? slug;
 }
 
 export function getProductGroups(): ProductGroup[] {
@@ -85,8 +86,7 @@ export function getProductGroups(): ProductGroup[] {
       new Set(variants.flatMap((v) => v.capabilities))
     );
     // Extract display name from first variant.
-    // The JSON uses a corrupted em-dash (\u00e2\u20ac\u201d) due to encoding issues.
-    const displayName = first.name.split("\u00e2\u20ac\u201d")[0].trim();
+    const displayName = first.name.split(" - ")[0].trim();
     groups.push({
       slug,
       name: displayName,
@@ -126,4 +126,16 @@ export function getWhatsappUrl(item: LiveProduct): string {
   const num = process.env.NEXT_PUBLIC_WA_PRIMARY ?? "8801865385348";
   const msg = item.whatsappMsg || `Hi, I want ${item.name}`;
   return `https://wa.me/${num}?text=${encodeURIComponent(msg)}`;
+}
+
+export function getRelatedProducts(
+  currentSlug: string,
+  category: string,
+  limit = 4
+): ProductGroup[] {
+  const all = getProductGroups();
+  // Same category first, then featured, then any
+  const sameCat = all.filter((g) => g.slug !== currentSlug && g.category === category);
+  const others = all.filter((g) => g.slug !== currentSlug && g.category !== category);
+  return [...sameCat, ...others].slice(0, limit);
 }
