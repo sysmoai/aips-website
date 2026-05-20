@@ -105,7 +105,7 @@ export function buildProductMetadata(product: {
   const description =
     product.metaDescription ??
     product.shortDescription ??
-    `Buy ${product.name} in Bangladesh. Starting from ৳${product.basePriceBdt.toLocaleString("en-BD")}. bKash/Nagad accepted. 15-min WhatsApp delivery. 10,000+ orders delivered.`;
+    `Buy ${product.name} in Bangladesh. Starting from ৳${product.basePriceBdt.toLocaleString("en-BD")}. bKash/Nagad accepted. 5–15 min WhatsApp delivery after payment confirmation. 10,000+ orders delivered.`;
   const canonical = `${siteUrl}/products/${product.slug}`;
   const ogImage = product.heroImageUrl ?? defaultOgImage;
 

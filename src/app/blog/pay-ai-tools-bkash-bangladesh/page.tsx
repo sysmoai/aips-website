@@ -97,7 +97,7 @@ export default function PayAIToolsBkashPage() {
               <li>Our support team provides a bKash merchant number</li>
               <li>You pay through the bKash app using &quot;Payment&quot; (not Send Money)</li>
               <li>We verify the transaction screenshot</li>
-              <li>Your AI subscription is delivered via WhatsApp in 5-30 minutes</li>
+              <li>Your AI subscription is delivered via WhatsApp in 5–15 minutes</li>
             </ol>
             <p>
               <strong>Pros:</strong> Instant, no fees, widely used, secure

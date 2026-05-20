@@ -21,7 +21,7 @@ const defaultFaqs = [
   },
   {
     q: "Are the accounts original? Will my account get banned?",
-    a: "Personal Accounts are set up through standard sign-up processes using legitimate payment methods. Shared slots are pre-registered accounts shared among a small group of users. We never claim official partnership with any brand. Shared slots carry a small risk if usage patterns trigger platform security — which is why we offer a 7-day replacement warranty. We confirm the exact account type before payment.",
+    a: "Personal Accounts are set up through standard sign-up processes using legitimate payment methods. Shared slots are pre-registered accounts shared among a small group of users. We are an independent reseller with no direct affiliation with any brand. Shared slots carry a small risk if usage patterns trigger platform security — which is why we offer a 7-day replacement warranty. We confirm the exact account type before payment.",
   },
   {
     q: "What is your Resolution Policy?",

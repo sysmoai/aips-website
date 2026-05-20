@@ -30,7 +30,7 @@ export default function TermsPage() {
               <p className="mt-3">
                 AI Premium Shop provides access to premium digital subscriptions for customers in Bangladesh.
                 We are an independent reseller and are not affiliated with, endorsed by, or sponsored by
-                any of the brands we offer. We do not claim official partnership with any company.
+                any of the brands we offer. We are an independent reseller with no direct affiliation with any company.
               </p>
             </section>
 
