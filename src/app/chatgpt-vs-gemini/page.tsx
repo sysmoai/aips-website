@@ -1,5 +1,5 @@
 import { buildMetadata } from "@/lib/seo/metadata";
-import { BreadcrumbJsonLd } from "@/components/seo/json-ld";
+import { BreadcrumbJsonLd, FAQPageJsonLd } from "@/components/seo/json-ld";
 import Link from "next/link";
 import type { Metadata } from "next";
 
@@ -10,9 +10,38 @@ export const metadata: Metadata = buildMetadata({
   canonical: "https://aipremiumshop.com/chatgpt-vs-gemini",
 });
 
+const faqItems = [
+  {
+    question: "Which is better for Bangladeshi students — ChatGPT Plus or Gemini Advanced?",
+    answer:
+      "ChatGPT Plus is the better all-rounder for students due to superior coding help, DALL-E image generation, and broader plugin ecosystem. Gemini Advanced wins if you rely heavily on Google Workspace (Docs, Sheets, Gmail) for assignments.",
+  },
+  {
+    question: "Can I pay for ChatGPT Plus or Gemini with bKash in Bangladesh?",
+    answer:
+      "Neither OpenAI nor Google accepts bKash directly. AI Premium Shop acts as a local reseller — you pay us via bKash, Nagad, or Rocket, and we deliver the subscription within 15 minutes.",
+  },
+  {
+    question: "Does Gemini Advanced support Bangla better than ChatGPT?",
+    answer:
+      "Both support Bangla well, but ChatGPT Plus generally produces more natural Bangla prose and better understands mixed Bangla-English (Banglish) queries common in Bangladesh.",
+  },
+  {
+    question: "Which has the larger context window?",
+    answer:
+      "Gemini Advanced offers a 1-million-token context window — the largest in the industry. ChatGPT Plus provides 128K tokens, which is sufficient for most documents and codebases.",
+  },
+  {
+    question: "Can I use both ChatGPT Plus and Gemini Advanced together?",
+    answer:
+      "Yes. Many power users in Bangladesh subscribe to both. Use ChatGPT for coding and creative tasks, and Gemini for Google-integrated research and long-document analysis.",
+  },
+];
+
 export default function ChatGPTVsGeminiPage() {
   return (
     <>
+      <FAQPageJsonLd items={faqItems} />
       <BreadcrumbJsonLd
         items={[
           { name: "Home", path: "/" },
@@ -104,6 +133,21 @@ export default function ChatGPTVsGeminiPage() {
               </Link>
             </div>
           </div>
+
+          <section className="mt-12">
+            <h2 className="text-2xl font-semibold text-[#141410]">Frequently Asked Questions</h2>
+            <dl className="mt-6 space-y-4">
+              {faqItems.map((item, i) => (
+                <div
+                  key={i}
+                  className="rounded-lg border border-[#dfded4] bg-white p-6 transition hover:shadow-sm"
+                >
+                  <dt className="text-lg font-semibold text-[#171713]">{item.question}</dt>
+                  <dd className="mt-2 leading-7 text-[#4f4d42]">{item.answer}</dd>
+                </div>
+              ))}
+            </dl>
+          </section>
         </article>
       </main>
     </>

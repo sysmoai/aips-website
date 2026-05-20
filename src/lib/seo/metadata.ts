@@ -120,7 +120,7 @@ export function buildProductMetadata(product: {
 }): Metadata {
   const title =
     product.metaTitle ??
-    `${product.name} in Bangladesh — Buy at Best Price | AI Premium Shop`;
+    `${product.name} in Bangladesh — Buy at Best Price`;
   const description =
     product.metaDescription ??
     product.shortDescription ??

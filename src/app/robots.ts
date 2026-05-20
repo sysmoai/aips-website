@@ -19,6 +19,7 @@ export default function robots(): MetadataRoute.Robots {
           "/cart",
         ],
       },
+      /* --- OpenAI crawlers --- */
       {
         userAgent: "GPTBot",
         allow: "/",
@@ -28,13 +29,32 @@ export default function robots(): MetadataRoute.Robots {
         allow: "/",
       },
       {
+        userAgent: "ChatGPT-User",
+        allow: "/",
+      },
+      /* --- Anthropic crawlers --- */
+      {
         userAgent: "ClaudeBot",
         allow: "/",
       },
       {
+        userAgent: "Claude-User",
+        allow: "/",
+      },
+      {
+        userAgent: "Claude-Web",
+        allow: "/",
+      },
+      /* --- Perplexity crawlers --- */
+      {
         userAgent: "PerplexityBot",
         allow: "/",
       },
+      {
+        userAgent: "Perplexity-User",
+        allow: "/",
+      },
+      /* --- Google / Apple / Other AI crawlers --- */
       {
         userAgent: "Google-Extended",
         allow: "/",
@@ -42,6 +62,16 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: "Applebot-Extended",
         allow: "/",
+      },
+      {
+        userAgent: "CCBot",
+        allow: "/",
+        crawlDelay: 10,
+      },
+      {
+        userAgent: "Bytespider",
+        allow: "/",
+        crawlDelay: 10,
       },
       {
         userAgent: "AhrefsBot",

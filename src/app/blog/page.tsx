@@ -3,6 +3,7 @@ import { db } from "@/db";
 import { blogPosts } from "@/db/schema";
 import { buildMetadata } from "@/lib/seo/metadata";
 import { BreadcrumbJsonLd } from "@/components/seo/json-ld";
+import { staticBlogPosts } from "@/lib/data/blog-posts";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = buildMetadata({
@@ -15,18 +16,38 @@ export const metadata: Metadata = buildMetadata({
 
 async function getPublishedPosts() {
   try {
-    return await db
+    const dbPosts = await db
       .select()
       .from(blogPosts)
       .where(eq(blogPosts.status, "published"))
       .orderBy(desc(blogPosts.publishedAt));
+    return dbPosts;
   } catch {
     return [];
   }
 }
 
 export default async function BlogIndexPage() {
-  const posts = await getPublishedPosts();
+  const dbPosts = await getPublishedPosts();
+
+  // Merge static posts (always shown) with any DB posts
+  const allPosts =
+    dbPosts.length > 0
+      ? [
+          ...staticBlogPosts,
+          ...dbPosts
+            .filter((p) => !staticBlogPosts.some((s) => s.slug === p.slug))
+            .map((p) => ({
+              id: p.id,
+              slug: p.slug,
+              title: p.title,
+              excerpt: p.excerpt ?? "",
+              coverImageUrl: p.coverImageUrl ?? undefined,
+              authorName: p.authorName,
+              publishedAt: p.publishedAt?.toISOString() ?? new Date().toISOString(),
+            })),
+        ]
+      : staticBlogPosts;
 
   const breadcrumbItems = [
     { name: "Home", path: "/" },
@@ -49,59 +70,50 @@ export default async function BlogIndexPage() {
             </p>
           </div>
 
-          {posts.length === 0 ? (
-            <div className="mt-12 rounded-lg border border-[#dfded4] bg-white p-10 text-center">
-              <p className="text-lg font-medium text-[#171713]">Articles coming soon</p>
-              <p className="mt-2 text-sm text-[#666454]">
-                Our content team is writing detailed guides. Check back shortly.
-              </p>
-            </div>
-          ) : (
-            <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-              {posts.map((post) => (
-                <article
-                  key={post.id}
-                  className="group rounded-lg border border-[#dfded4] bg-white p-5 transition hover:shadow-lg"
-                >
-                  <a href={`/blog/${post.slug}`} className="block">
-                    {post.coverImageUrl && (
-                      <div className="relative aspect-[16/9] overflow-hidden rounded-md bg-[#e8e7df]">
-                        <img
-                          src={post.coverImageUrl}
-                          alt={`Cover for ${post.title}`}
-                          className="h-full w-full object-cover transition group-hover:scale-105"
-                          width={400}
-                          height={225}
-                          loading="lazy"
-                        />
-                      </div>
-                    )}
-                    <div className="mt-4">
-                      <h2 className="text-xl font-semibold text-[#171713] group-hover:text-[#176b4d]">
-                        {post.title}
-                      </h2>
-                      {post.excerpt && (
-                        <p className="mt-2 text-sm text-[#666454] line-clamp-3">
-                          {post.excerpt}
-                        </p>
-                      )}
-                      <div className="mt-3 flex items-center gap-2 text-xs text-[#666454]">
-                        <span>{post.authorName}</span>
-                        <span>·</span>
-                        <time dateTime={post.publishedAt?.toISOString()}>
-                          {post.publishedAt?.toLocaleDateString("en-BD", {
-                            year: "numeric",
-                            month: "short",
-                            day: "numeric",
-                          })}
-                        </time>
-                      </div>
+          <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {allPosts.map((post) => (
+              <article
+                key={post.id}
+                className="group rounded-lg border border-[#dfded4] bg-white p-5 transition hover:shadow-lg"
+              >
+                <a href={`/blog/${post.slug}`} className="block">
+                  {post.coverImageUrl && (
+                    <div className="relative aspect-[16/9] overflow-hidden rounded-md bg-[#e8e7df]">
+                      <img
+                        src={post.coverImageUrl}
+                        alt={`Cover for ${post.title}`}
+                        className="h-full w-full object-cover transition group-hover:scale-105"
+                        width={400}
+                        height={225}
+                        loading="lazy"
+                      />
                     </div>
-                  </a>
-                </article>
-              ))}
-            </div>
-          )}
+                  )}
+                  <div className="mt-4">
+                    <h2 className="text-xl font-semibold text-[#171713] group-hover:text-[#176b4d]">
+                      {post.title}
+                    </h2>
+                    {post.excerpt && (
+                      <p className="mt-2 text-sm text-[#666454] line-clamp-3">
+                        {post.excerpt}
+                      </p>
+                    )}
+                    <div className="mt-3 flex items-center gap-2 text-xs text-[#666454]">
+                      <span>{post.authorName}</span>
+                      <span>·</span>
+                      <time dateTime={post.publishedAt}>
+                        {new Date(post.publishedAt).toLocaleDateString("en-BD", {
+                          year: "numeric",
+                          month: "short",
+                          day: "numeric",
+                        })}
+                      </time>
+                    </div>
+                  </div>
+                </a>
+              </article>
+            ))}
+          </div>
         </section>
       </main>
     </>

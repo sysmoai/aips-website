@@ -28,6 +28,7 @@ export default function RootLayout({
       <head>
         <OrganizationJsonLd />
         <WebsiteJsonLd />
+        <link rel="llms-txt" href="/llms.txt" type="text/plain" />
         <link rel="preconnect" href={siteUrl} />
         <link rel="dns-prefetch" href={siteUrl} />
         {/* TODO: Add preconnect to Supabase, media CDN, and analytics when domains are known */}

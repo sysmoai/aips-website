@@ -1,5 +1,5 @@
 import { buildMetadata } from "@/lib/seo/metadata";
-import { BreadcrumbJsonLd } from "@/components/seo/json-ld";
+import { BreadcrumbJsonLd, FAQPageJsonLd } from "@/components/seo/json-ld";
 import Link from "next/link";
 import type { Metadata } from "next";
 
@@ -10,9 +10,38 @@ export const metadata: Metadata = buildMetadata({
   canonical: "https://aipremiumshop.com/copilot-vs-cursor",
 });
 
+const faqItems = [
+  {
+    question: "Which AI code editor is best for Bangladeshi developers?",
+    answer:
+      "Cursor Pro is best for developers who want an AI-native editor with codebase-wide understanding and agentic editing. GitHub Copilot is ideal if you prefer keeping your existing IDE (VS Code, JetBrains) and want proven inline completions.",
+  },
+  {
+    question: "Can I pay for GitHub Copilot or Cursor Pro with bKash?",
+    answer:
+      "Neither GitHub nor Cursor accepts bKash directly. AI Premium Shop is a local reseller in Bangladesh — pay via bKash, Nagad, or Rocket and receive your subscription within 15 minutes.",
+  },
+  {
+    question: "Does Cursor Pro work offline in Bangladesh?",
+    answer:
+      "Cursor Pro requires an internet connection for AI features. However, the editor itself works offline for local coding. Ensure a stable connection for the best AI-assisted experience.",
+  },
+  {
+    question: "Is GitHub Copilot enough for web development in Bangladesh?",
+    answer:
+      "Yes. GitHub Copilot excels at HTML, CSS, JavaScript, React, Next.js, and Node.js — the most common stacks for Bangladeshi freelancers and agencies.",
+  },
+  {
+    question: "Can students in Bangladesh get a discount on Copilot or Cursor?",
+    answer:
+      "GitHub offers free Copilot for verified students via GitHub Education. Cursor does not currently offer student discounts in Bangladesh. AI Premium Shop provides the most affordable local pricing for both tools.",
+  },
+];
+
 export default function CopilotVsCursorPage() {
   return (
     <>
+      <FAQPageJsonLd items={faqItems} />
       <BreadcrumbJsonLd
         items={[
           { name: "Home", path: "/" },
@@ -104,6 +133,21 @@ export default function CopilotVsCursorPage() {
               </Link>
             </div>
           </div>
+
+          <section className="mt-12">
+            <h2 className="text-2xl font-semibold text-[#141410]">Frequently Asked Questions</h2>
+            <dl className="mt-6 space-y-4">
+              {faqItems.map((item, i) => (
+                <div
+                  key={i}
+                  className="rounded-lg border border-[#dfded4] bg-white p-6 transition hover:shadow-sm"
+                >
+                  <dt className="text-lg font-semibold text-[#171713]">{item.question}</dt>
+                  <dd className="mt-2 leading-7 text-[#4f4d42]">{item.answer}</dd>
+                </div>
+              ))}
+            </dl>
+          </section>
         </article>
       </main>
     </>
