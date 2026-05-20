@@ -54,58 +54,50 @@ pnpm lint       # ✅ 0 errors
 pnpm typecheck  # ✅ Pass
 ```
 
+## Current Status
+
+- ✅ Code pushed to `https://github.com/sysmoai/aips-website`
+- ✅ GitHub Pages preview live: `https://sysmoai.github.io/aips-website/`
+- ✅ Static export built: `aips-phoenix-static.zip` (1.6 MB, 408 files, 47 pages)
+- ⚠️ Live deployment to `aipremiumshop.com` requires Cloudflare Pages access
+
 ## Deployment options
 
-### Option A: Cloudflare Pages (Recommended)
+### Option A: Cloudflare Pages — Direct Upload (FASTEST — 2 minutes)
 
-**Prerequisites:**
-- Node.js 20+ and pnpm 9+
-- Cloudflare account with Pages access
+**Project:** `aips-landing` (already exists, connected to `aipremiumshop.com`)
+**Account:** `sysmoai.com@gmail.com` (Account ID: `4ca6269edabb6ad2906d70ec6845de22`)
 
-**Steps:**
+1. Go to https://dash.cloudflare.com/4ca6269edabb6ad2906d70ec6845de22/pages/view/aips-landing
+2. Click **"Create deployment"** or **"Direct Upload"**
+3. Upload the file: `C:\Users\emonh\AI Premium Shop\01-phoenix-website\aips-phoenix-static.zip`
+4. Set **production branch** = `main`
+5. Wait 30 seconds for deployment
+6. Verify at `https://aipremiumshop.com`
 
-1. **Install Wrangler** (Cloudflare CLI):
-   ```bash
-   npm install -g wrangler
-   ```
+### Option B: Cloudflare Pages — Wrangler CLI
 
-2. **Login to Cloudflare**:
-   ```bash
-   wrangler login
-   ```
+```bash
+cd "C:\Users\emonh\AI Premium Shop\01-phoenix-website"
+npm install -g wrangler
+wrangler login
+wrangler pages deploy dist --project-name=aips-landing
+```
 
-3. **Create Pages project** (or use existing):
-   ```bash
-   wrangler pages project create aips-phoenix
-   ```
+**Note:** The existing API token (`CLOUDFLARE_API_TOKEN`) is invalid. Use `wrangler login` for OAuth.
 
-4. **Build and deploy**:
-   ```bash
-   cd "AI Premium Shop/01-phoenix-website"
-   pnpm build
-   wrangler pages deploy .next --project-name=aips-phoenix
-   ```
+### Option C: GitHub Pages (Preview only)
 
-5. **Set environment variables** in Cloudflare Pages dashboard:
-   - `NEXT_PUBLIC_SITE_URL` = `https://aipremiumshop.com` (or preview URL)
-   - `NEXT_PUBLIC_WA_PRIMARY` = `8801865385348`
+Already live at: `https://sysmoai.github.io/aips-website/`
+- Branch: `gh-pages`
+- Build: Static export with `output: export`
+- ⚠️ Asset paths use root-relative URLs — works for root domains, preview may have minor path issues
 
-6. **Add custom domain** in Cloudflare Pages dashboard → Custom domains → `aipremiumshop.com`
+### Option D: Vercel
 
-### Option B: Vercel
-
-1. Push this repo to GitHub
-2. Import into Vercel
-3. Set environment variables
-4. Deploy
-
-### Option C: Manual upload
-
-1. Build locally:
-   ```bash
-   pnpm build
-   ```
-2. Upload `.next/standalone` or use `output: 'export'` for pure static files
+Existing project: `prj_MmnqCkLADrA0jNpt9qCIA8TLMrZa`
+Team: `aipremiumshopbd-8091s`
+Requires Vercel CLI auth or dashboard upload.
 
 ## Post-deployment checklist
 
