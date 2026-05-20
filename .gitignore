@@ -52,4 +52,4 @@ secrets/
 dist/
 *.zip
 products-extracted.json
-deploy.sh
+

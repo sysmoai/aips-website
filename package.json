@@ -12,7 +12,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "deploy": "bash deploy.sh",
+    "deploy:win": "deploy.bat"
   },
   "dependencies": {
     "@base-ui/react": "^1.4.1",
