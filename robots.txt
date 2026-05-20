@@ -1,0 +1,63 @@
+User-Agent: *
+Allow: /
+Disallow: /admin
+Disallow: /api
+Disallow: /_next
+Disallow: /private
+Disallow: /checkout
+Disallow: /cart
+
+User-Agent: GPTBot
+Allow: /
+
+User-Agent: OAI-SearchBot
+Allow: /
+
+User-Agent: ChatGPT-User
+Allow: /
+
+User-Agent: ClaudeBot
+Allow: /
+
+User-Agent: Claude-User
+Allow: /
+
+User-Agent: Claude-Web
+Allow: /
+
+User-Agent: PerplexityBot
+Allow: /
+
+User-Agent: Perplexity-User
+Allow: /
+
+User-Agent: Google-Extended
+Allow: /
+
+User-Agent: Applebot-Extended
+Allow: /
+
+User-Agent: CCBot
+Allow: /
+Crawl-delay: 10
+
+User-Agent: Bytespider
+Allow: /
+Crawl-delay: 10
+
+User-Agent: AhrefsBot
+Allow: /
+Crawl-delay: 10
+
+User-Agent: SemrushBot
+Allow: /
+Crawl-delay: 10
+
+User-Agent: MJ12bot
+Disallow: /
+
+User-Agent: DotBot
+Disallow: /
+
+Host: https://aipremiumshop.com
+Sitemap: https://aipremiumshop.com/sitemap.xml

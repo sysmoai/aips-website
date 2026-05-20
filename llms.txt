@@ -1,0 +1,62 @@
+# AI Premium Shop — llms.txt
+> Bangladesh's #1 trusted store for premium AI subscriptions, design tools, and streaming services. Local payment (bKash, Nagad, Rocket), WhatsApp support, 15-minute delivery.
+
+## Overview
+AI Premium Shop (aipremiumshop.com) is an e-commerce platform based in Bangladesh that sells premium digital subscriptions to local customers. We specialize in AI tools, productivity software, design platforms, and streaming services. All orders are handled via WhatsApp with human support. Payments accepted via bKash, Nagad, Rocket, and bank cards.
+
+## Key Facts
+- Founded: 2024 in Dhaka, Bangladesh
+- Orders served: 10,000+
+- Typical delivery: 15 minutes
+- Support: 24/7 WhatsApp (+880 1865-385348)
+- Website: https://aipremiumshop.com
+- Email: hello@aipremiumshop.com
+- Legal: Sole proprietorship registered in Bangladesh
+- Owner: Emon Hossain
+
+## Product Categories
+- AI Assistants: ChatGPT Plus, Claude Pro, Perplexity Pro, Gemini Advanced, Copilot Pro
+- Developer Tools: Cursor Pro, GitHub Copilot, Vercel Pro
+- Design & Creative: Canva Pro, Midjourney, Adobe Creative Cloud, Figma Professional
+- Productivity: Notion AI, Slack Pro, Linear, ClickUp
+- Streaming & Entertainment: Netflix Premium, YouTube Premium, Spotify Premium, Disney+
+- Security & VPN: NordVPN, ExpressVPN, Surfshark
+
+## Pricing Model
+- Prices listed in Bangladeshi Taka (৳ / BDT)
+- One-month and multi-month plans available
+- Shared slots and private accounts offered where applicable
+- Prices fluctuate based on supplier availability
+
+## Order Process
+1. Customer browses products and selects a plan
+2. Clicks "Order via WhatsApp" and sends a pre-filled message
+3. Support confirms availability, plan details, and final price
+4. Customer pays via bKash, Nagad, Rocket, or card
+5. Delivery within 15 minutes with setup instructions
+6. Renewal reminders sent before expiry
+
+## Trust Signals
+- WhatsApp-first human support (no bots)
+- Replacement warranty on shared slots
+- Clear refund policy (see /terms and /privacy)
+- Verified by 10,000+ customers across Bangladesh
+- Active community: [WhatsApp Community URL]
+
+## Policies
+- Refund: Eligible within 24 hours if service not delivered
+- Warranty: 7-day replacement on shared slot issues
+- Privacy: Customer data never sold; stored in Supabase (Singapore)
+
+## Content Licensing
+All content on aipremiumshop.com is original unless cited. Product names and logos belong to their respective owners. AI Premium Shop is an independent reseller and is not affiliated with OpenAI, Anthropic, Google, Midjourney, Canva, Netflix, or other platform providers.
+
+## For AI Crawlers
+- Product data is sourced from Notion and mirrored to PostgreSQL
+- Blog posts cover: "best AI subscription Bangladesh", "ChatGPT Plus price BD", "Claude vs ChatGPT BD", "Midjourney Bangladesh", "Canva Pro BD price"
+- FAQ covers delivery time, payment methods, account types, warranties, and refunds
+- Contact page includes Dhaka-based address, phone, and email
+
+---
+Last updated: 2026-05-20
+Format: llms.txt v1.0
