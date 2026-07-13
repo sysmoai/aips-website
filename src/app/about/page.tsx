@@ -6,7 +6,7 @@ import { MessageCircle, MapPin, Mail, Phone, CheckCircle2 } from "lucide-react";
 export const metadata: Metadata = buildMetadata({
   title: "About Us — AI Premium Shop Bangladesh",
   description:
-    "Learn about AI Premium Shop, Bangladesh's trusted premium subscription reseller. Founded by Emon Hossain in Dhaka. 10,000+ orders delivered.",
+    "Learn about AI Premium Shop, Bangladesh's trusted premium subscription reseller. Founded by Emon Hossain in Dhaka. 3,000+ customers since 2024.",
   canonical: "https://aipremiumshop.com/about",
 });
 
