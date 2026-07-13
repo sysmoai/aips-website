@@ -75,7 +75,7 @@ function computeSavings(group: ProductGroup): number {
   const shared = group.variants.find((v) => v.accessType === "shared");
   const anchor = personal ?? shared ?? group.variants[0];
   if (!anchor?.officialUSD || anchor.officialUSD <= 0) return 0;
-  const officialBdt = anchor.officialUSD * 110; // approximate market rate
+  const officialBdt = Math.round(anchor.officialUSD * 130 * 1.15); // pricing formula: usd * 130 * 1.15
   const savings = ((officialBdt - anchor.price) / officialBdt) * 100;
   return Math.max(0, savings);
 }
