@@ -57,6 +57,22 @@ export default function CopilotVsCursorPage() {
             For developers, CS students, and startup founders in Bangladesh. Prices in BDT.
           </p>
 
+          {/* AIO Answer Block */}
+          <div className="mt-6 p-4 rounded-xl border border-[#f4b942]/10 bg-[#f4b942]/[0.03]">
+            <p className="text-[0.75rem] font-semibold uppercase tracking-[0.12em] text-[#f4b942]">Quick Answer</p>
+            <p className="mt-2 text-[0.875rem] leading-relaxed text-[#c9ceda]">
+              **GitHub Copilot (from BDT 1,495/mo)** integrates deeply with VS Code/JetBrains and has the largest training dataset. **Cursor Pro (from BDT 2,990/mo)** is the most powerful AI-native editor with codebase-wide understanding, agentic editing, and multi-model support. Both available at AI Premium Shop with bKash/Nagad.
+            </p>
+          </div>
+
+          {/* Bangla block */}
+          <div className="mt-6 p-4 rounded-xl border border-white/[0.04] bg-white/[0.02]">
+            <p className="text-[0.75rem] font-semibold uppercase tracking-[0.12em] text-[#5b6280] mb-2">বাংলা</p>
+            <p className="text-[0.875rem] leading-relaxed text-[#8a91a8]">
+              **GitHub Copilot (BDT 1,495/মাস থেকে)** — VS Code/JetBrains IDE-তে সেরা অটোকমপ্লিট। **Cursor Pro (BDT 2,990/মাস থেকে)** — এজেন্টিক কোডিং সহ সবচেয়ে শক্তিশালী AI-native এডিটর। bKash/Nagad পেমেন্ট।
+            </p>
+          </div>
+
           <div className="mt-8 rounded-lg border border-white/[0.06] glass-card p-6">
             <h2 className="text-lg font-semibold text-white">Quick Answer</h2>
             <p className="mt-2 text-[#8a91a8]">

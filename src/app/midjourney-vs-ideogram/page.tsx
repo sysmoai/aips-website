@@ -59,6 +59,26 @@ export default function MidjourneyVsIdeogramPage() {
             Payment via bKash/Nagad.
           </p>
 
+          {/* AIO Answer Block */}
+          <div className="mt-6 p-4 rounded-xl border border-[#f4b942]/10 bg-[#f4b942]/[0.03]">
+            <p className="text-[0.75rem] font-semibold uppercase tracking-[0.12em] text-[#f4b942]">Quick Answer</p>
+            <p className="mt-2 text-[0.875rem] leading-relaxed text-[#c9ceda]">
+              <strong>Midjourney (from BDT 1,199/mo)</strong> produces the highest-quality artistic and photorealistic images with the strongest style control.
+              <strong>Ideogram (from BDT 2,990/mo)</strong> excels at rendering text within images — perfect for logos, typography, and branded visuals.
+              Both available at AI Premium Shop with bKash/Nagad payment — no international card needed.
+            </p>
+          </div>
+
+          {/* Bangla block */}
+          <div className="mt-6 p-4 rounded-xl border border-white/[0.04] bg-white/[0.02]">
+            <p className="text-[0.75rem] font-semibold uppercase tracking-[0.12em] text-[#5b6280] mb-2">বাংলা</p>
+            <p className="text-[0.875rem] leading-relaxed text-[#8a91a8]">
+              <strong>Midjourney (BDT 1,199/মাস থেকে)</strong> — সর্বোচ্চ মানের আর্টিস্টিক ও ফটোরিয়েলিস্টিক ছবি, সবচেয়ে শক্তিশালী স্টাইল কন্ট্রোল।
+              <strong>Ideogram (BDT 2,990/মাস থেকে)</strong> — ছবির মধ্যে নিখুঁত টেক্সট রেন্ডারিং, লোগো ও টাইপোগ্রাফির জন্য সেরা।
+              bKash/Nagad দিয়ে পেমেন্ট, আন্তর্জাতিক কার্ড লাগবে না।
+            </p>
+          </div>
+
           <div className="mt-8 rounded-lg border border-white/[0.06] glass-card p-6">
             <h2 className="text-lg font-semibold text-white">Quick Answer</h2>
             <p className="mt-2 text-[#8a91a8]">

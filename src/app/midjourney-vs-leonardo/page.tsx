@@ -58,6 +58,26 @@ export default function MidjourneyVsLeonardoPage() {
             A detailed comparison for Bangladeshi creators and designers deciding between Midjourney and Leonardo AI for image and video generation.
           </p>
 
+          {/* AIO Answer Block */}
+          <div className="mt-6 p-4 rounded-xl border border-[#f4b942]/10 bg-[#f4b942]/[0.03]">
+            <p className="text-[0.75rem] font-semibold uppercase tracking-[0.12em] text-[#f4b942]">Quick Answer</p>
+            <p className="mt-2 text-[0.875rem] leading-relaxed text-[#c9ceda]">
+              <strong>Midjourney (from BDT 1,199/mo)</strong> is the premium choice for highest-quality artistry and photorealism.
+              <strong>Leonardo AI (from BDT 599/mo)</strong> is the budget-friendly alternative with character consistency and 3D-to-image features.
+              Both available at AI Premium Shop with bKash/Nagad payment — no international card needed.
+            </p>
+          </div>
+
+          {/* Bangla block */}
+          <div className="mt-6 p-4 rounded-xl border border-white/[0.04] bg-white/[0.02]">
+            <p className="text-[0.75rem] font-semibold uppercase tracking-[0.12em] text-[#5b6280] mb-2">বাংলা</p>
+            <p className="text-[0.875rem] leading-relaxed text-[#8a91a8]">
+              <strong>Midjourney (BDT 1,199/মাস থেকে)</strong> — প্রিমিয়াম কোয়ালিটি, ফটোরিয়েলিস্টিক ও আর্টিস্টিক ইমেজের জন্য সেরা।
+              <strong>Leonardo AI (BDT 599/মাস থেকে)</strong> — বাজেট-বান্ধব, ক্যারেক্টার কনসিসটেন্সি ও 3D-টু-ইমেজ ফিচারসহ।
+              bKash/Nagad দিয়ে পেমেন্ট, আন্তর্জাতিক কার্ড লাগবে না।
+            </p>
+          </div>
+
           <div className="mt-10 overflow-x-auto">
             <table className="w-full text-[0.875rem]">
               <thead>
