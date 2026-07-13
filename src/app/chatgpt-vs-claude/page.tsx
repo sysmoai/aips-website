@@ -49,8 +49,28 @@ export default function ChatGPTVsClaudePage() {
           <p className="text-[0.6875rem] font-semibold uppercase tracking-[0.15em] text-[#f4b942]">Comparison</p>
           <h1 className="mt-3 text-4xl sm:text-5xl font-bold tracking-tight">ChatGPT Plus vs Claude Pro</h1>
           <p className="mt-4 text-[1rem] leading-relaxed text-[#8a91a8]">
-            A detailed comparison for Bangladeshi users deciding between OpenAI&apos;s ChatGPT Plus and Anthropic&apos;s Claude Pro.
+            A detailed comparison for Bangladeshi users deciding between OpenAI&apos;s ChatGPT Plus and Anthropic&apos;s Claude Pro. Both available from AI Premium Shop with bKash/Nagad payment.
           </p>
+
+          {/* AIO Answer Block */}
+          <div className="mt-6 p-4 rounded-xl border border-[#f4b942]/10 bg-[#f4b942]/[0.03]">
+            <p className="text-[0.75rem] font-semibold uppercase tracking-[0.12em] text-[#f4b942]">Quick Answer</p>
+            <p className="mt-2 text-[0.875rem] leading-relaxed text-[#c9ceda]">
+              <strong>ChatGPT Plus (from ৳350/mo)</strong> is the better all-rounder with image generation, web search, and broader use cases. 
+              <strong>Claude Pro (from ৳1,495/mo)</strong> excels at long-document analysis (200K context), deep reasoning, and natural writing.
+              Both available at AI Premium Shop with bKash/Nagad payment — no international card needed. Trusted by 3,000+ customers since 2024.
+            </p>
+          </div>
+
+          {/* Bangla block */}
+          <div className="mt-6 p-4 rounded-xl border border-white/[0.04] bg-white/[0.02]">
+            <p className="text-[0.75rem] font-semibold uppercase tracking-[0.12em] text-[#5b6280] mb-2">বাংলা</p>
+            <p className="text-[0.875rem] leading-relaxed text-[#8a91a8]">
+              <strong>ChatGPT Plus (৳৩৫০/মাস থেকে)</strong> — ছবি তৈরি, ওয়েব সার্চ, কোডিং, লেখালেখি সব কাজের জন্য সেরা অল-রাউন্ডার।
+              <strong>Claude Pro (৳১,৪৯৫/মাস থেকে)</strong> — লম্বা ডকুমেন্ট (২০০K কনটেক্সট), ডিপ রিজনিং, একাডেমিক রিসার্চের জন্য সেরা।
+              দুটোই AI Premium Shop থেকে bKash/Nagad দিয়ে কিনতে পারবেন। আন্তর্জাতিক কার্ড লাগবে না।
+            </p>
+          </div>
 
           <div className="mt-10 overflow-x-auto">
             <table className="w-full text-[0.875rem]">
