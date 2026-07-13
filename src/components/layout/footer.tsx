@@ -157,6 +157,9 @@ export function Footer() {
           <p className="text-[0.75rem] text-[#5b6280]">
             © {new Date().getFullYear()} AI Premium Shop. All rights reserved.
           </p>
+          <p className="text-[0.625rem] text-[#5b6280] max-w-md text-center">
+            All product names and logos are trademarks of their respective owners. Service provided by SYSmoAI Private Limited (Bangladesh).
+          </p>
           <a
             href={whatsappUrl}
             target="_blank"
