@@ -113,5 +113,17 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${siteUrl}/blog/pay-ai-tools-bkash-bangladesh`, lastModified: now, changeFrequency: "monthly", priority: 0.75 },
   ];
 
-  return [...staticPages, ...categoryEntries, ...productEntries, ...comparisonEntries, ...blogEntries];
+  // Segment audience pages
+  const segmentSlugs = [
+    "students", "freelancers", "business", "developers", "creators",
+    "marketers", "designers", "researchers", "job-seekers", "teachers", "ecommerce",
+  ];
+  const segmentEntries: MetadataRoute.Sitemap = segmentSlugs.map((slug) => ({
+    url: `${siteUrl}/best-ai-for-${slug}`,
+    lastModified: now,
+    changeFrequency: "monthly",
+    priority: 0.75,
+  }));
+
+  return [...staticPages, ...categoryEntries, ...productEntries, ...comparisonEntries, ...blogEntries, ...segmentEntries];
 }
