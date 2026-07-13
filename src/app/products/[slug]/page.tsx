@@ -179,6 +179,18 @@ export default async function ProductPage({ params }: ProductPageProps) {
   const related = getRelatedProducts(group.slug, group.category, 3);
   const savings = computeSavings(group);
   const useCases = getUseCases(group.category, group.brand);
+  
+  // Product-specific FAQs + enrich data
+  const firstVariant = group.variants[0] as typeof group.variants[0] & { 
+    useCases?: string[]; whyBuyFromAIPS?: string; faq?: { q: string; a: string }[];
+    competitorCompare?: { name: string; price: string; advantage: string }[];
+    uniqueSellingPoints?: string[];
+  };
+  const productFAQs = firstVariant.faq ?? [];
+  const banglaUseCases: string[] = firstVariant.useCases ?? [];
+  const whyBuyFromAIPS = firstVariant.whyBuyFromAIPS ?? '';
+  const usps: string[] = firstVariant.uniqueSellingPoints ?? [];
+  const competitors = firstVariant.competitorCompare ?? [];
 
   const breadcrumbItems = [
     { name: "Home", path: "/" },
@@ -187,6 +199,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
   ];
 
   const faqItems = [
+    ...productFAQs.map((f) => ({ question: f.q, answer: f.a })),
     {
       question: `How long does ${group.name} delivery take?`,
       answer: `Most orders are delivered within ${mainVariant.deliverySLA} after payment confirmation via WhatsApp. During peak hours (7 PM – 11 PM BST), delivery may take slightly longer. Personal accounts typically take 2-4 hours due to individual setup.`,
@@ -305,6 +318,36 @@ export default async function ProductPage({ params }: ProductPageProps) {
                       <CheckCircle2 className="size-3 text-[#f4b942]/70" />
                       {getCapabilityLabel(cap)}
                     </span>
+                  ))}
+                </div>
+              )}
+
+              {/* Bangla Answer Block — AIO-aware */}
+              {whyBuyFromAIPS && (
+                <div className="mt-6 p-4 rounded-xl border border-[#f4b942]/10 bg-[#f4b942]/[0.03]">
+                  <p className="text-[0.75rem] font-semibold uppercase tracking-[0.12em] text-[#f4b942] mb-2">বাংলাদেশ থেকে কিনুন</p>
+                  <p className="text-[0.875rem] leading-relaxed text-[#8a91a8]">{whyBuyFromAIPS}</p>
+                  {banglaUseCases.length > 0 && (
+                    <div className="mt-3 flex flex-wrap gap-2">
+                      {banglaUseCases.slice(0, 4).map((uc, i) => (
+                        <span key={i} className="text-[0.75rem] text-[#5b6280] border border-white/[0.04] rounded-full px-3 py-1">
+                          ✅ {uc}
+                        </span>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              )}
+
+              {/* Competitor Compare Mini */}
+              {competitors.length > 0 && (
+                <div className="mt-6 grid grid-cols-2 gap-3">
+                  {competitors.slice(0, 2).map((comp, i) => (
+                    <div key={i} className="rounded-xl border border-white/[0.06] bg-white/[0.02] p-3">
+                      <p className="text-[0.6875rem] font-semibold uppercase tracking-[0.12em] text-[#5b6280]">vs {comp.name}</p>
+                      <p className="mt-1 text-[0.8125rem] text-white">{comp.advantage}</p>
+                      <p className="mt-1 text-[0.75rem] text-[#f4b942]">{comp.price}</p>
+                    </div>
                   ))}
                 </div>
               )}
