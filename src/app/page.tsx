@@ -21,9 +21,9 @@ import { buildMetadata } from "@/lib/seo/metadata";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Buy ChatGPT Plus, Claude Pro, Midjourney & 86+ AI Subscriptions in Bangladesh",
+  title: "Buy ChatGPT Plus, Claude Pro, Midjourney & 86 Premium AI Subscriptions in Bangladesh",
   description:
-    "Bangladesh's largest AI subscription store. ChatGPT Plus from ৳350, Claude Pro, Midjourney, Canva Pro, GitHub Copilot & 86+ more. bKash/Nagad payment. 5-15 min WhatsApp delivery.",
+    "Bangladesh's largest AI subscription store. 86 premium AI tools — ChatGPT Plus from ৳350, Claude Pro, Midjourney, Canva Pro, GitHub Copilot & more. bKash/Nagad payment. 5-15 min WhatsApp delivery.",
   canonical: "https://aipremiumshop.com",
 });
 
