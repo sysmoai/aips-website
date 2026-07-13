@@ -125,5 +125,22 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.75,
   }));
 
-  return [...staticPages, ...categoryEntries, ...productEntries, ...comparisonEntries, ...blogEntries, ...segmentEntries];
+  // City landing pages
+  const cityNames = ["dhaka", "chittagong", "sylhet", "rajshahi", "khulna"];
+  const cityEntries: MetadataRoute.Sitemap = cityNames.map((city) => ({
+    url: `${siteUrl}/${city}`,
+    lastModified: now,
+    changeFrequency: "monthly",
+    priority: 0.75,
+  }));
+
+  // Budget filter pages
+  const budgetEntries: MetadataRoute.Sitemap = [500, 1000, 3000].map((n) => ({
+    url: `${siteUrl}/ai-under-${n}`,
+    lastModified: now,
+    changeFrequency: "monthly",
+    priority: 0.75,
+  }));
+
+  return [...staticPages, ...categoryEntries, ...productEntries, ...comparisonEntries, ...blogEntries, ...segmentEntries, ...budgetEntries, ...cityEntries];
 }
