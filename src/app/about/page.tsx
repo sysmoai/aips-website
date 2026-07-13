@@ -40,7 +40,7 @@ export default function AboutPage() {
               <p className="mt-3 text-[0.9375rem] leading-relaxed text-[#8a91a8]">
                 It started with a single problem: friends and classmates in Dhaka wanted ChatGPT Plus
                 and Midjourney but could not pay with local cards. Emon Hossain built AI Premium Shop
-                to bridge that gap — one subscription at a time. Today, we serve over 10,000 orders
+                to bridge that gap — one subscription at a time. Today, we serve 3,000+ customers
                 across Bangladesh, from students in Rajshahi to agencies in Gulshan.
               </p>
             </div>

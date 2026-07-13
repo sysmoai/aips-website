@@ -22,7 +22,7 @@ const faqItems = [
   {
     question: "Is it safe to buy AI subscriptions through a reseller?",
     answer:
-      "AI Premium Shop has served 10,000+ customers since 2024. We offer 7-day replacement warranty on shared plans, 30-day support on personal plans, and full refund if not delivered within 2 hours.",
+      "AI Premium Shop has served 3,000+ customers since 2024. We offer 7-day replacement warranty on shared plans, 30-day support on personal plans, and full refund if not delivered within 2 hours.",
   },
   {
     question: "What if I don't have bKash?",

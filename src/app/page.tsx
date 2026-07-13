@@ -49,7 +49,7 @@ function getCategoryGradient(category: string): string {
 }
 
 const stats = [
-  { value: "10k+", label: "Orders delivered" },
+  { value: "3,000+", label: "Orders delivered" },
   { value: "5–15 min", label: "Avg. delivery" },
   { value: "24/7", label: "Support" },
   { value: "86+", label: "Products" },
@@ -93,7 +93,7 @@ const faqItems = [
   },
   {
     q: "Is it safe to buy from AI Premium Shop?",
-    a: "We have served 10,000+ customers since 2024. We offer a 7-day replacement Resolution Policy and verify every transaction on WhatsApp before delivery.",
+    a: "We have served 3,000+ since 2024. We offer a 7-day replacement Resolution Policy and verify every transaction on WhatsApp before delivery.",
   },
 ];
 
@@ -411,7 +411,7 @@ export default function Home() {
               Ready to get started?
             </h2>
             <p className="mt-4 text-[0.9375rem] text-[#5b6280] max-w-md mx-auto">
-              Join 10,000+ customers in Bangladesh who trust AI Premium Shop for their premium subscriptions.
+              Join 3,000+ in Bangladesh who trust AI Premium Shop for their premium subscriptions.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
               <Link href="/products" className="btn-primary">
