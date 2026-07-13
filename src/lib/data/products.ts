@@ -23,6 +23,21 @@ export interface LiveProduct {
   featured: boolean;
   whatsappMsg: string;
   status: string;
+  // Enriched fields from Replit catalog
+  descriptionBN?: string;
+  useCases?: string[];
+  whyBuyFromAIPS?: string;
+  faq?: { q: string; a: string }[];
+  competitorCompare?: { name: string; price: string; advantage: string }[];
+  relatedProducts?: string[];
+  uniqueSellingPoints?: string[];
+  howItWorksSteps?: { step: number; title: string; description: string }[];
+  estimatedDeliveryTime?: string;
+  deliveryMethod?: string;
+  lastVerifiedDate?: string;
+  seo?: { title: string; description: string };
+  badges?: string[];
+  trust?: { warrantyDays: number; replacementGuarantee: boolean };
 }
 
 export interface ProductGroup {
