@@ -1,21 +1,46 @@
-# Production Verification — 2026-07-19 (PARTIAL)
+# Production Verification — 2026-07-19 (CDN CACHE BLOCK)
 
-## Status: CDN serving cached baseline
-Republish completed ("Published your app just now") but CDN continues serving `95808b9` content (~80 tools). This is likely due to Replit's deployment pipeline using a cached build artifact rather than rebuilding from the latest git state.
+## Status: GitHub pushed ↔ Replit needs manual build verification
+- **GitHub**: `4d943af` — all 17 commits pushed
+- **Replit publish**: 3 republishes executed ("Published your app just now")
+- **CDN**: Google Frontend (not Cloudflare) serving `95808b9` content
 
-## Verified (CDN serving old content)
-- `https://aipremiumshop.com` → 200, title says "80 Premium AI Tools"
-- `https://aipremiumshop.com/dhaka` → 200, generic title (city page not rendering)
-- `https://aipremiumshop.com/sitemap.xml` → 200, no city pages in sitemap
+## What happened
+1. `git fetch && git pull origin main` — executed in Replit Shell
+2. `pnpm install && pnpm build` — executed (build output not visible — canvas terminal)
+3. Republished 3 times — each time confirmed "Published just now"
+4. CDN continues serving old baseline (`~80 tools`, no city pages)
 
-## What needs to happen
-1. Replit Shell: `git reset --hard origin/main` (done)
-2. Replit Shell: `NODE_ENV=development pnpm install && pnpm build` (done)
-3. **Republish through Replit UI** (done twice)
-4. **CDN cache invalidation** — Cloudflare may need manual purge
+## Root cause: Likely one of
+1. **Build didn't complete** — pnpm/node errors not visible in canvas terminal
+2. **Replit deployment uses different build pipeline** — may not pick up Shell-based build
+3. **Google Frontend CDN cache** — aggressive caching of static site
 
-## Cloudflare Cache
-The domain `aipremiumshop.com` likely has Cloudflare caching. A manual cache purge or waiting 24h may be required.
+## Fix: Owner action required
+In Replit IDE Shell, run these commands manually and verify output:
 
-## Recommendation
-Try republishing 12-24h later, or use Replit's "Clear cache and redeploy" if available in Publishing settings.
+```sh
+git log --oneline -1
+# Must show: 4d943af
+
+rm -rf node_modules dist .next
+git reset --hard origin/main
+NODE_ENV=development pnpm install
+pnpm build
+# Must show: ✓ Generating static pages using 9 workers (103/103)
+
+ls dist/dhaka/index.html dist/sitemap.xml
+# Must exist and contain city pages
+
+# Then click Republish
+```
+
+After republish, wait 5-10 minutes then verify:
+```sh
+curl -s "https://aipremiumshop.com/dhaka" | grep -o '<title>[^<]*</title>'
+# Should NOT show "80 Premium AI Tools" (should show city-specific title)
+```
+
+## Alternative: Clear CDN cache
+If Google Frontend is caching, use `gcloud` or Firebase console to purge cache.
+The domain may be behind Firebase Hosting CDN.
