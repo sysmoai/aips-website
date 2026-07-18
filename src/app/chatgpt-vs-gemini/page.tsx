@@ -61,7 +61,7 @@ export default function ChatGPTVsGeminiPage() {
           <div className="mt-6 p-4 rounded-xl border border-[#f4b942]/10 bg-[#f4b942]/[0.03]">
             <p className="text-[0.75rem] font-semibold uppercase tracking-[0.12em] text-[#f4b942]">Quick Answer</p>
             <p className="mt-2 text-[0.875rem] leading-relaxed text-[#c9ceda]">
-              **ChatGPT Plus (from BDT 350/mo)** is the best all-rounder with DALL-E image generation, web search, and broad capabilities. **Google AI Pro/Gemini Advanced (BDT 500/mo)** is the best choice for Google Workspace users — AI in Gmail, Docs, Sheets, and 2TB storage. At BDT 500, it undercuts Google's direct Bangladesh price (BDT 2,500). Both available with bKash/Nagad.
+              **ChatGPT Plus (from BDT 350/mo)** is the best all-rounder with DALL-E image generation, web search, and broad capabilities. **Google AI Pro/Gemini Advanced (BDT 500/mo)** is the best choice for Google Workspace users — AI in Gmail, Docs, Sheets, and 2TB storage. At BDT 500, it undercuts Google&apos;s direct Bangladesh price (BDT 2,500). Both available with bKash/Nagad.
             </p>
           </div>
 

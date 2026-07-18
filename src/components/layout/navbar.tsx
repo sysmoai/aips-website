@@ -102,10 +102,6 @@ export function Navbar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  useEffect(() => {
-    setMobileOpen(false);
-  }, [pathname]);
-
   /* Lock body scroll when mobile menu is open */
   useEffect(() => {
     if (mobileOpen) {
