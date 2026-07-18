@@ -10,6 +10,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "postbuild": "rm -rf dist/public && mkdir -p dist/public && find dist -mindepth 1 -maxdepth 1 -not -name public | while read f; do cp -r \"$f\" dist/public/; done",
     "start": "next start",
     "lint": "eslint",
     "typecheck": "tsc --noEmit",
