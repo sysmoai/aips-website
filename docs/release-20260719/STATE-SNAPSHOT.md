@@ -7,15 +7,16 @@
 - **Command Code**: v0.52.1
 - **OS**: darwin-arm64
 
-## Git State
-- **Local HEAD**: `4a7d9d6ee3c7482d884b98cc8ba4d38ab184339d` (main)
-- **origin/main**: `95808b9c2d84b518e6ef9825e4dad2239b3c4b45`
-- **Ahead**: 14 commits
+## Git State (FINAL)
+- **Local HEAD**: `6b26ea9` (main)
+- **origin/main**: `6b26ea9` (pushed, synced)
+- **Previous baseline**: `95808b9` (was deployed to live)
 - **Working Tree**: Clean
 - **Continuation Branch**: `command-code/phase0-reconcile-20260714` at `4a7d9d6`
 
-### Local commits ahead of origin/main
+### All commits (15 total pushed to origin/main)
 ```
+6b26ea9 fix: lint errors — unescaped entity in chatgpt-vs-gemini, remove setState-in-effect in navbar
 4a7d9d6 feat(phase8): all new pages in sitemap + build verified
 7d4f2b3 feat(phase8): 3 budget filter pages + 5 city landing pages
 bf7829e feat(phase8): segment pages in sitemap + build verified
@@ -32,10 +33,18 @@ b352ac0 feat(phase3): Bangla, FAQs, competitor compare
 3427817 feat(phase0): reconcile + AIO layer
 ```
 
-## Replit App
-- **URL**: https://replit.com/t/sysmoais-workspace/repls/AI-Premium-Shop
-- **Live URL**: https://aipremiumshop.com
-- **Status**: TO BE VERIFIED
+## Build Gates: PASS
+- Install: ✅ (376 packages)
+- Typecheck: ✅ (0 errors)
+- Lint: ✅ (0 errors, 15 pre-existing warnings)
+- Build: ✅ (103 static pages, 52 product routes)
 
-## Known Baseline
-- **origin/main**: `95808b9` — last verified baseline before command-code phase
+## Replit Status
+- Deployment: **NEEDS MANUAL PULL + REPUBLISH**
+- Current live: Serves `95808b9` (~80 tools)
+- GitHub: `6b26ea9` ready to pull
+
+## Live Site
+- **URL**: https://aipremiumshop.com
+- **Current content**: Baseline `95808b9` (~80 tools)
+- **Release not yet deployed**
