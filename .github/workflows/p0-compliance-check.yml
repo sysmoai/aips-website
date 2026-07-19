@@ -1,0 +1,53 @@
+name: P0 Compliance Check
+
+on:
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9.15.9
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Typecheck
+        run: pnpm typecheck
+
+      - name: Lint
+        run: pnpm lint
+
+      - name: Build
+        run: pnpm build
+
+      - name: Compliance assertions
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -f src/lib/data/products.ts
+          grep -q 'function isPublishable' src/lib/data/products.ts
+          grep -q 'item.accessType === "shared"' src/lib/data/products.ts
+          grep -q 'account-credentials' src/lib/data/products.ts
+          if grep -nE '3,000\+|Available 24/7|Reply in 5 min|Get your credentials' src/app/page.tsx; then
+            echo 'Unsafe or unsupported homepage claim found.'
+            exit 1
+          fi
