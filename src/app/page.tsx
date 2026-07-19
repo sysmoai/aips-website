@@ -1,242 +1,172 @@
 import {
+  ArrowRight,
+  CheckCircle2,
   ChevronRight,
+  CreditCard,
   MessageCircle,
   Search,
   ShieldCheck,
-  Clock,
-  Users,
-  CreditCard,
-  Star,
-  Zap,
-  ArrowRight,
 } from "lucide-react";
-import {
-  FAQPageJsonLd,
-  HowToJsonLd,
-  BreadcrumbJsonLd,
-} from "@/components/seo/json-ld";
+import { BreadcrumbJsonLd, FAQPageJsonLd, HowToJsonLd } from "@/components/seo/json-ld";
 import Link from "next/link";
 import { getFeaturedItems, getWhatsappUrl } from "@/lib/data/products";
 import { buildMetadata } from "@/lib/seo/metadata";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Buy ChatGPT Plus, Claude Pro, Midjourney & 86 Premium AI Subscriptions in Bangladesh",
+  title: "Premium AI Subscriptions in Bangladesh | AI Premium Shop",
   description:
-    "Bangladesh's largest AI subscription store. 86 premium AI tools — ChatGPT Plus from ৳350, Claude Pro, Midjourney, Canva Pro, GitHub Copilot & more. bKash/Nagad payment. 5-15 min WhatsApp delivery.",
+    "Compare clearly described premium AI and productivity subscriptions in Bangladesh. Check ownership, activation method, duration, eligibility and support terms before payment.",
   canonical: "https://aipremiumshop.com",
 });
 
 const whatsappNumber = process.env.NEXT_PUBLIC_WA_PRIMARY ?? "8801865385348";
 const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
-  "Hi AI Premium Shop, I want to order a premium subscription."
+  "Hi AI Premium Shop, I want to check availability and eligibility for a premium subscription."
 )}`;
 
 const featuredProducts = getFeaturedItems().slice(0, 6);
-
-function getCategoryGradient(category: string): string {
-  const map: Record<string, string> = {
-    "ai-assistant": "from-emerald-400/20 to-cyan-400/20",
-    "ai-code": "from-violet-400/20 to-fuchsia-400/20",
-    "ai-image": "from-pink-400/20 to-rose-400/20",
-    "ai-video": "from-orange-400/20 to-red-400/20",
-    "ai-voice-music": "from-amber-400/20 to-yellow-400/20",
-    "ai-workspace": "from-sky-400/20 to-blue-400/20",
-    "ai-writing": "from-teal-400/20 to-emerald-400/20",
-    bundles: "from-indigo-400/20 to-purple-400/20",
-  };
-  return map[category] ?? "from-gray-400/20 to-slate-400/20";
-}
-
-const stats = [
-  { value: "3,000+", label: "Orders delivered" },
-  { value: "5–15 min", label: "Avg. delivery" },
-  { value: "24/7", label: "Support" },
-  { value: "86+", label: "Products" },
-];
 
 const steps = [
   {
     icon: Search,
     title: "Choose",
-    desc: "Browse 86+ premium AI subscriptions and pick the plan that fits your needs.",
+    desc: "Review the plan, duration, ownership model and stated activation method.",
   },
   {
     icon: MessageCircle,
-    title: "Confirm",
-    desc: "Message us on WhatsApp. We confirm availability, price, and slot type.",
+    title: "Verify",
+    desc: "Ask us to confirm current availability, eligibility, final price and delivery estimate.",
   },
   {
     icon: CreditCard,
     title: "Pay",
-    desc: "Send payment via bKash, Nagad, or Rocket. Share the screenshot.",
+    desc: "Pay only after the exact product and support terms are confirmed in writing.",
   },
   {
-    icon: Zap,
-    title: "Receive",
-    desc: "Get your credentials or setup guide delivered within 5–15 minutes.",
+    icon: CheckCircle2,
+    title: "Activate",
+    desc: "Complete the disclosed activation process and verify the plan before closing the order.",
   },
 ];
 
 const faqItems = [
   {
-    q: "How long does delivery take?",
-    a: "Most orders are delivered within 15 minutes after payment confirmation. During peak hours (7 PM – 11 PM BST), delivery may take up to 45 minutes.",
+    q: "How long does activation take?",
+    a: "Activation time depends on the product, eligibility and current availability. We confirm the estimated delivery time before payment.",
   },
   {
-    q: "What payment methods do you accept?",
-    a: "We accept bKash, Nagad, Rocket, and local Visa/Mastercard debit or credit cards. All payments are confirmed via WhatsApp for security.",
+    q: "Which payment methods are available?",
+    a: "Available local payment methods are confirmed during the order. Do not pay until the final price and recipient details are verified.",
   },
   {
-    q: "Do you offer a warranty?",
-    a: "Yes. Shared slots include a 7-day replacement warranty if the account stops working. Personal Account setups include 30 days of free activation support.",
+    q: "What information should I check before buying?",
+    a: "Check the exact plan, duration, account ownership, activation method, eligibility, renewal behavior, warranty scope and refund conditions.",
   },
   {
-    q: "Is it safe to buy from AI Premium Shop?",
-    a: "We have served 3,000+ since 2024. We offer a 7-day replacement Resolution Policy and verify every transaction on WhatsApp before delivery.",
+    q: "Does AI Premium Shop ask for passwords or OTPs?",
+    a: "Published products should not require your email password, OTP, recovery code, browser cookie or session token. Do not share these credentials.",
   },
 ];
 
-const testimonials = [
-  {
-    name: "Rafi K.",
-    role: "Freelancer",
-    text: "Got my ChatGPT Plus in 8 minutes. The bKash payment was smooth and the support team guided me through everything.",
-  },
-  {
-    name: "Tasnim A.",
-    role: "Student",
-    text: "I was skeptical at first but the 7-day warranty gave me confidence. My Claude Pro account works perfectly.",
-  },
-  {
-    name: "Imran H.",
-    role: "Agency Owner",
-    text: "We buy 12+ subscriptions every month for our team. AI Premium Shop handles bulk orders with consistent reliability.",
-  },
-];
-
-const howToSteps = [
-  { name: "Browse subscriptions", text: "Visit aipremiumshop.com and choose from AI assistants, design tools, streaming services, and productivity apps." },
-  { name: "Order via WhatsApp", text: "Click the 'Order via WhatsApp' button and send the pre-filled message to our support team." },
-  { name: "Confirm and pay", text: "Our team confirms availability, plan type, and final price. Pay via bKash, Nagad, Rocket, or card." },
-  { name: "Receive instantly", text: "Get your login credentials or setup guide delivered on WhatsApp within 5–15 minutes." },
-];
+const howToSteps = steps.map((step) => ({
+  name: step.title,
+  text: step.desc,
+}));
 
 export default function Home() {
   return (
     <>
       <BreadcrumbJsonLd items={[{ name: "Home", path: "/" }]} />
-      <HowToJsonLd name="How to buy premium subscriptions in Bangladesh" description="A simple 4-step guide to ordering AI tools, design software, and streaming services from AI Premium Shop with local payment." totalTime="PT15M" steps={howToSteps} />
-      <FAQPageJsonLd items={faqItems.map((i) => ({ question: i.q, answer: i.a }))} />
+      <HowToJsonLd
+        name="How to buy a premium subscription from AI Premium Shop"
+        description="A transparent four-step process for checking, paying for and verifying a digital subscription."
+        steps={howToSteps}
+      />
+      <FAQPageJsonLd
+        items={faqItems.map((item) => ({
+          question: item.q,
+          answer: item.a,
+        }))}
+      />
 
       <main className="relative overflow-hidden">
-        {/* ================================================================
-            HERO SECTION
-            ================================================================ */}
-        <section className="relative min-h-[90vh] flex items-center">
-          {/* Background orbs */}
+        <section className="relative min-h-[78vh] flex items-center">
           <div className="absolute inset-0 overflow-hidden pointer-events-none">
             <div className="gradient-orb gradient-orb-gold w-[600px] h-[600px] -top-40 -left-40 animate-pulse-glow" />
-            <div className="gradient-orb gradient-orb-purple w-[500px] h-[500px] top-1/3 right-0 animate-pulse-glow" style={{ animationDelay: "-2s" }} />
-            <div className="gradient-orb gradient-orb-blue w-[400px] h-[400px] bottom-0 left-1/3 animate-pulse-glow" style={{ animationDelay: "-4s" }} />
+            <div className="gradient-orb gradient-orb-purple w-[500px] h-[500px] top-1/3 right-0 animate-pulse-glow" />
           </div>
 
           <div className="relative mx-auto max-w-7xl px-5 sm:px-8 py-20">
-            <div className="grid gap-16 lg:grid-cols-2 lg:gap-12 items-center">
-              {/* Left: Copy */}
-              <div className="max-w-xl">
-                {/* Badge */}
+            <div className="grid gap-14 lg:grid-cols-2 lg:gap-12 items-center">
+              <div className="max-w-2xl">
                 <div className="inline-flex items-center gap-2 rounded-full border border-[#f4b942]/20 bg-[#f4b942]/5 px-4 py-1.5 text-[0.8125rem] text-[#f4b942] mb-8">
-                  <span className="relative flex size-2">
-                    <span className="absolute inline-flex size-full animate-ping rounded-full bg-[#f4b942] opacity-60" />
-                    <span className="relative inline-flex size-2 rounded-full bg-[#f4b942]" />
-                  </span>
-                  Premium access, local payment, human support
+                  <ShieldCheck className="size-4" />
+                  Clear plan details before payment
                 </div>
 
                 <h1 className="text-4xl sm:text-5xl lg:text-[3.5rem] font-bold tracking-tight leading-[1.1]">
-                  Buy Premium AI{" "}
-                  <span className="text-gradient">Subscriptions</span>{" "}
-                  in Bangladesh
+                  Premium AI subscriptions,
+                  <span className="text-gradient"> explained clearly</span>
                 </h1>
 
-                <p className="mt-6 text-[1rem] leading-relaxed text-[#8a91a8] max-w-md">
-                  ChatGPT Plus, Claude Pro, Midjourney, Canva Pro, GitHub Copilot, and 86+ more.
-                  Pay with bKash or Nagad. Delivered in minutes on WhatsApp.
+                <p className="mt-6 text-[1rem] leading-relaxed text-[#8a91a8] max-w-xl">
+                  Compare available plans for Bangladesh with transparent duration,
+                  ownership, activation, eligibility and support information. Final
+                  availability and price are confirmed before payment.
                 </p>
 
                 <div className="mt-8 flex flex-col sm:flex-row gap-3">
                   <Link href="/products" className="btn-primary">
-                    Browse Products
+                    Browse available products
                     <ChevronRight className="size-4" />
                   </Link>
                   <a href={whatsappUrl} className="btn-secondary">
                     <MessageCircle className="size-4 text-[#25d366]" />
-                    Chat on WhatsApp
+                    Check availability
                   </a>
                 </div>
 
-                {/* Stats */}
-                <div className="mt-10 grid grid-cols-4 gap-4 max-w-md">
-                  {stats.map((s) => (
-                    <div key={s.label}>
-                      <p className="text-xl sm:text-2xl font-bold text-white">{s.value}</p>
-                      <p className="text-[0.6875rem] text-[#5b6280] mt-0.5">{s.label}</p>
+                <div className="mt-10 grid gap-3 sm:grid-cols-2 max-w-2xl">
+                  {[
+                    "No email password or OTP requests",
+                    "Activation method disclosed before payment",
+                    "Plan and duration confirmed in writing",
+                    "Support terms matched to the exact product",
+                  ].map((item) => (
+                    <div key={item} className="flex items-center gap-2 text-sm text-[#8a91a8]">
+                      <CheckCircle2 className="size-4 text-[#f4b942] shrink-0" />
+                      {item}
                     </div>
                   ))}
                 </div>
               </div>
 
-              {/* Right: Visual */}
               <div className="relative hidden lg:block">
-                <div className="relative rounded-2xl border border-white/[0.06] bg-white/[0.02] p-6 backdrop-blur-sm">
-                  {/* Glow border */}
-                  <div className="absolute -inset-px rounded-2xl bg-gradient-to-b from-white/[0.08] to-transparent pointer-events-none" />
-
-                  <div className="relative space-y-3">
-                    {/* Search bar mock */}
-                    <div className="flex items-center gap-3 rounded-xl bg-white/[0.04] border border-white/[0.06] px-4 py-3">
-                      <Search className="size-4 text-[#5b6280]" />
-                      <span className="text-[0.8125rem] text-[#5b6280]">What AI tool do you need?</span>
-                    </div>
-
-                    {/* Product cards */}
-                    {featuredProducts.slice(0, 3).map((p, i) => (
-                      <Link
-                        key={p.id}
-                        href={`/products/${p.slug}`}
-                        className="flex items-center justify-between rounded-xl bg-white/[0.03] border border-white/[0.06] px-4 py-3 transition-all duration-300 hover:bg-white/[0.06] hover:border-white/[0.1]"
-                        style={{ animationDelay: `${i * 100}ms` }}
+                <div className="rounded-2xl border border-white/[0.06] bg-white/[0.02] p-6 backdrop-blur-sm">
+                  <p className="text-xs font-semibold uppercase tracking-[0.15em] text-[#f4b942]">
+                    Buyer checklist
+                  </p>
+                  <h2 className="mt-3 text-2xl font-bold">Confirm these before paying</h2>
+                  <div className="mt-6 space-y-3">
+                    {[
+                      "Exact product and plan",
+                      "Subscription duration",
+                      "Customer ownership model",
+                      "Activation and delivery method",
+                      "Eligibility and card requirements",
+                      "Renewal, warranty and refund terms",
+                    ].map((item, index) => (
+                      <div
+                        key={item}
+                        className="flex items-center gap-3 rounded-xl border border-white/[0.06] bg-white/[0.03] px-4 py-3"
                       >
-                        <div className="flex items-center gap-3">
-                          <div className={`size-10 rounded-lg bg-gradient-to-br ${getCategoryGradient(p.category)} flex items-center justify-center`}>
-                            <span className="text-[0.625rem] font-bold text-white/80">{p.brand.slice(0, 2).toUpperCase()}</span>
-                          </div>
-                          <div>
-                            <p className="text-[0.8125rem] font-semibold text-white">{p.name}</p>
-                            <p className="text-[0.6875rem] text-[#5b6280]">{p.tier}</p>
-                          </div>
-                        </div>
-                        <div className="text-right">
-                          <p className="text-[0.8125rem] font-semibold text-white">৳{p.price.toLocaleString("en-BD")}</p>
-                          <p className="text-[0.625rem] text-[#5b6280]">{p.accessType}</p>
-                        </div>
-                      </Link>
+                        <span className="flex size-7 items-center justify-center rounded-full bg-[#f4b942]/10 text-xs font-bold text-[#f4b942]">
+                          {index + 1}
+                        </span>
+                        <span className="text-sm text-[#c3c8d8]">{item}</span>
+                      </div>
                     ))}
-
-                    {/* Trust badges */}
-                    <div className="grid grid-cols-3 gap-2 pt-2">
-                      {([
-                        [ShieldCheck, "Verified"],
-                        [Clock, "Fast"],
-                        [Users, "Trusted"],
-                      ] as const).map(([Icon, label]) => (
-                        <div key={label} className="flex flex-col items-center gap-1.5 rounded-lg bg-white/[0.02] border border-white/[0.05] py-3">
-                          <Icon className="size-4 text-[#f4b942]" />
-                          <span className="text-[0.625rem] text-[#5b6280]">{label}</span>
-                        </div>
-                      ))}
-                    </div>
                   </div>
                 </div>
               </div>
@@ -244,142 +174,121 @@ export default function Home() {
           </div>
         </section>
 
-        {/* ================================================================
-            HOW IT WORKS
-            ================================================================ */}
         <section className="relative py-24 border-t border-white/[0.04]">
           <div className="mx-auto max-w-7xl px-5 sm:px-8">
             <div className="text-center max-w-xl mx-auto">
-              <p className="text-[0.6875rem] font-semibold uppercase tracking-[0.15em] text-[#f4b942]">How it works</p>
-              <h2 className="mt-3 text-3xl sm:text-4xl font-bold tracking-tight">Four steps to your subscription</h2>
-              <p className="mt-4 text-[0.9375rem] text-[#5b6280]">No foreign credit card needed. No complex setup. Just message, pay, and receive.</p>
+              <p className="text-[0.6875rem] font-semibold uppercase tracking-[0.15em] text-[#f4b942]">
+                How it works
+              </p>
+              <h2 className="mt-3 text-3xl sm:text-4xl font-bold tracking-tight">
+                Verify first, then pay
+              </h2>
+              <p className="mt-4 text-[0.9375rem] text-[#5b6280]">
+                Availability, eligibility and fulfilment can vary by product.
+              </p>
             </div>
 
             <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-              {steps.map((step, i) => (
-                <div key={step.title} className="glass-card rounded-2xl p-6 relative group">
+              {steps.map((step, index) => (
+                <div key={step.title} className="glass-card rounded-2xl p-6 relative">
                   <div className="flex size-11 items-center justify-center rounded-xl bg-gradient-to-br from-[#f4b942]/20 to-[#f4b942]/5 border border-[#f4b942]/10 mb-5">
                     <step.icon className="size-5 text-[#f4b942]" />
                   </div>
                   <div className="absolute top-6 right-6 text-[1.5rem] font-bold text-white/[0.04]">
-                    0{i + 1}
+                    0{index + 1}
                   </div>
                   <h3 className="text-[1rem] font-semibold text-white">{step.title}</h3>
-                  <p className="mt-2 text-[0.8125rem] leading-relaxed text-[#5b6280]">{step.desc}</p>
+                  <p className="mt-2 text-[0.8125rem] leading-relaxed text-[#5b6280]">
+                    {step.desc}
+                  </p>
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-        {/* ================================================================
-            FEATURED PRODUCTS
-            ================================================================ */}
         <section className="relative py-24">
           <div className="mx-auto max-w-7xl px-5 sm:px-8">
             <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
               <div>
-                <p className="text-[0.6875rem] font-semibold uppercase tracking-[0.15em] text-[#f4b942]">Popular</p>
-                <h2 className="mt-3 text-3xl sm:text-4xl font-bold tracking-tight">Ready-to-order plans</h2>
+                <p className="text-[0.6875rem] font-semibold uppercase tracking-[0.15em] text-[#f4b942]">
+                  Available catalog
+                </p>
+                <h2 className="mt-3 text-3xl sm:text-4xl font-bold tracking-tight">
+                  Products that pass the publication gate
+                </h2>
               </div>
-              <Link href="/products" className="inline-flex items-center gap-1 text-[0.8125rem] font-medium text-[#8a91a8] hover:text-white transition">
+              <Link
+                href="/products"
+                className="inline-flex items-center gap-1 text-[0.8125rem] font-medium text-[#8a91a8] hover:text-white transition"
+              >
                 View all products
                 <ArrowRight className="size-4" />
               </Link>
             </div>
 
-            <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-              {featuredProducts.map((product) => (
-                <article key={product.id} className="glass-card rounded-2xl overflow-hidden group">
-                  {/* Top gradient bar */}
-                  <div className={`h-1.5 bg-gradient-to-r ${getCategoryGradient(product.category).replace('/20', '')}`} />
-
-                  <div className="p-6">
-                    <div className="flex items-start justify-between">
-                      <div>
-                        <p className="text-[0.625rem] font-semibold uppercase tracking-[0.12em] text-[#5b6280]">{product.provider}</p>
-                        <h3 className="mt-1 text-[1.125rem] font-semibold text-white">
-                          <Link href={`/products/${product.slug}`} className="hover:text-[#f4b942] transition">
-                            {product.name}
-                          </Link>
-                        </h3>
-                      </div>
-                      <div className="text-right">
-                        <p className="text-[1.125rem] font-bold text-white">৳{product.price.toLocaleString("en-BD")}</p>
-                        <p className="text-[0.625rem] text-[#5b6280]">{product.tier}</p>
+            {featuredProducts.length > 0 ? (
+              <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+                {featuredProducts.map((product) => (
+                  <article key={product.id} className="glass-card rounded-2xl overflow-hidden">
+                    <div className="p-6">
+                      <p className="text-[0.625rem] font-semibold uppercase tracking-[0.12em] text-[#5b6280]">
+                        {product.provider}
+                      </p>
+                      <h3 className="mt-1 text-[1.125rem] font-semibold text-white">
+                        <Link href={`/products/${product.slug}`} className="hover:text-[#f4b942] transition">
+                          {product.name}
+                        </Link>
+                      </h3>
+                      <p className="mt-3 text-sm text-[#8a91a8] line-clamp-3">
+                        {product.description}
+                      </p>
+                      <div className="mt-5 flex items-end justify-between gap-4">
+                        <div>
+                          <p className="text-xs text-[#5b6280]">Listed price</p>
+                          <p className="text-xl font-bold text-white">
+                            ৳{product.price.toLocaleString("en-BD")}
+                          </p>
+                        </div>
+                        <a href={getWhatsappUrl(product)} className="btn-whatsapp h-10 text-[0.8125rem] px-4">
+                          Verify & order
+                        </a>
                       </div>
                     </div>
-
-                    <ul className="mt-5 space-y-2">
-                      {product.capabilities.slice(0, 3).map((feature) => (
-                        <li key={feature} className="flex items-center gap-2 text-[0.8125rem] text-[#8a91a8]">
-                          <ShieldCheck className="size-3.5 text-[#f4b942]/60" />
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
-
-                    <a href={getWhatsappUrl(product)} className="btn-whatsapp w-full mt-6 h-10 text-[0.8125rem]">
-                      Order via WhatsApp
-                      <ChevronRight className="size-4" />
-                    </a>
-                  </div>
-                </article>
-              ))}
-            </div>
+                  </article>
+                ))}
+              </div>
+            ) : (
+              <div className="mt-12 rounded-2xl border border-[#f4b942]/15 bg-[#f4b942]/5 p-8 text-center">
+                <ShieldCheck className="mx-auto size-8 text-[#f4b942]" />
+                <h3 className="mt-4 text-xl font-semibold">Catalog verification in progress</h3>
+                <p className="mt-2 text-sm text-[#8a91a8] max-w-xl mx-auto">
+                  Products remain unpublished until their activation method, ownership,
+                  price and support terms pass review. Contact us to check a specific plan.
+                </p>
+                <a href={whatsappUrl} className="btn-secondary mt-6 inline-flex">
+                  Check a product
+                </a>
+              </div>
+            )}
           </div>
         </section>
 
-        {/* ================================================================
-            TESTIMONIALS
-            ================================================================ */}
         <section className="relative py-24 border-t border-white/[0.04]">
-          <div className="mx-auto max-w-7xl px-5 sm:px-8">
-            <div className="text-center max-w-xl mx-auto">
-              <p className="text-[0.6875rem] font-semibold uppercase tracking-[0.15em] text-[#f4b942]">Testimonials</p>
-              <h2 className="mt-3 text-3xl sm:text-4xl font-bold tracking-tight">Bangladeshi freelancers choose us</h2>
-            </div>
-
-            <div className="mt-12 grid gap-5 md:grid-cols-3">
-              {testimonials.map((t) => (
-                <div key={t.name} className="glass-card rounded-2xl p-6">
-                  <div className="flex gap-1">
-                    {Array.from({ length: 5 }).map((_, i) => (
-                      <Star key={i} className="size-3.5 fill-[#f4b942] text-[#f4b942]" />
-                    ))}
-                  </div>
-                  <p className="mt-4 text-[0.875rem] leading-relaxed text-[#8a91a8]">
-                    &ldquo;{t.text}&rdquo;
-                  </p>
-                  <div className="mt-5 flex items-center gap-3">
-                    <div className="flex size-9 items-center justify-center rounded-full bg-gradient-to-br from-[#f4b942]/30 to-[#f4b942]/10 text-[0.75rem] font-bold text-[#f4b942]">
-                      {t.name.charAt(0)}
-                    </div>
-                    <div>
-                      <p className="text-[0.8125rem] font-semibold text-white">{t.name}</p>
-                      <p className="text-[0.6875rem] text-[#5b6280]">{t.role}</p>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* ================================================================
-            FAQ
-            ================================================================ */}
-        <section className="relative py-24">
           <div className="mx-auto max-w-3xl px-5 sm:px-8">
             <div className="text-center">
-              <p className="text-[0.6875rem] font-semibold uppercase tracking-[0.15em] text-[#f4b942]">FAQ</p>
-              <h2 className="mt-3 text-3xl sm:text-4xl font-bold tracking-tight">Common questions</h2>
+              <p className="text-[0.6875rem] font-semibold uppercase tracking-[0.15em] text-[#f4b942]">
+                FAQ
+              </p>
+              <h2 className="mt-3 text-3xl sm:text-4xl font-bold tracking-tight">
+                Common questions
+              </h2>
             </div>
 
             <div className="mt-10 space-y-3">
-              {faqItems.map((item, i) => (
+              {faqItems.map((item) => (
                 <details
-                  key={i}
+                  key={item.q}
                   className="group rounded-xl border border-white/[0.06] bg-white/[0.02] overflow-hidden transition-colors open:border-[#f4b942]/15 open:bg-white/[0.03]"
                 >
                   <summary className="flex cursor-pointer list-none items-center justify-between gap-4 px-5 py-4">
@@ -392,37 +301,22 @@ export default function Home() {
                 </details>
               ))}
             </div>
-
-            <div className="mt-8 text-center">
-              <Link href="/faq" className="inline-flex items-center gap-1 text-[0.8125rem] font-medium text-[#8a91a8] hover:text-white transition">
-                View all FAQs
-                <ArrowRight className="size-4" />
-              </Link>
-            </div>
           </div>
         </section>
 
-        {/* ================================================================
-            FINAL CTA
-            ================================================================ */}
         <section className="relative py-24 border-t border-white/[0.04]">
           <div className="mx-auto max-w-3xl px-5 sm:px-8 text-center">
             <h2 className="text-3xl sm:text-4xl font-bold tracking-tight">
-              Ready to get started?
+              Need help choosing the correct plan?
             </h2>
-            <p className="mt-4 text-[0.9375rem] text-[#5b6280] max-w-md mx-auto">
-              Join 3,000+ in Bangladesh who trust AI Premium Shop for their premium subscriptions.
+            <p className="mt-4 text-[0.9375rem] text-[#5b6280] max-w-xl mx-auto">
+              Tell us your use case and budget. We will confirm what is currently available
+              and disclose the activation and support terms before payment.
             </p>
-            <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
-              <Link href="/products" className="btn-primary">
-                Browse Products
-                <ChevronRight className="size-4" />
-              </Link>
-              <a href={whatsappUrl} className="btn-secondary">
-                <MessageCircle className="size-4 text-[#25d366]" />
-                Chat on WhatsApp
-              </a>
-            </div>
+            <a href={whatsappUrl} className="btn-secondary mt-8 inline-flex">
+              <MessageCircle className="size-4 text-[#25d366]" />
+              Ask on WhatsApp
+            </a>
           </div>
         </section>
       </main>

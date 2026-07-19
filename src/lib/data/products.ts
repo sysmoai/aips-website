@@ -23,7 +23,6 @@ export interface LiveProduct {
   featured: boolean;
   whatsappMsg: string;
   status: string;
-  // Enriched fields from Replit catalog
   descriptionBN?: string;
   useCases?: string[];
   whyBuyFromAIPS?: string;
@@ -42,7 +41,7 @@ export interface LiveProduct {
 
 export interface ProductGroup {
   slug: string;
-  name: string; // Display name, e.g. "Claude Pro" not "Claude"
+  name: string;
   brand: string;
   brandSlug: string;
   provider: string;
@@ -55,16 +54,51 @@ export interface ProductGroup {
   featured: boolean;
 }
 
-/* ------------------------------------------------------------------ */
-/*  Raw data                                                          */
-/* ------------------------------------------------------------------ */
 const allItems: LiveProduct[] = rawProducts as LiveProduct[];
 
-/* ------------------------------------------------------------------ */
-/*  Helpers                                                           */
-/* ------------------------------------------------------------------ */
+function isPublishable(item: LiveProduct): boolean {
+  if (item.status !== "Active") return false;
+  if (item.accessType === "shared") return false;
+
+  const unsafeDeliveryMethods = new Set([
+    "account-credentials",
+    "shared-account",
+    "login-credentials",
+    "password-delivery",
+    "cookie",
+    "session-token",
+  ]);
+
+  if (item.deliveryMethod && unsafeDeliveryMethods.has(item.deliveryMethod)) {
+    return false;
+  }
+
+  const searchableText = [
+    item.name,
+    item.tier,
+    item.description,
+    item.whatsappMsg,
+    item.whyBuyFromAIPS,
+    item.deliveryMethod,
+  ]
+    .filter(Boolean)
+    .join(" ")
+    .toLowerCase();
+
+  const unsafeTerms = [
+    "shared",
+    "credentials",
+    "login details",
+    "account pool",
+    "cookie",
+    "session token",
+  ];
+
+  return !unsafeTerms.some((term) => searchableText.includes(term));
+}
+
 export function getAllItems(): LiveProduct[] {
-  return allItems.filter((i) => i.status === "Active");
+  return allItems.filter(isPublishable);
 }
 
 export function getCategories(): string[] {
@@ -100,7 +134,6 @@ export function getProductGroups(): ProductGroup[] {
     const allCapabilities = Array.from(
       new Set(variants.flatMap((v) => v.capabilities))
     );
-    // Extract display name from first variant.
     const displayName = first.name.split(" - ")[0].trim();
     groups.push({
       slug,
@@ -149,8 +182,11 @@ export function getRelatedProducts(
   limit = 4
 ): ProductGroup[] {
   const all = getProductGroups();
-  // Same category first, then featured, then any
-  const sameCat = all.filter((g) => g.slug !== currentSlug && g.category === category);
-  const others = all.filter((g) => g.slug !== currentSlug && g.category !== category);
+  const sameCat = all.filter(
+    (g) => g.slug !== currentSlug && g.category === category
+  );
+  const others = all.filter(
+    (g) => g.slug !== currentSlug && g.category !== category
+  );
   return [...sameCat, ...others].slice(0, limit);
 }
