@@ -1,4 +1,4 @@
-import { buildMetadata } from "@/lib/seo/metadata";
+﻿import { buildMetadata } from "@/lib/seo/metadata";
 import { BreadcrumbJsonLd, FAQPageJsonLd } from "@/components/seo/json-ld";
 import type { Metadata } from "next";
 import Link from "next/link";
@@ -44,7 +44,7 @@ export default function BestAIForFreelancersPage() {
           <div className="mt-6 p-4 rounded-xl border border-[#f4b942]/10 bg-[#f4b942]/[0.03]">
             <p className="text-[0.75rem] font-semibold uppercase tracking-[0.12em] text-[#f4b942]">Quick Answer</p>
             <p className="mt-2 text-[0.875rem] leading-relaxed text-[#c9ceda]">
-              <strong>ChatGPT Plus (৳350/mo) + Midjourney (৳1,199/mo) + Canva Pro (৳499/mo)</strong> is the winning combo for most Bangladeshi freelancers — ৳2,048/mo total. Writers add Grammarly (৳470/mo), developers add GitHub Copilot (৳1,495/mo). All with bKash/Nagad. Trusted by 3,000+ customers since 2024.
+              <strong>ChatGPT Plus (৳350/mo) + Midjourney (৳1,199/mo) + Canva Pro (৳499/mo)</strong> is the winning combo for most Bangladeshi freelancers — ৳2,048/mo total. Writers add Grammarly (৳470/mo), developers add GitHub Copilot (৳1,495/mo). All with bKash/Nagad. Trusted by a growing community of customers since 2024.
             </p>
           </div>
 

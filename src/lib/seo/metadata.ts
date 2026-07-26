@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://aipremiumshop.com";
 const siteName = "AI Premium Shop";
@@ -105,7 +105,7 @@ export function buildProductMetadata(product: {
   const description =
     product.metaDescription ??
     product.shortDescription ??
-    `Buy ${product.name} in Bangladesh. Starting from ৳${product.basePriceBdt.toLocaleString("en-BD")}. bKash/Nagad accepted. 5–15 min WhatsApp delivery after payment confirmation. 3,000+ customers since 2024.`;
+    `Buy ${product.name} in Bangladesh. Starting from ৳${product.basePriceBdt.toLocaleString("en-BD")}. bKash/Nagad accepted. 5–15 min WhatsApp delivery after payment confirmation. a growing community of customers since 2024.`;
   const canonical = `${siteUrl}/products/${product.slug}`;
   const ogImage = product.heroImageUrl ?? defaultOgImage;
 

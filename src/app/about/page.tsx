@@ -1,4 +1,4 @@
-import { buildMetadata } from "@/lib/seo/metadata";
+﻿import { buildMetadata } from "@/lib/seo/metadata";
 import type { Metadata } from "next";
 import { BreadcrumbJsonLd } from "@/components/seo/json-ld";
 import { MessageCircle, MapPin, Mail, Phone, CheckCircle2 } from "lucide-react";
@@ -6,7 +6,7 @@ import { MessageCircle, MapPin, Mail, Phone, CheckCircle2 } from "lucide-react";
 export const metadata: Metadata = buildMetadata({
   title: "About Us — AI Premium Shop Bangladesh",
   description:
-    "Learn about AI Premium Shop, Bangladesh's trusted premium subscription reseller. Founded by Emon Hossain in Dhaka. 3,000+ customers since 2024.",
+    "Learn about AI Premium Shop, Bangladesh's trusted premium subscription reseller. Founded by Emon Hossain in Dhaka. a growing community of customers since 2024.",
   canonical: "https://aipremiumshop.com/about",
 });
 
@@ -40,7 +40,7 @@ export default function AboutPage() {
               <p className="mt-3 text-[0.9375rem] leading-relaxed text-[#8a91a8]">
                 It started with a single problem: friends and classmates in Dhaka wanted ChatGPT Plus
                 and Midjourney but could not pay with local cards. Emon Hossain built AI Premium Shop
-                to bridge that gap — one subscription at a time. Today, we serve 3,000+ customers
+                to bridge that gap — one subscription at a time. Today, we serve a growing community of customers
                 across Bangladesh, from students in Rajshahi to agencies in Gulshan.
               </p>
             </div>

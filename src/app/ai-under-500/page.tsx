@@ -1,4 +1,4 @@
-import { buildMetadata } from "@/lib/seo/metadata";
+﻿import { buildMetadata } from "@/lib/seo/metadata";
 import { BreadcrumbJsonLd, FAQPageJsonLd } from "@/components/seo/json-ld";
 import type { Metadata } from "next";
 import Link from "next/link";
@@ -29,7 +29,7 @@ export default function AIUnder500Page() {
       <div className="mt-6 p-4 rounded-xl border border-[#f4b942]/10 bg-[#f4b942]/[0.03]">
         <p className="text-[0.75rem] font-semibold uppercase tracking-[0.12em] text-[#f4b942]">Quick Answer</p>
         <p className="mt-2 text-[0.875rem] leading-relaxed text-[#c9ceda]">
-          You can get <strong>20 premium AI subscriptions under BDT 500/month</strong> at AI Premium Shop — including ChatGPT Plus (BDT 350), Google AI Pro (BDT 500), Canva Pro (BDT 499), and Perplexity Pro (BDT 350). All with bKash/Nagad payment — no international card needed. Trusted by 3,000+ customers since 2024.
+          You can get <strong>20 premium AI subscriptions under BDT 500/month</strong> at AI Premium Shop — including ChatGPT Plus (BDT 350), Google AI Pro (BDT 500), Canva Pro (BDT 499), and Perplexity Pro (BDT 350). All with bKash/Nagad payment — no international card needed. Trusted by a growing community of customers since 2024.
         </p>
       </div>
 

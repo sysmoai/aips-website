@@ -1,4 +1,4 @@
-import { buildMetadata } from "@/lib/seo/metadata";
+﻿import { buildMetadata } from "@/lib/seo/metadata";
 import { BreadcrumbJsonLd, FAQPageJsonLd } from "@/components/seo/json-ld";
 import type { Metadata } from "next";
 import { ArrowRight } from "lucide-react";
@@ -58,7 +58,7 @@ export default function ChatGPTVsClaudePage() {
             <p className="mt-2 text-[0.875rem] leading-relaxed text-[#c9ceda]">
               <strong>ChatGPT Plus (from ৳350/mo)</strong> is the better all-rounder with image generation, web search, and broader use cases. 
               <strong>Claude Pro (from ৳1,495/mo)</strong> excels at long-document analysis (200K context), deep reasoning, and natural writing.
-              Both available at AI Premium Shop with bKash/Nagad payment — no international card needed. Trusted by 3,000+ customers since 2024.
+              Both available at AI Premium Shop with bKash/Nagad payment — no international card needed. Trusted by a growing community of customers since 2024.
             </p>
           </div>
 

@@ -1,4 +1,4 @@
-import { buildMetadata } from "@/lib/seo/metadata";
+﻿import { buildMetadata } from "@/lib/seo/metadata";
 import { BreadcrumbJsonLd, FAQPageJsonLd } from "@/components/seo/json-ld";
 import type { Metadata } from "next";
 import Link from "next/link";
@@ -6,7 +6,7 @@ import { ArrowRight, MessageCircle, MapPin } from "lucide-react";
 
 export const metadata: Metadata = buildMetadata({
   title: "Buy AI Subscriptions in Rajshahi — bKash/Nagad Payment",
-  description: "Buy ChatGPT Plus, Claude Pro, Midjourney & 103+ AI tools in Rajshahi, Bangladesh. bKash/Nagad payment. 5-15 min WhatsApp delivery. 3,000+ customers.",
+  description: "Buy ChatGPT Plus, Claude Pro, Midjourney & 103+ AI tools in Rajshahi, Bangladesh. bKash/Nagad payment. 5-15 min WhatsApp delivery. a growing community of customers.",
   canonical: "https://aipremiumshop.com/rajshahi",
 });
 
@@ -37,7 +37,7 @@ export default function RajshahiPage() {
       <div className="mt-6 p-4 rounded-xl border border-[#f4b942]/10 bg-[#f4b942]/[0.03]">
         <p className="text-[0.75rem] font-semibold uppercase tracking-[0.12em] text-[#f4b942]">Quick Answer</p>
         <p className="mt-2 text-[0.875rem] leading-relaxed text-[#c9ceda]">
-          Yes — you can buy <strong>103+ premium AI subscriptions from Rajshahi</strong> through AI Premium Shop. Pay with bKash, Nagad, or Rocket — no international card needed. Delivery in 5-15 minutes via WhatsApp. Trusted by 3,000+ customers across all 64 districts since 2024.
+          Yes — you can buy <strong>103+ premium AI subscriptions from Rajshahi</strong> through AI Premium Shop. Pay with bKash, Nagad, or Rocket — no international card needed. Delivery in 5-15 minutes via WhatsApp. Trusted by a growing community of customers across all 64 districts since 2024.
         </p>
       </div>
 

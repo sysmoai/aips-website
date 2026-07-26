@@ -1,4 +1,4 @@
-import { buildMetadata } from "@/lib/seo/metadata";
+﻿import { buildMetadata } from "@/lib/seo/metadata";
 import { BreadcrumbJsonLd, FAQPageJsonLd } from "@/components/seo/json-ld";
 import type { Metadata } from "next";
 import Link from "next/link";
@@ -45,7 +45,7 @@ export default function BestAIForStudentsPage() {
           <div className="mt-6 p-4 rounded-xl border border-[#f4b942]/10 bg-[#f4b942]/[0.03]">
             <p className="text-[0.75rem] font-semibold uppercase tracking-[0.12em] text-[#f4b942]">Quick Answer</p>
             <p className="mt-2 text-[0.875rem] leading-relaxed text-[#c9ceda]">
-              <strong>ChatGPT Plus (৳350/mo)</strong> is the best all-round AI tool for Bangladeshi students — covers writing, coding, research, and image generation. Add <strong>Grammarly (৳470/mo)</strong> for perfect English in essays and theses. All available at AI Premium Shop with bKash/Nagad payment — no international card needed. Trusted by 3,000+ students and professionals since 2024.
+              <strong>ChatGPT Plus (৳350/mo)</strong> is the best all-round AI tool for Bangladeshi students — covers writing, coding, research, and image generation. Add <strong>Grammarly (৳470/mo)</strong> for perfect English in essays and theses. All available at AI Premium Shop with bKash/Nagad payment — no international card needed. Trusted by thousands students and professionals since 2024.
             </p>
           </div>
 
