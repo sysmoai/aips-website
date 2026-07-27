@@ -11,8 +11,10 @@ Updated: 2026-07-27 (session: Claude Fable 5, Mac)
   or manual dashboard upload (see DEPLOY-CEO.md). NOT auto-deployed from git.
   NOTE: aipremiumshop.com currently points at dead Replit infra (404) — DNS
   change is a pending Human Gate.
-- `src/data/products.json`: 103 entries. Had UTF-8 BOM (fixed). NOT consumed by
-  any route yet — all 40 pages hardcode copy. Centralizing is a top gap.
+- `src/data/products.json`: 103 entries → 52 product slugs, 45 brands. Had
+  UTF-8 BOM (fixed). CORRECTION to earlier note: the catalog IS consumed —
+  /products, /products/[slug], /category/[slug] read it via
+  src/lib/data/products.ts. Persona/city/blog pages still hardcode copy.
 
 ## Completed this session
 - CEO pricing applied everywhere (ChatGPT Plus Starter 350→499, Premium
@@ -26,14 +28,19 @@ Updated: 2026-07-27 (session: Claude Fable 5, Mac)
 - typecheck ✓, next build ✓ (all 40 routes SSG clean).
 
 ## Open gaps (ranked)
-1. products.json unused: build /products/[slug] generator (103 entries → pages)
-   and make existing pages read from data, not hardcoded copy.
-2. No design-token system yet (Higgsfield-grade dark cinematic spec): tokens
-   for color/type/motion, glass cards, video hero slots + poster fallbacks.
-3. /public/media structure + Higgsfield briefs not yet emitted.
-4. Deploy pipeline is manual — wire CF Pages git integration or a GH Action.
+1. DONE 2026-07-27: Vercel project "aips-website" created, git-linked to
+   sysmoai/aips-website — pushes now auto-deploy. (CF Pages manual pipeline
+   remains as legacy.)
+2. DONE 2026-07-27: /public/media structure + MediaImage/MediaVideo
+   components (lazy, poster-backed, reduced-motion aware). Media files
+   themselves pending Higgsfield renders — briefs to emit next.
+3. Design-token system (Higgsfield-grade dark cinematic spec): tokens for
+   color/type/motion, glass cards, video hero slot on homepage.
+4. Persona/city/blog pages still hardcode prices/copy — migrate to catalog.
 5. Bangla route coverage partial; no EN/BN toggle component.
 6. JSON-LD present only on some pages; audit Product/Offer/FAQ schema.
+7. Port best content from aips-landing (testimonials, offers data) — merge
+   decision 2026-07-27: aips-website is THE canonical AIPS site.
 
 ## Pending Human Gates
 - DNS at registrar (3 domains ready on Vercel side; aipremiumshop.com brand
