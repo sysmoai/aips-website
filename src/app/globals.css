@@ -427,3 +427,68 @@ html {
     scroll-behavior: auto !important;
   }
 }
+
+/* Cinematic motion animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes scalePulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.02); }
+}
+
+@keyframes glowPulse {
+  0%, 100% { box-shadow: 0 0 20px rgba(255, 255, 255, 0.1); }
+  50% { box-shadow: 0 0 40px rgba(255, 255, 255, 0.15); }
+}
+
+/* Utility classes */
+.animate-fade-in { animation: fadeIn 0.5s ease-out; }
+.animate-slide-up { animation: slideUp 0.6s ease-out; }
+.animate-scale-pulse { animation: scalePulse 3s ease-in-out infinite; }
+.animate-glow-pulse { animation: glowPulse 3s ease-in-out infinite; }
+
+.glass-card {
+  border-radius: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  background-color: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(8px);
+}
+
+.glass-card-md {
+  border-radius: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background-color: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(12px);
+}
+
+.glass-card-lg {
+  border-radius: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(16px);
+}
+
+.text-glow {
+  color: white;
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.15));
+}
+
+/* Reduced motion: disable animations */
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-in,
+  .animate-slide-up,
+  .animate-scale-pulse,
+  .animate-glow-pulse {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}

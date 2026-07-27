@@ -14,6 +14,9 @@ import {
   FAQPageJsonLd,
   HowToJsonLd,
   BreadcrumbJsonLd,
+  LocalBusinessJsonLd,
+  OrganizationJsonLd,
+  WebsiteJsonLd,
 } from "@/components/seo/json-ld";
 import Link from "next/link";
 import { getFeaturedItems, getWhatsappUrl } from "@/lib/data/products";
@@ -125,6 +128,9 @@ const howToSteps = [
 export default function Home() {
   return (
     <>
+      <OrganizationJsonLd />
+      <WebsiteJsonLd />
+      <LocalBusinessJsonLd />
       <BreadcrumbJsonLd items={[{ name: "Home", path: "/" }]} />
       <HowToJsonLd name="How to buy premium subscriptions in Bangladesh" description="A simple 4-step guide to ordering AI tools, design software, and streaming services from AI Premium Shop with local payment." totalTime="PT15M" steps={howToSteps} />
       <FAQPageJsonLd items={faqItems.map((i) => ({ question: i.q, answer: i.a }))} />
@@ -177,11 +183,11 @@ export default function Home() {
                 </div>
 
                 {/* Stats */}
-                <div className="mt-10 grid grid-cols-4 gap-4 max-w-md">
+                <div className="mt-12 grid grid-cols-2 sm:grid-cols-4 gap-6 sm:gap-4 max-w-md">
                   {stats.map((s) => (
                     <div key={s.label}>
-                      <p className="text-xl sm:text-2xl font-bold text-white">{s.value}</p>
-                      <p className="text-[0.6875rem] text-[#5b6280] mt-0.5">{s.label}</p>
+                      <p className="text-lg sm:text-2xl font-bold text-white">{s.value}</p>
+                      <p className="text-xs sm:text-[0.6875rem] text-[#5b6280] mt-1">{s.label}</p>
                     </div>
                   ))}
                 </div>

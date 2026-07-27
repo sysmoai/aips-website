@@ -302,3 +302,82 @@ export function HowToJsonLd({ name, description, totalTime, estimatedCost, steps
 
   return <ScriptLd schema={schema} />;
 }
+
+interface LocalBusinessProps {
+  name?: string;
+  telephone?: string;
+  address?: {
+    streetAddress?: string;
+    addressLocality?: string;
+    addressRegion?: string;
+    postalCode?: string;
+    addressCountry: string;
+  };
+  areaServed?: string[];
+  priceRange?: string;
+}
+
+export function LocalBusinessJsonLd({
+  name = siteName,
+  telephone = process.env.NEXT_PUBLIC_WA_PRIMARY ? "+" + process.env.NEXT_PUBLIC_WA_PRIMARY : "+880-1865-385348",
+  address = { addressCountry: "BD", addressLocality: "Dhaka", addressRegion: "Dhaka Division" },
+  areaServed = ["Bangladesh"],
+  priceRange = "৳270–৳29,900",
+}: LocalBusinessProps) {
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "@id": `${siteUrl}/#local-business`,
+    name,
+    url: siteUrl,
+    telephone,
+    image: `${siteUrl}/logo.png`,
+    address: {
+      "@type": "PostalAddress",
+      ...address,
+    },
+    areaServed: areaServed.map((area) => ({ "@type": "Place", name: area })),
+    priceRange,
+    openingHours: {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+      opens: "00:00",
+      closes: "23:59",
+    },
+    sameAs: [
+      "https://wa.me/" + (process.env.NEXT_PUBLIC_WA_PRIMARY || "8801865385348"),
+    ],
+  };
+
+  return <ScriptLd schema={schema} />;
+}
+
+interface CollectionPageProps {
+  name: string;
+  description: string;
+  url: string;
+  itemCount: number;
+}
+
+export function CollectionPageJsonLd({
+  name,
+  description,
+  url,
+  itemCount,
+}: CollectionPageProps) {
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    name,
+    description,
+    url,
+    mainEntity: {
+      "@type": "Thing",
+      name,
+      description,
+      numberOfItems: itemCount,
+    },
+  };
+
+  return <ScriptLd schema={schema} />;
+}
