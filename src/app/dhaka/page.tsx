@@ -11,8 +11,8 @@ export const metadata: Metadata = buildMetadata({
 });
 
 const tools = [
-  { name: "ChatGPT Plus", slug: "chatgpt-plus-bangladesh", price: "৳350/mo", desc: "Bangladesh's most popular AI — writing, coding, research, images." },
-  { name: "Google AI Pro", slug: "gemini-advanced-bangladesh", price: "৳500/mo", desc: "AI in Gmail, Docs + 2TB storage. Google price: ৳2,500." },
+  { name: "ChatGPT Plus", slug: "chatgpt-plus-bangladesh", price: "৳499/mo", desc: "Bangladesh's most popular AI — writing, coding, research, images." },
+  { name: "Google AI Pro", slug: "gemini-advanced-bangladesh", price: "৳499/mo", desc: "AI in Gmail, Docs + 2TB storage. Google price: ৳2,500." },
   { name: "Claude Pro", slug: "claude-pro-bangladesh", price: "৳1,495/mo", desc: "Best writing quality, 200K context, PDF analysis." },
   { name: "Midjourney", slug: "midjourney-bangladesh", price: "৳1,199/mo", desc: "Professional AI images — photorealistic and artistic." },
   { name: "Canva Pro", slug: "canva-pro-bangladesh", price: "৳499/mo", desc: "All-in-one design with AI Magic Studio and templates." },
@@ -22,7 +22,7 @@ const tools = [
 const faqs = [
   { question: "Can I buy AI subscriptions from Dhaka with bKash?", answer: "Yes! AI Premium Shop delivers to all 64 districts including Dhaka. Pay with bKash, Nagad, Rocket, or bank transfer. No international credit card needed. 5-15 minute delivery via WhatsApp." },
   { question: "How fast is delivery in Dhaka?", answer: "Most subscriptions are delivered within 5-15 minutes of payment confirmation via WhatsApp. Personal accounts may take 2-4 hours for individual setup. All of Bangladesh is covered — Dhaka included." },
-  { question: "Which AI tool should I buy from Dhaka?", answer: "Start with ChatGPT Plus (BDT 350/mo) — it covers writing, coding, research, and image generation. For Dhaka freelancers, add Midjourney (BDT 1,199/mo) for design work. Students should get ChatGPT Plus + Grammarly (BDT 470/mo)." },
+  { question: "Which AI tool should I buy from Dhaka?", answer: "Start with ChatGPT Plus (BDT 499/mo) — it covers writing, coding, research, and image generation. For Dhaka freelancers, add Midjourney (BDT 1,199/mo) for design work. Students should get ChatGPT Plus + Grammarly (BDT 470/mo)." },
 ];
 
 export default function DhakaPage() {

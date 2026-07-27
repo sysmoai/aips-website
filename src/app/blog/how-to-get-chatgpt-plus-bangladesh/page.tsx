@@ -34,7 +34,7 @@ export default function HowToGetChatGPTPlusPage() {
         description="A 4-step guide to purchasing ChatGPT Plus in Bangladesh using local payment methods."
         totalTime="PT15M"
         steps={[
-          { name: "Choose your ChatGPT Plus plan", text: "Visit AI Premium Shop and select ChatGPT Plus Starter Shared (৳350), Premium Shared (৳950), or Personal (৳2,990)." },
+          { name: "Choose your ChatGPT Plus plan", text: "Visit AI Premium Shop and select ChatGPT Plus Starter Shared (৳499), Premium Shared (৳999), or Personal (৳2,990)." },
           { name: "Click Order via WhatsApp", text: "Click the Order button and send the pre-filled message to our support team." },
           { name: "Pay with bKash or Nagad", text: "Send payment via bKash Merchant Pay, Nagad, Rocket, or bank card. Share the transaction screenshot." },
           { name: "Receive your account", text: "Get your ChatGPT Plus login credentials delivered on WhatsApp within 5-15 minutes." },
@@ -82,12 +82,12 @@ export default function HowToGetChatGPTPlusPage() {
               <tbody>
                 <tr className="border-b border-white/[0.04]">
                   <td className="py-2 pr-4">Starter Shared</td>
-                  <td className="py-2 pr-4">৳350/mo</td>
+                  <td className="py-2 pr-4">৳499/mo</td>
                   <td className="py-2 pr-4">Students, light users</td>
                 </tr>
                 <tr className="border-b border-white/[0.04]">
                   <td className="py-2 pr-4">Premium Shared</td>
-                  <td className="py-2 pr-4">৳950/mo</td>
+                  <td className="py-2 pr-4">৳999/mo</td>
                   <td className="py-2 pr-4">Freelancers, regular users</td>
                 </tr>
                 <tr className="border-b border-white/[0.04]">
@@ -111,8 +111,8 @@ export default function HowToGetChatGPTPlusPage() {
               Select the plan that matches your budget and usage:
             </p>
             <ul>
-              <li><strong>Starter Shared (৳350):</strong> Budget-friendly. Shared with 4-6 users. Good for students.</li>
-              <li><strong>Premium Shared (৳950):</strong> 2-3 users max. Higher stability. Best for freelancers.</li>
+              <li><strong>Starter Shared (৳499):</strong> Budget-friendly. Shared with 4-6 users. Good for students.</li>
+              <li><strong>Premium Shared (৳999):</strong> 2-3 users max. Higher stability. Best for freelancers.</li>
               <li><strong>Personal (৳2,990):</strong> Your own Personal Account. Full GPT-5.4 access. Best for professionals.</li>
             </ul>
 
@@ -122,7 +122,7 @@ export default function HowToGetChatGPTPlusPage() {
               opens in WhatsApp. Send it to our support team at <strong>+880 1865-385348</strong>.
             </p>
             <p>
-              Example message: <em>&quot;Hi AI Premium Shop, I want ChatGPT Plus Premium Shared (৳950/mo).&quot;</em>
+              Example message: <em>&quot;Hi AI Premium Shop, I want ChatGPT Plus Premium Shared (৳999/mo).&quot;</em>
             </p>
 
             <h3>Step 3: Pay with bKash</h3>
@@ -133,7 +133,7 @@ export default function HowToGetChatGPTPlusPage() {
               <li>Open your bKash app</li>
               <li>Select &quot;Payment&quot; (not Send Money)</li>
               <li>Enter our merchant number</li>
-              <li>Enter the exact amount (e.g., ৳950)</li>
+              <li>Enter the exact amount (e.g., ৳999)</li>
               <li>Enter your PIN to confirm</li>
               <li>Take a screenshot of the success message</li>
             </ol>
@@ -188,7 +188,7 @@ export default function HowToGetChatGPTPlusPage() {
           <div className="mt-12 rounded-lg glass-card p-8 text-center text-white">
             <h2 className="text-2xl font-semibold">Ready to get ChatGPT Plus?</h2>
             <p className="mt-2 text-white/70">
-              Starting from ৳350/mo with bKash payment and instant delivery.
+              Starting from ৳499/mo with bKash payment and instant delivery.
             </p>
             <Link
               href="/products/chatgpt-plus-bangladesh"

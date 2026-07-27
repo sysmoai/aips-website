@@ -10,12 +10,12 @@ export const metadatanswer: Metadata = buildMetadata({
   canonical: "https://aipremiumshop.com/best-ai-for-job-seekers",
 });
 
-const tools = [{ name: "ChatGPT Plus", slug: "chatgpt-plus-bangladesh", price: "৳350/mo", desc: "Write tailored CVs, cover letters, and interview answers for any job." },
+const tools = [{ name: "ChatGPT Plus", slug: "chatgpt-plus-bangladesh", price: "৳499/mo", desc: "Write tailored CVs, cover letters, and interview answers for any job." },
     { name: "Grammarly Premium", slug: "grammarly-premium-bangladesh", price: "৳470/mo", desc: "Perfect English for CVs, cover letters, and professional emails." },
     { name: "Canva Pro", slug: "canva-pro-bangladesh", price: "৳499/mo", desc: "Create professional CV templates, portfolio presentations, and LinkedIn banners." },
     { name: "Claude Pro", slug: "claude-pro-bangladesh", price: "৳1,495/mo", desc: "Mock interviews, complex career strategy, and long-form research." }];
 
-const faqs = [{ question: "How can AI help me get a job in Bangladesh?", answer: "ChatGPT Plus (৳350/mo) writes tailored CVs and cover letters in seconds. Grammarly (৳470/mo) polishes your English to professional standard. Canva Pro (৳499/mo) creates stunning CV designs. Total: ৳1,319/mo — less than one week's transport cost in Dhaka." }];
+const faqs = [{ question: "How can AI help me get a job in Bangladesh?", answer: "ChatGPT Plus (৳499/mo) writes tailored CVs and cover letters in seconds. Grammarly (৳470/mo) polishes your English to professional standard. Canva Pro (৳499/mo) creates stunning CV designs. Total: ৳1,319/mo — less than one week's transport cost in Dhaka." }];
 
 export default function Page() {
   return (

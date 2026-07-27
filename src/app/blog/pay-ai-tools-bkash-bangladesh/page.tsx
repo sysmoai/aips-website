@@ -130,7 +130,7 @@ export default function PayAIToolsBkashPage() {
               that fits your needs. Popular choices:
             </p>
             <ul>
-              <li>ChatGPT Plus — ৳350–৳2,990/mo</li>
+              <li>ChatGPT Plus — ৳499–৳2,990/mo</li>
               <li>Claude Pro — ৳1,495–৳2,990/mo</li>
               <li>Midjourney — ৳1,199–৳17,940/mo</li>
               <li>Cursor Pro — ৳2,990–৳8,970/mo</li>
@@ -200,7 +200,7 @@ export default function PayAIToolsBkashPage() {
                 <tr className="border-b border-white/[0.04]">
                   <td className="py-2 pr-4">AI Assistants</td>
                   <td className="py-2 pr-4">ChatGPT, Claude, Gemini, Perplexity</td>
-                  <td className="py-2 pr-4">৳350 – ৳29,900</td>
+                  <td className="py-2 pr-4">৳270 – ৳29,900</td>
                 </tr>
                 <tr className="border-b border-white/[0.04]">
                   <td className="py-2 pr-4">AI Code</td>

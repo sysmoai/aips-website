@@ -61,7 +61,7 @@ export default function ChatGPTVsGeminiPage() {
           <div className="mt-6 p-4 rounded-xl border border-[#f4b942]/10 bg-[#f4b942]/[0.03]">
             <p className="text-[0.75rem] font-semibold uppercase tracking-[0.12em] text-[#f4b942]">Quick Answer</p>
             <p className="mt-2 text-[0.875rem] leading-relaxed text-[#c9ceda]">
-              **ChatGPT Plus (from BDT 350/mo)** is the best all-rounder with DALL-E image generation, web search, and broad capabilities. **Google AI Pro/Gemini Advanced (BDT 500/mo)** is the best choice for Google Workspace users — AI in Gmail, Docs, Sheets, and 2TB storage. At BDT 500, it undercuts Google&apos;s direct Bangladesh price (BDT 2,500). Both available with bKash/Nagad.
+              **ChatGPT Plus (from BDT 499/mo)** is the best all-rounder with DALL-E image generation, web search, and broad capabilities. **Google AI Pro/Gemini Advanced (BDT 499/mo)** is the best choice for Google Workspace users — AI in Gmail, Docs, Sheets, and 2TB storage. At BDT 499, it undercuts Google&apos;s direct Bangladesh price (BDT 2,500). Both available with bKash/Nagad.
             </p>
           </div>
 
@@ -69,14 +69,14 @@ export default function ChatGPTVsGeminiPage() {
           <div className="mt-6 p-4 rounded-xl border border-white/[0.04] bg-white/[0.02]">
             <p className="text-[0.75rem] font-semibold uppercase tracking-[0.12em] text-[#5b6280] mb-2">বাংলা</p>
             <p className="text-[0.875rem] leading-relaxed text-[#8a91a8]">
-              **ChatGPT Plus (BDT 350/মাস থেকে)** — সবচেয়ে বহুমুখী AI, ছবি তৈরি, ওয়েব সার্চ ও কোডিং। **Google AI Pro (BDT 500/মাস)** — Gmail, Docs, Sheets-এ AI + 2TB স্টোরেজ। Google-এর সরাসরি দাম BDT 2,500 — AIPS-এ BDT 500। bKash/Nagad দিয়ে পেমেন্ট।
+              **ChatGPT Plus (BDT 499/মাস থেকে)** — সবচেয়ে বহুমুখী AI, ছবি তৈরি, ওয়েব সার্চ ও কোডিং। **Google AI Pro (BDT 499/মাস)** — Gmail, Docs, Sheets-এ AI + 2TB স্টোরেজ। Google-এর সরাসরি দাম BDT 2,500 — AIPS-এ BDT 499। bKash/Nagad দিয়ে পেমেন্ট।
             </p>
           </div>
 
           <div className="mt-8 rounded-lg border border-white/[0.06] glass-card p-6">
             <h2 className="text-lg font-semibold text-white">Quick Answer</h2>
             <p className="mt-2 text-[#8a91a8]">
-              <strong>Choose ChatGPT Plus</strong> (৳350–৳2,990/mo) for the best all-rounder,
+              <strong>Choose ChatGPT Plus</strong> (৳499–৳2,990/mo) for the best all-rounder,
               superior coding, and DALL-E image generation. <strong>Choose Gemini Advanced</strong>
               (৳500/mo) if you live in the Google ecosystem (Gmail, Docs, Drive) and want
               native integration with Google Workspace.
@@ -95,7 +95,7 @@ export default function ChatGPTVsGeminiPage() {
               <tbody className="text-[#8a91a8]">
                 <tr className="border-b border-white/[0.04]">
                   <td className="py-3 pr-4 font-medium">Price (BD)</td>
-                  <td className="py-3 pr-4">৳350 – ৳2,990/mo</td>
+                  <td className="py-3 pr-4">৳499 – ৳2,990/mo</td>
                   <td className="py-3 pr-4">৳500/mo</td>
                 </tr>
                 <tr className="border-b border-white/[0.04]">
@@ -130,7 +130,7 @@ export default function ChatGPTVsGeminiPage() {
           <div className="mt-8 grid gap-6 md:grid-cols-2">
             <div className="rounded-lg border border-white/[0.06] glass-card p-6">
               <h3 className="text-xl font-semibold text-white">ChatGPT Plus</h3>
-              <p className="mt-2 text-2xl font-bold text-white">৳350/mo</p>
+              <p className="mt-2 text-2xl font-bold text-white">৳499/mo</p>
               <Link
                 href="/products/chatgpt-plus-bangladesh"
                 className="mt-4 inline-flex h-10 items-center justify-center btn-primary h-10 px-4 text-[0.8125rem]"

@@ -17,7 +17,7 @@ const tools = [
   { name: "Ideogram", slug: "ideogram-bangladesh", price: "৳2,990/mo", desc: "Best AI for text-in-image, logo design, and typography work." },
   { name: "Freepik Premium", slug: "freepik-premium-bangladesh", price: "৳450/mo", desc: "Millions of premium vectors, PSDs, icons, and stock images + AI generator." },
   { name: "Leonardo AI", slug: "leonardo-ai-bangladesh", price: "৳599/mo", desc: "Budget-friendly with character consistency and 3D-to-image features." },
-  { name: "ChatGPT Plus", slug: "chatgpt-plus-bangladesh", price: "৳350/mo", desc: "DALL-E image generation, design brief writing, and creative idea generation." },
+  { name: "ChatGPT Plus", slug: "chatgpt-plus-bangladesh", price: "৳499/mo", desc: "DALL-E image generation, design brief writing, and creative idea generation." },
   { name: "Kling AI", slug: "kling-ai-bangladesh", price: "৳270/mo", desc: "Cinematic AI video with character consistency for motion designers." },
 ];
 

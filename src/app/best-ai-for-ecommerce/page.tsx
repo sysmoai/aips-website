@@ -10,11 +10,11 @@ export const metadatanswer: Metadata = buildMetadata({
   canonical: "https://aipremiumshop.com/best-ai-for-ecommerce",
 });
 
-const tools = [{ name: "ChatGPT Plus", slug: "chatgpt-plus-bangladesh", price: "৳350/mo", desc: "Product descriptions, ad copy, customer support emails, and FB ad scripts." },
+const tools = [{ name: "ChatGPT Plus", slug: "chatgpt-plus-bangladesh", price: "৳499/mo", desc: "Product descriptions, ad copy, customer support emails, and FB ad scripts." },
     { name: "Midjourney", slug: "midjourney-bangladesh", price: "৳1,199/mo", desc: "Professional product mockups and lifestyle images without a photographer." },
     { name: "Canva Pro", slug: "canva-pro-bangladesh", price: "৳499/mo", desc: "Product banners, social media posts, and brand assets — no designer needed." },
     { name: "CapCut Pro", slug: "capcut-pro-bangladesh", price: "৳299/mo", desc: "Product videos and promotional content for TikTok/Reels — AI effects and captions." },
-    { name: "Google AI Pro", slug: "gemini-advanced-bangladesh", price: "৳500/mo", desc: "AI in Gmail and Sheets + 2TB storage. Google's price: ৳2,500." },
+    { name: "Google AI Pro", slug: "gemini-advanced-bangladesh", price: "৳499/mo", desc: "AI in Gmail and Sheets + 2TB storage. Google's price: ৳2,500." },
     { name: "Freepik Premium", slug: "freepik-premium-bangladesh", price: "৳450/mo", desc: "Millions of stock photos and vectors for product listings + AI image generator." }];
 
 const faqs = [{ question: "How can AI help my e-commerce business in Bangladesh?", answer: "AI creates product descriptions in seconds, generates professional product photos without a studio, writes FB ad copy that converts, and produces video content for TikTok/Reels. A ৳2,000/mo AI stack replaces ৳30,000+ in freelancer costs." },

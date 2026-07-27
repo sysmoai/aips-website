@@ -10,14 +10,14 @@ export const metadatanswer: Metadata = buildMetadata({
   canonical: "https://aipremiumshop.com/best-ai-for-teachers",
 });
 
-const tools = [{ name: "ChatGPT Plus", slug: "chatgpt-plus-bangladesh", price: "৳350/mo", desc: "Lesson plans, quiz questions, worksheets, and teaching materials in minutes." },
+const tools = [{ name: "ChatGPT Plus", slug: "chatgpt-plus-bangladesh", price: "৳499/mo", desc: "Lesson plans, quiz questions, worksheets, and teaching materials in minutes." },
     { name: "Gamma Plus", slug: "gamma-bangladesh", price: "৳399/mo", desc: "AI presentations and slides — perfect for classroom lectures and workshops." },
     { name: "Canva Pro", slug: "canva-pro-bangladesh", price: "৳499/mo", desc: "Create visual teaching aids, classroom posters, and student handouts." },
-    { name: "Google AI Pro", slug: "gemini-advanced-bangladesh", price: "৳500/mo", desc: "AI in Google Classroom, Docs, Sheets + 2TB storage for course materials." },
+    { name: "Google AI Pro", slug: "gemini-advanced-bangladesh", price: "৳499/mo", desc: "AI in Google Classroom, Docs, Sheets + 2TB storage for course materials." },
     { name: "Grammarly Premium", slug: "grammarly-premium-bangladesh", price: "৳470/mo", desc: "Check student essays, proofread materials, and write professional reports." },
     { name: "Notion Business", slug: "notion-business-bangladesh", price: "৳800/mo", desc: "Organize lesson plans, student progress trackers, and curriculum in one place." }];
 
-const faqs = [{ question: "What AI tools should Bangladeshi teachers use?", answer: "ChatGPT Plus (৳350/mo) for lesson planning and quiz generation, Gamma (৳399/mo) for AI presentations, and Google AI Pro (৳500/mo) for Google Classroom integration. Total: ৳1,249/mo for a complete teaching AI stack. All with bKash." }];
+const faqs = [{ question: "What AI tools should Bangladeshi teachers use?", answer: "ChatGPT Plus (৳499/mo) for lesson planning and quiz generation, Gamma (৳399/mo) for AI presentations, and Google AI Pro (৳499/mo) for Google Classroom integration. Total: ৳1,249/mo for a complete teaching AI stack. All with bKash." }];
 
 export default function Page() {
   return (

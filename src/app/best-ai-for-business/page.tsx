@@ -6,12 +6,12 @@ import { ArrowRight, MessageCircle } from "lucide-react";
 
 export const metadatanswer: Metadata = buildMetadata({
   title: "Best AI Tools for Business Owners in Bangladesh 2026",
-  description: "Top AI tools for Bangladeshi SMEs and business owners — ChatGPT Business, Google AI Pro ৳500, Notion, Midjourney. bKash/Nagad. 5-15 min delivery.",
+  description: "Top AI tools for Bangladeshi SMEs and business owners — ChatGPT Business, Google AI Pro ৳499, Notion, Midjourney. bKash/Nagad. 5-15 min delivery.",
   canonical: "https://aipremiumshop.com/best-ai-for-business",
 });
 
 const tools = [
-  { name: "Google AI Pro", slug: "gemini-advanced-bangladesh", price: "৳500/mo", desc: "AI in Gmail, Docs, Sheets, and Meet + 2TB storage. Google's own price: ৳2,500. Save 80%." },
+  { name: "Google AI Pro", slug: "gemini-advanced-bangladesh", price: "৳499/mo", desc: "AI in Gmail, Docs, Sheets, and Meet + 2TB storage. Google's own price: ৳2,500. Save 80%." },
   { name: "ChatGPT Business", slug: "chatgpt-business-bangladesh", price: "৳699/mo", desc: "Team AI assistant with admin controls, privacy, and unlimited usage for the whole team." },
   { name: "Notion Business", slug: "notion-business-bangladesh", price: "৳800/mo", desc: "Centralize docs, wikis, project management, and team knowledge with AI search." },
   { name: "Canva Pro", slug: "canva-pro-bangladesh", price: "৳499/mo", desc: "Create social media posts, ads, presentations, and brand materials without a designer." },
@@ -22,7 +22,7 @@ const tools = [
 ];
 
 const faqs = [
-  { question: "Which AI tools are best for small businesses in Bangladesh?", answer: "Google AI Pro (৳500/mo) is the #1 recommendation — it adds AI to Gmail, Docs, Sheets, and gives you 2TB storage. ChatGPT Business (৳699/mo shared) gives your team AI access with admin controls. Total: ৳1,199/mo for a complete business AI stack." },
+  { question: "Which AI tools are best for small businesses in Bangladesh?", answer: "Google AI Pro (৳499/mo) is the #1 recommendation — it adds AI to Gmail, Docs, Sheets, and gives you 2TB storage. ChatGPT Business (৳699/mo shared) gives your team AI access with admin controls. Total: ৳1,199/mo for a complete business AI stack." },
   { question: "How can my business pay with bKash or Nagad?", answer: "AI Premium Shop accepts bKash, Nagad, Rocket, and bank transfer. No international credit card or PayPal needed. Pay in BDT via your phone — subscriptions delivered within 5-15 minutes." },
   { question: "Can my whole team use the AI tools?", answer: "Yes — shared plans work for up to 7 team members. For larger teams, we recommend ChatGPT Business at ৳699/seat/mo with admin controls. Personal accounts available for privacy-sensitive work." },
   { question: "How much can AI reduce our operational costs?", answer: "Bangladeshi SMEs report 30-40% cost reduction by using AI for content creation, customer support drafts, data analysis, and design work. A ৳2,000-3,000/mo AI stack can replace ৳20,000-40,000 in freelance or employee costs." },

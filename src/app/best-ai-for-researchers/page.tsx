@@ -12,9 +12,9 @@ export const metadatanswer: Metadata = buildMetadata({
 
 const tools = [{ name: "Claude Pro", slug: "claude-pro-bangladesh", price: "৳1,495/mo", desc: "200K context window for analyzing entire research papers and long documents at once." },
     { name: "Perplexity Pro", slug: "perplexity-pro-bangladesh", price: "৳350/mo", desc: "AI-powered deep research with real citations. 300+ Pro searches/day." },
-    { name: "ChatGPT Plus", slug: "chatgpt-plus-bangladesh", price: "৳350/mo", desc: "Literature review, research structuring, and academic writing assistance." },
+    { name: "ChatGPT Plus", slug: "chatgpt-plus-bangladesh", price: "৳499/mo", desc: "Literature review, research structuring, and academic writing assistance." },
     { name: "Notion Business", slug: "notion-business-bangladesh", price: "৳800/mo", desc: "Organize research notes, bibliographies, and project timelines with AI search." },
-    { name: "Google AI Pro", slug: "gemini-advanced-bangladesh", price: "৳500/mo", desc: "Google Scholar integration, Deep Research, 2TB storage for datasets." }];
+    { name: "Google AI Pro", slug: "gemini-advanced-bangladesh", price: "৳499/mo", desc: "Google Scholar integration, Deep Research, 2TB storage for datasets." }];
 
 const faqs = [{ question: "Which AI is best for academic research in Bangladesh?", answer: "Claude Pro (৳1,495/mo) is the best for long-document analysis with 200K context — upload entire theses or books. Perplexity Pro (৳350/mo) provides real citations for literature review. Together they're an unbeatable research stack." }];
 

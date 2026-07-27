@@ -57,7 +57,7 @@ export default function BestAIToolsBangladeshPage() {
 
             <h3>1. ChatGPT Plus — Best All-Rounder</h3>
             <p>
-              <strong>Price:</strong> ৳350–৳2,990/mo · <strong>Best for:</strong> Students, freelancers, general users
+              <strong>Price:</strong> ৳499–৳2,990/mo · <strong>Best for:</strong> Students, freelancers, general users
             </p>
             <p>
               ChatGPT Plus remains the most versatile AI assistant for Bangladeshi users. The Bangla
@@ -81,7 +81,7 @@ export default function BestAIToolsBangladeshPage() {
               <strong>Price:</strong> ৳500/mo · <strong>Best for:</strong> Google Workspace users
             </p>
             <p>
-              At just ৳500/mo, Gemini Advanced is the best value AI assistant. It integrates natively
+              At just ৳499/mo, Gemini Advanced is the best value AI assistant. It integrates natively
               with Gmail, Google Docs, and Drive. The 1M token context window lets you analyze entire
               books or hours of video.
             </p>
@@ -171,12 +171,12 @@ export default function BestAIToolsBangladeshPage() {
                 <tr className="border-b border-white/[0.04]">
                   <td className="py-2 pr-4">Student</td>
                   <td className="py-2 pr-4">ChatGPT Plus Starter Shared</td>
-                  <td className="py-2 pr-4">৳350/mo</td>
+                  <td className="py-2 pr-4">৳499/mo</td>
                 </tr>
                 <tr className="border-b border-white/[0.04]">
                   <td className="py-2 pr-4">Freelancer</td>
                   <td className="py-2 pr-4">ChatGPT Plus Premium Shared</td>
-                  <td className="py-2 pr-4">৳950/mo</td>
+                  <td className="py-2 pr-4">৳999/mo</td>
                 </tr>
                 <tr className="border-b border-white/[0.04]">
                   <td className="py-2 pr-4">Developer</td>

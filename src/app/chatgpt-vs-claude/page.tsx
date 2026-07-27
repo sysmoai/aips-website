@@ -6,7 +6,7 @@ import { ArrowRight } from "lucide-react";
 export const metadata: Metadata = buildMetadata({
   title: "ChatGPT Plus vs Claude Pro in Bangladesh — Which AI Assistant to Buy?",
   description:
-    "Compare ChatGPT Plus and Claude Pro for Bangladeshi users. ChatGPT from ৳350/mo, Claude from ৳1,495/mo. Features, coding, reasoning, and use cases. Buy with bKash/Nagad.",
+    "Compare ChatGPT Plus and Claude Pro for Bangladeshi users. ChatGPT from ৳499/mo, Claude from ৳1,495/mo. Features, coding, reasoning, and use cases. Buy with bKash/Nagad.",
   canonical: "https://aipremiumshop.com/chatgpt-vs-claude",
 });
 
@@ -32,7 +32,7 @@ export default function ChatGPTVsClaudePage() {
     },
     {
       question: "Can I use a shared account, or do I need a Personal Account?",
-      answer: "Shared accounts start at ৳350/mo for ChatGPT Plus and ৳1,495/mo for Claude Pro — perfect for trying the service. Personal Accounts give you full control with your own credentials and are ideal for privacy-conscious users and businesses.",
+      answer: "Shared accounts start at ৳499/mo for ChatGPT Plus and ৳1,495/mo for Claude Pro — perfect for trying the service. Personal Accounts give you full control with your own credentials and are ideal for privacy-conscious users and businesses.",
     },
     {
       question: "Will my account get banned?",
@@ -56,7 +56,7 @@ export default function ChatGPTVsClaudePage() {
           <div className="mt-6 p-4 rounded-xl border border-[#f4b942]/10 bg-[#f4b942]/[0.03]">
             <p className="text-[0.75rem] font-semibold uppercase tracking-[0.12em] text-[#f4b942]">Quick Answer</p>
             <p className="mt-2 text-[0.875rem] leading-relaxed text-[#c9ceda]">
-              <strong>ChatGPT Plus (from ৳350/mo)</strong> is the better all-rounder with image generation, web search, and broader use cases. 
+              <strong>ChatGPT Plus (from ৳499/mo)</strong> is the better all-rounder with image generation, web search, and broader use cases. 
               <strong>Claude Pro (from ৳1,495/mo)</strong> excels at long-document analysis (200K context), deep reasoning, and natural writing.
               Both available at AI Premium Shop with bKash/Nagad payment — no international card needed. Trusted by a growing community of customers since 2024.
             </p>
@@ -83,8 +83,8 @@ export default function ChatGPTVsClaudePage() {
               </thead>
               <tbody className="text-[#8a91a8]">
                 {[
-                  ["Price (BDT/month)", "৳350 – ৳2,990/mo", "৳1,495 – ৳29,900/mo"],
-                  ["Shared plan entry", "৳350/mo (Starter)", "৳1,495/mo (Premium Shared)"],
+                  ["Price (BDT/month)", "৳499 – ৳2,990/mo", "৳1,495 – ৳29,900/mo"],
+                  ["Shared plan entry", "৳499/mo (Starter)", "৳1,495/mo (Premium Shared)"],
                   ["Personal plan", "৳2,990/mo", "৳2,990/mo"],
                   ["Model", "GPT-4o, o1, o3-mini", "Claude 3.7 Sonnet, Opus 4"],
                   ["Context window", "128K tokens", "200K tokens"],
@@ -114,7 +114,7 @@ export default function ChatGPTVsClaudePage() {
                   <li>You need image generation with DALL-E 3</li>
                   <li>You want real-time web browsing while working</li>
                   <li>You prefer a versatile all-rounder for coding, writing, and research</li>
-                  <li>You want the lowest entry price (৳350/mo shared)</li>
+                  <li>You want the lowest entry price (৳499/mo shared)</li>
                 </ul>
               </div>
               <div>

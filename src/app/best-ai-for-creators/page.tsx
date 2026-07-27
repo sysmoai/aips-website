@@ -16,11 +16,11 @@ const tools = [
   { name: "Canva Pro", slug: "canva-pro-bangladesh", price: "৳499/mo", desc: "Thumbnails, channel banners, and social posts with AI Magic Studio." },
   { name: "ElevenLabs", slug: "elevenlabs-bangladesh", price: "৳748/mo", desc: "AI voiceovers in 29+ languages — narration, dubbing, character voices." },
   { name: "Runway", slug: "runway-bangladesh", price: "৳1,794/mo", desc: "Professional AI video generation, 4K upscaling, and video editing." },
-  { name: "ChatGPT Plus", slug: "chatgpt-plus-bangladesh", price: "৳350/mo", desc: "Video scripts, content ideas, titles, descriptions, and SEO optimization." },
+  { name: "ChatGPT Plus", slug: "chatgpt-plus-bangladesh", price: "৳499/mo", desc: "Video scripts, content ideas, titles, descriptions, and SEO optimization." },
 ];
 
 const faqs = [
-  { question: "Which AI tools do Bangladeshi YouTubers use?", answer: "CapCut Pro (৳299/mo) for editing, ChatGPT Plus (৳350/mo) for scripts, and Canva Pro (৳499/mo) for thumbnails. Total: ৳1,148/mo for a complete creator stack. All with bKash." },
+  { question: "Which AI tools do Bangladeshi YouTubers use?", answer: "CapCut Pro (৳299/mo) for editing, ChatGPT Plus (৳499/mo) for scripts, and Canva Pro (৳499/mo) for thumbnails. Total: ৳1,148/mo for a complete creator stack. All with bKash." },
   { question: "Can I get CapCut Pro in Bangladesh with bKash?", answer: "Yes — AI Premium Shop delivers CapCut Pro (৳299/mo) via WhatsApp within 5-15 minutes. Pay with bKash or Nagad." },
 ];
 

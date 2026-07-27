@@ -6,25 +6,25 @@ import { GraduationCap, ArrowRight, MessageCircle, CheckCircle2 } from "lucide-r
 
 export const metadatanswer: Metadata = buildMetadata({
   title: "Best AI Tools for Students in Bangladesh 2026",
-  description: "Top AI tools for Bangladeshi students — ChatGPT Plus from ৳350, Grammarly, Notion, Perplexity & more. bKash/Nagad payment. 5-15 min WhatsApp delivery.",
+  description: "Top AI tools for Bangladeshi students — ChatGPT Plus from ৳499, Grammarly, Notion, Perplexity & more. bKash/Nagad payment. 5-15 min WhatsApp delivery.",
   canonical: "https://aipremiumshop.com/best-ai-for-students",
 });
 
 const tools = [
-  { name: "ChatGPT Plus", slug: "chatgpt-plus-bangladesh", price: "৳350/mo", desc: "All-rounder for assignments, research, coding, and exam prep. GPT-5.5 series with web search." },
+  { name: "ChatGPT Plus", slug: "chatgpt-plus-bangladesh", price: "৳499/mo", desc: "All-rounder for assignments, research, coding, and exam prep. GPT-5.5 series with web search." },
   { name: "Grammarly Premium", slug: "grammarly-premium-bangladesh", price: "৳470/mo", desc: "Perfect English writing for essays, theses, and job applications." },
   { name: "Notion Business", slug: "notion-business-bangladesh", price: "৳800/mo", desc: "Organize notes, track deadlines, and collaborate on group projects with AI." },
   { name: "Perplexity Pro", slug: "perplexity-pro-bangladesh", price: "৳350/mo", desc: "AI-powered research with citations — perfect for academic papers." },
-  { name: "Google AI Pro", slug: "gemini-advanced-bangladesh", price: "৳500/mo", desc: "AI in Gmail, Docs, Sheets + 2TB storage. Best for Google Workspace users." },
+  { name: "Google AI Pro", slug: "gemini-advanced-bangladesh", price: "৳499/mo", desc: "AI in Gmail, Docs, Sheets + 2TB storage. Best for Google Workspace users." },
   { name: "QuillBot Premium", slug: "quillbot-premium-bangladesh", price: "৳390/mo", desc: "Paraphrasing and citation tool — essential for avoiding plagiarism." },
   { name: "Canva Pro", slug: "canva-pro-bangladesh", price: "৳499/mo", desc: "Create stunning presentations and project visuals without design skills." },
   { name: "Claude Pro", slug: "claude-pro-bangladesh", price: "৳1,495/mo", desc: "Deep reasoning for complex research papers and long document analysis." },
 ];
 
 const faqs = [
-  { question: "Which AI tool is best for Bangladeshi university students?", answer: "ChatGPT Plus (৳350/mo shared) is the best starter tool for most students — it handles writing, coding, research, and image generation. For thesis writing, add Grammarly (৳470/mo). For group projects, Notion Business (৳800/mo). All available with bKash/Nagad." },
+  { question: "Which AI tool is best for Bangladeshi university students?", answer: "ChatGPT Plus (৳499/mo shared) is the best starter tool for most students — it handles writing, coding, research, and image generation. For thesis writing, add Grammarly (৳470/mo). For group projects, Notion Business (৳800/mo). All available with bKash/Nagad." },
   { question: "Can I pay for these AI tools with bKash?", answer: "Yes — AI Premium Shop accepts bKash, Nagad, Rocket, and bank transfer. No international credit card needed. Pay in BDT, get your subscription within 5-15 minutes." },
-  { question: "What is the cheapest AI tool for students?", answer: "ChatGPT Plus Starter Shared at ৳350/mo is the best value. It covers writing, coding, research, and image generation. Perplexity Pro (৳350/mo) is also excellent for research with citation support." },
+  { question: "What is the cheapest AI tool for students?", answer: "ChatGPT Plus Starter Shared at ৳499/mo is the best value. It covers writing, coding, research, and image generation. Perplexity Pro (৳499/mo) is also excellent for research with citation support." },
   { question: "Is it safe to use shared AI accounts?", answer: "Shared accounts are budget-friendly with multiple users. For full privacy, we recommend personal accounts. Every order includes a 7-day replacement warranty." },
   { question: "How can AI help with my thesis?", answer: "Use Perplexity Pro for literature review with real citations, ChatGPT Plus for structuring and editing, Grammarly for English polishing, and Claude Pro for analyzing long PDFs of previous research." },
 ];
@@ -45,7 +45,7 @@ export default function BestAIForStudentsPage() {
           <div className="mt-6 p-4 rounded-xl border border-[#f4b942]/10 bg-[#f4b942]/[0.03]">
             <p className="text-[0.75rem] font-semibold uppercase tracking-[0.12em] text-[#f4b942]">Quick Answer</p>
             <p className="mt-2 text-[0.875rem] leading-relaxed text-[#c9ceda]">
-              <strong>ChatGPT Plus (৳350/mo)</strong> is the best all-round AI tool for Bangladeshi students — covers writing, coding, research, and image generation. Add <strong>Grammarly (৳470/mo)</strong> for perfect English in essays and theses. All available at AI Premium Shop with bKash/Nagad payment — no international card needed. Trusted by thousands students and professionals since 2024.
+              <strong>ChatGPT Plus (৳499/mo)</strong> is the best all-round AI tool for Bangladeshi students — covers writing, coding, research, and image generation. Add <strong>Grammarly (৳470/mo)</strong> for perfect English in essays and theses. All available at AI Premium Shop with bKash/Nagad payment — no international card needed. Trusted by thousands students and professionals since 2024.
             </p>
           </div>
 

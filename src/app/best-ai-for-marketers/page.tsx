@@ -11,7 +11,7 @@ export const metadatanswer: Metadata = buildMetadata({
 });
 
 const tools = [
-  { name: "ChatGPT Plus", slug: "chatgpt-plus-bangladesh", price: "৳350/mo", desc: "Ad copy, email sequences, social posts, and marketing strategy in seconds." },
+  { name: "ChatGPT Plus", slug: "chatgpt-plus-bangladesh", price: "৳499/mo", desc: "Ad copy, email sequences, social posts, and marketing strategy in seconds." },
   { name: "Canva Pro", slug: "canva-pro-bangladesh", price: "৳499/mo", desc: "Facebook ads, Instagram posts, and brand kits with AI Magic Studio." },
   { name: "Jasper", slug: "jasper-bangladesh", price: "৳1,499/mo", desc: "Purpose-built AI marketing platform — brand voice, SEO mode, 50+ templates." },
   { name: "Midjourney", slug: "midjourney-bangladesh", price: "৳1,199/mo", desc: "Ad creative images, campaign visuals, and social graphics at production quality." },
@@ -21,7 +21,7 @@ const tools = [
 export default function BestAIForMarketersPage() {
   return (
     <>
-      <FAQPageJsonLd items={[{ question: "What AI tools do Bangladeshi digital marketers use?", answer: "ChatGPT Plus (৳350/mo) for copy and strategy, Canva Pro (৳499/mo) for visuals, and Midjourney (৳1,199/mo) for ad creative. Total: ~৳2,048/mo. All with bKash/Nagad." }]} />
+      <FAQPageJsonLd items={[{ question: "What AI tools do Bangladeshi digital marketers use?", answer: "ChatGPT Plus (৳499/mo) for copy and strategy, Canva Pro (৳499/mo) for visuals, and Midjourney (৳1,199/mo) for ad creative. Total: ~৳2,048/mo. All with bKash/Nagad." }]} />
       <BreadcrumbJsonLd items={[{ name: "Home", path: "/" }, { name: "Best AI for best-ai-for-marketers", path: "/best-ai-for-marketers" }]} />
       <main className="min-h-screen"><section className="mx-auto max-w-4xl px-5 sm:px-8 py-12">
         <p className="text-[0.6875rem] font-semibold uppercase tracking-[0.15em] text-[#f4b942]">Marketers</p>

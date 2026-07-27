@@ -16,7 +16,7 @@ const tools = [
   { name: "Claude Pro", slug: "claude-pro-bangladesh", price: "৳1,495/mo", desc: "Best for complex code reasoning, debugging, and 200K context code reviews." },
   { name: "Windsurf Pro", slug: "windsurf-bangladesh", price: "৳590/mo", desc: "AI-native IDE with autonomous cascade agent — great value for money." },
   { name: "v0.dev Pro", slug: "v0-dev-bangladesh", price: "৳999/mo", desc: "AI web app builder — describe what you want and deploy instantly." },
-  { name: "ChatGPT Plus", slug: "chatgpt-plus-bangladesh", price: "৳350/mo", desc: "Universal AI for coding help, documentation writing, and architecture questions." },
+  { name: "ChatGPT Plus", slug: "chatgpt-plus-bangladesh", price: "৳499/mo", desc: "Universal AI for coding help, documentation writing, and architecture questions." },
 ];
 
 const faqs = [
