@@ -385,12 +385,59 @@ html {
 }
 
 /* ================================================================
-   FOCUS STATES
+   FOCUS STATES & KEYBOARD NAVIGATION (WCAG 2.1 AA)
    ================================================================ */
 
-:focus-visible {
-  outline: 2px solid rgba(245, 197, 71, 0.5);
+/* Global focus indicators for all interactive elements */
+:focus {
+  outline: 2px solid #f4b942;
   outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Enhanced focus for keyboard users only (not mouse) */
+:focus-visible {
+  outline: 2px solid #f4b942;
+  outline-offset: 2px;
+  border-radius: 4px;
+  box-shadow: 0 0 0 3px rgba(244, 185, 66, 0.1);
+}
+
+/* Remove focus indicator for mouse users while keeping for keyboard */
+*:focus:not(:focus-visible) {
+  outline: none;
+  box-shadow: none;
+}
+
+/* Specific focus states for common interactive elements */
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+[role="button"]:focus-visible,
+[role="link"]:focus-visible,
+[role="tab"]:focus-visible,
+[role="menuitem"]:focus-visible {
+  outline: 2px solid #f4b942;
+  outline-offset: 2px;
+  border-radius: 4px;
+  box-shadow: 0 0 0 3px rgba(244, 185, 66, 0.1);
+}
+
+/* Enhanced focus for form elements */
+input[type="text"]:focus-visible,
+input[type="email"]:focus-visible,
+input[type="password"]:focus-visible,
+input[type="search"]:focus-visible,
+input[type="number"]:focus-visible,
+input[type="date"]:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid #f4b942;
+  outline-offset: 0;
+  border-color: #f4b942;
+  box-shadow: 0 0 0 3px rgba(244, 185, 66, 0.1);
 }
 
 /* ================================================================

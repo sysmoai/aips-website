@@ -162,7 +162,7 @@ const defaultFaqs = [
   },
   {
     q: "What if the AI tool I want isn't listed?",
-    a: "We have 118+ AI tools in stock. If you can't find what you want, message us on WhatsApp and we'll check availability or arrange a custom order.",
+    a: "We have 80+ AI tools in stock with 118+ subscription plans available. If you can't find what you want, message us on WhatsApp and we'll check availability or arrange a custom order.",
   },
   {
     q: "Do you offer discounts for students?",
