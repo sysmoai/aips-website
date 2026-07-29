@@ -1961,7 +1961,14 @@
   "deliverySLA": "2-4 hours",
   "featured": false,
   "whatsappMsg": "Hi, I want Runway Full Access (৳11,362/mo)",
-  "status": "Active"
+  "status": "Active",
+  "useCases": [
+   "Professional video production & editing (ads, reels, TikToks)",
+   "AI-powered video effects & motion graphics",
+   "Custom video generation from text prompts",
+   "YouTube content creation & thumbnails",
+   "Marketing video editing with AI assistance"
+  ]
  },
  {
   "id": "heygen-creator-shared",
@@ -2760,7 +2767,14 @@
   "deliverySLA": "2-4 hours",
   "featured": false,
   "whatsappMsg": "Hi, I want Leonardo AI Personal (৳2,990/mo)",
-  "status": "Active"
+  "status": "Active",
+  "useCases": [
+   "Generate professional product images for eCommerce",
+   "Create marketing graphics & social media visuals",
+   "Custom AI art generation for brands",
+   "Logo & branding asset creation",
+   "Game & animation asset generation"
+  ]
  },
  {
   "id": "heygen-personal",
@@ -2785,7 +2799,14 @@
   "deliverySLA": "2-4 hours",
   "featured": false,
   "whatsappMsg": "Hi, I want HeyGen Personal (৳4,990/mo)",
-  "status": "Active"
+  "status": "Active",
+  "useCases": [
+   "Create AI avatar videos for training & education",
+   "Multilingual avatar videos (20+ languages)",
+   "Professional presentation video generation",
+   "YouTube content creation without filming",
+   "Corporate training & e-learning videos"
+  ]
  },
  {
   "id": "udio-personal",
@@ -2808,7 +2829,14 @@
   "deliverySLA": "2-4 hours",
   "featured": false,
   "whatsappMsg": "Hi, I want Udio Personal (৳1,990/mo)",
-  "status": "Active"
+  "status": "Active",
+  "useCases": [
+   "Generate background music for videos & podcasts",
+   "Create custom songs & musical compositions",
+   "AI music production for content creators",
+   "Royalty-free music generation",
+   "Audio branding & sonic identity creation"
+  ]
  },
  {
   "id": "v0-dev-personal",
@@ -2833,7 +2861,14 @@
   "deliverySLA": "2-4 hours",
   "featured": false,
   "whatsappMsg": "Hi, I want v0.dev Personal (৳2,990/mo)",
-  "status": "Active"
+  "status": "Active",
+  "useCases": [
+   "Generate UI components from text descriptions",
+   "Build web interfaces 10x faster",
+   "React component generation",
+   "Web app prototyping & rapid development",
+   "Fullstack application scaffolding"
+  ]
  },
  {
   "id": "replit-shared",
@@ -2856,7 +2891,14 @@
   "deliverySLA": "5-15 min",
   "featured": false,
   "whatsappMsg": "Hi, I want Replit Core Shared (৳299/mo)",
-  "status": "Active"
+  "status": "Active",
+  "useCases": [
+   "Cloud-based IDE with AI coding assistant",
+   "Build, host & deploy apps from the browser",
+   "Real-time collaboration on code projects",
+   "Deploy Python, Node.js, React apps instantly",
+   "Full-stack development in the cloud"
+  ]
  },
  {
   "id": "manus-ai-shared",
@@ -2881,7 +2923,14 @@
   "deliverySLA": "5-15 min",
   "featured": false,
   "whatsappMsg": "Hi, I want Manus AI Shared (৳1,199/mo)",
-  "status": "Active"
+  "status": "Active",
+  "useCases": [
+   "AI-powered 3D hand gesture recognition",
+   "Sign language detection & interpretation",
+   "Motion capture for animation & gaming",
+   "Hand tracking for AR/VR experiences",
+   "Accessibility technology for disabled users"
+  ]
  },
  {
   "id": "otter-ai-personal",
@@ -2906,7 +2955,14 @@
   "deliverySLA": "2-4 hours",
   "featured": false,
   "whatsappMsg": "Hi, I want Otter.ai Personal (৳1,990/mo)",
-  "status": "Active"
+  "status": "Active",
+  "useCases": [
+   "Automatic transcription of meetings & podcasts",
+   "Real-time meeting notes with AI summaries",
+   "Search & highlight key moments in recordings",
+   "Multi-speaker identification & timestamps",
+   "Meeting intelligence & action item extraction"
+  ]
  },
  {
   "id": "gamma-personal",
@@ -2931,7 +2987,14 @@
   "deliverySLA": "2-4 hours",
   "featured": false,
   "whatsappMsg": "Hi, I want Gamma Personal (৳1,199/mo)",
-  "status": "Active"
+  "status": "Active",
+  "useCases": [
+   "Create AI presentations & decks in minutes",
+   "Generate beautiful slide designs automatically",
+   "Build interactive web pages & landing pages",
+   "AI-powered document creation",
+   "Professional presentations without design skills"
+  ]
  },
  {
   "id": "writesonic-personal",
@@ -2956,7 +3019,14 @@
   "deliverySLA": "2-4 hours",
   "featured": false,
   "whatsappMsg": "Hi, I want Writesonic Personal (৳1,990/mo)",
-  "status": "Active"
+  "status": "Active",
+  "useCases": [
+   "AI copywriting for sales pages & emails",
+   "Blog post & article generation",
+   "Product descriptions for eCommerce",
+   "Social media content creation",
+   "Ad copy generation for Google & Facebook"
+  ]
  },
  {
   "id": "canva-pro-shared",
@@ -2982,7 +3052,14 @@
   "deliverySLA": "5-15 min",
   "featured": true,
   "whatsappMsg": "Hi, I want Canva Pro Shared (৳499/mo)",
-  "status": "Active"
+  "status": "Active",
+  "useCases": [
+   "Create social media graphics & posts",
+   "Design professional presentations & slides",
+   "Marketing materials: flyers, brochures, ads",
+   "Video editing for TikTok, Reels, YouTube",
+   "Brand kit management for consistency"
+  ]
  },
  {
   "id": "canva-pro-personal",
@@ -3060,7 +3137,14 @@
   "deliverySLA": "5-15 min",
   "featured": false,
   "whatsappMsg": "Hi, I want Adobe Firefly Shared (৳599/mo)",
-  "status": "Active"
+  "status": "Active",
+  "useCases": [
+   "Generative fill & remove objects from images",
+   "Text-to-image AI generation",
+   "Expand canvas & extend artwork",
+   "Generative variation of designs",
+   "Professional photo editing with AI"
+  ]
  },
  {
   "id": "adobe-firefly-personal",
@@ -3085,7 +3169,14 @@
   "deliverySLA": "2-4 hours",
   "featured": false,
   "whatsappMsg": "Hi, I want Adobe Firefly Personal (৳2,490/mo)",
-  "status": "Active"
+  "status": "Active",
+  "useCases": [
+   "Generative fill & remove objects from images",
+   "Text-to-image AI generation",
+   "Expand canvas & extend artwork",
+   "Generative variation of designs",
+   "Professional photo editing with AI"
+  ]
  },
  {
   "id": "pika-labs-personal",
@@ -3192,7 +3283,14 @@
   "deliverySLA": "5-15 min",
   "featured": false,
   "whatsappMsg": "Hi, I want Murf.ai Shared (৳499/mo)",
-  "status": "Active"
+  "status": "Active",
+  "useCases": [
+   "AI voice-over generation (120+ voices, 20+ languages)",
+   "Podcast narration without a microphone",
+   "YouTube video voiceovers",
+   "E-learning & training video narration",
+   "Commercial voice production"
+  ]
  },
  {
   "id": "murf-ai-personal",
@@ -3332,7 +3430,14 @@
   "deliverySLA": "5-15 min",
   "featured": false,
   "whatsappMsg": "Hi, I want Jasper Shared (৳1,499/mo)",
-  "status": "Active"
+  "status": "Active",
+  "useCases": [
+   "Enterprise AI content generation",
+   "Long-form blog post & article writing",
+   "Marketing campaign content at scale",
+   "Brand voice consistency across channels",
+   "SEO-optimized content generation"
+  ]
  },
  {
   "id": "jasper-personal",
@@ -3358,7 +3463,14 @@
   "deliverySLA": "2-4 hours",
   "featured": true,
   "whatsappMsg": "Hi, I want Jasper Personal (৳5,990/mo)",
-  "status": "Active"
+  "status": "Active",
+  "useCases": [
+   "AI writing assistant for content creators",
+   "Blog post & article generation",
+   "Marketing copy & email campaigns",
+   "Social media content creation",
+   "Brand voice customization"
+  ]
  },
  {
   "id": "copy-ai-shared",
