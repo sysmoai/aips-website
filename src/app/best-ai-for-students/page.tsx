@@ -14,7 +14,7 @@ const tools = [
   { name: "ChatGPT Plus", slug: "chatgpt-plus-bangladesh", price: "৳499/mo", desc: "All-rounder for assignments, research, coding, and exam prep. GPT-5.5 series with web search." },
   { name: "Grammarly Premium", slug: "grammarly-premium-bangladesh", price: "৳470/mo", desc: "Perfect English writing for essays, theses, and job applications." },
   { name: "Notion Business", slug: "notion-business-bangladesh", price: "৳800/mo", desc: "Organize notes, track deadlines, and collaborate on group projects with AI." },
-  { name: "Perplexity Pro", slug: "perplexity-pro-bangladesh", price: "৳350/mo", desc: "AI-powered research with citations — perfect for academic papers." },
+  { name: "Perplexity Pro", slug: "perplexity-pro-bangladesh", price: "৳599/mo", desc: "AI-powered research with citations — perfect for academic papers." },
   { name: "Google AI Pro", slug: "gemini-advanced-bangladesh", price: "৳499/mo", desc: "AI in Gmail, Docs, Sheets + 2TB storage. Best for Google Workspace users." },
   { name: "QuillBot Premium", slug: "quillbot-premium-bangladesh", price: "৳390/mo", desc: "Paraphrasing and citation tool — essential for avoiding plagiarism." },
   { name: "Canva Pro", slug: "canva-pro-bangladesh", price: "৳499/mo", desc: "Create stunning presentations and project visuals without design skills." },
@@ -24,7 +24,7 @@ const tools = [
 const faqs = [
   { question: "Which AI tool is best for Bangladeshi university students?", answer: "ChatGPT Plus (৳499/mo shared) is the best starter tool for most students — it handles writing, coding, research, and image generation. For thesis writing, add Grammarly (৳470/mo). For group projects, Notion Business (৳800/mo). All available with bKash/Nagad." },
   { question: "Can I pay for these AI tools with bKash?", answer: "Yes — AI Premium Shop accepts bKash, Nagad, Rocket, and bank transfer. No international credit card needed. Pay in BDT, get your subscription within 5-15 minutes." },
-  { question: "What is the cheapest AI tool for students?", answer: "ChatGPT Plus Starter Shared at ৳499/mo is the best value. It covers writing, coding, research, and image generation. Perplexity Pro (৳499/mo) is also excellent for research with citation support." },
+  { question: "What is the cheapest AI tool for students?", answer: "ChatGPT Plus Starter Shared at ৳499/mo is the best value. It covers writing, coding, research, and image generation. Perplexity Pro (৳599/mo) is also excellent for research with citation support." },
   { question: "Is it safe to use shared AI accounts?", answer: "Shared accounts are budget-friendly with multiple users. For full privacy, we recommend personal accounts. Every order includes a 7-day replacement warranty." },
   { question: "How can AI help with my thesis?", answer: "Use Perplexity Pro for literature review with real citations, ChatGPT Plus for structuring and editing, Grammarly for English polishing, and Claude Pro for analyzing long PDFs of previous research." },
 ];
@@ -52,7 +52,7 @@ export default function BestAIForStudentsPage() {
           <div className="mt-6 p-4 rounded-xl border border-white/[0.04] bg-white/[0.02]">
             <p className="text-[0.75rem] font-semibold uppercase tracking-[0.12em] text-[#5b6280] mb-2">বাংলা</p>
             <p className="text-[0.875rem] leading-relaxed text-[#8a91a8]">
-              বাংলাদেশী শিক্ষার্থীদের জন্য <strong>সবচেয়ে ভালো AI টুল ChatGPT Plus (৳৩৫০/মাস)</strong> — লেখালেখি, কোডিং, রিসার্চ, ছবি তৈরি সব কাজ করে। থিসিসের জন্য <strong>Grammarly (৳৪৭০/মাস)</strong> এবং <strong>Perplexity Pro (৳৩৫০/মাস)</strong> যোগ করুন। bKash/Nagad দিয়ে পেমেন্ট — আন্তর্জাতিক কার্ড লাগবে না।
+              বাংলাদেশী শিক্ষার্থীদের জন্য <strong>সবচেয়ে ভালো AI টুল ChatGPT Plus (৳499/মাস)</strong> — লেখালেখি, কোডিং, রিসার্চ, ছবি তৈরি সব কাজ করে। থিসিসের জন্য <strong>Grammarly (৳470/মাস)</strong> এবং <strong>Perplexity Pro (৳599/মাস)</strong> যোগ করুন। bKash/Nagad দিয়ে পেমেন্ট — আন্তর্জাতিক কার্ড লাগবে না।
             </p>
           </div>
 
