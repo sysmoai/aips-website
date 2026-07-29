@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X, MessageCircle } from "lucide-react";
+import { LanguageToggle } from "@/components/language-toggle";
 
 const whatsappNumber = process.env.NEXT_PUBLIC_WA_PRIMARY ?? "8801865385348";
 const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
@@ -161,6 +162,7 @@ export function Navbar() {
           </nav>
 
           <div className="hidden md:flex items-center gap-3">
+            <LanguageToggle />
             <a
               href={whatsappUrl}
               target="_blank"
@@ -211,6 +213,9 @@ export function Navbar() {
                 {link.label}
               </Link>
             ))}
+            <div className="w-full flex justify-center pt-4 border-t border-white/[0.08]">
+              <LanguageToggle />
+            </div>
             <a
               href={whatsappUrl}
               target="_blank"

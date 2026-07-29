@@ -6,7 +6,6 @@
   Clock,
   Users,
   CreditCard,
-  Star,
   Zap,
   ArrowRight,
 } from "lucide-react";
@@ -21,6 +20,7 @@ import {
 import Link from "next/link";
 import { getFeaturedItems, getWhatsappUrl } from "@/lib/data/products";
 import { buildMetadata } from "@/lib/seo/metadata";
+import { TextTestimonial } from "@/components/testimonials";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = buildMetadata({
@@ -348,25 +348,12 @@ export default function Home() {
 
             <div className="mt-12 grid gap-5 md:grid-cols-3">
               {testimonials.map((t) => (
-                <div key={t.name} className="glass-card rounded-2xl p-6">
-                  <div className="flex gap-1">
-                    {Array.from({ length: 5 }).map((_, i) => (
-                      <Star key={i} className="size-3.5 fill-[#f4b942] text-[#f4b942]" />
-                    ))}
-                  </div>
-                  <p className="mt-4 text-[0.875rem] leading-relaxed text-[#8a91a8]">
-                    &ldquo;{t.text}&rdquo;
-                  </p>
-                  <div className="mt-5 flex items-center gap-3">
-                    <div className="flex size-9 items-center justify-center rounded-full bg-gradient-to-br from-[#f4b942]/30 to-[#f4b942]/10 text-[0.75rem] font-bold text-[#f4b942]">
-                      {t.name.charAt(0)}
-                    </div>
-                    <div>
-                      <p className="text-[0.8125rem] font-semibold text-white">{t.name}</p>
-                      <p className="text-[0.6875rem] text-[#5b6280]">{t.role}</p>
-                    </div>
-                  </div>
-                </div>
+                <TextTestimonial
+                  key={t.name}
+                  name={t.name}
+                  role={t.role}
+                  text={t.text}
+                />
               ))}
             </div>
           </div>
